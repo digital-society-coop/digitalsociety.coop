@@ -1,0 +1,20 @@
+{
+  "name": "digitalsociety.coop",
+  "version": "1.0.0",
+  "description": "The landing page website",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-society-coop/digitalsociety.coop.git"
+  },
+  "author": "Digital Society Ltd",
+  "license": "ISC",
+  "homepage": "digitalsociety.coop",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-bundle": "^1.0.4"
+  }
+}

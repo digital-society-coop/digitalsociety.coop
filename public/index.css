@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+html, body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 1em;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #1f1f28;
+  color: #dcd7ba;
+}
+
+a {
+  color: #7fb4ca;
+}

@@ -2,20 +2,36 @@
 
 html, body {
   height: 100%;
-}
-
-html {
-  display: table;
-  margin: auto;
+  margin: 0;
 }
 
 body {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 1em;
-  font-family: 'Work Sans', sans-serif;
+  align-items: center;
   background-color: #1f1f28;
   color: #dcd7ba;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Work Sans', sans-serif;
+  justify-content: center;
+}
+
+.container {
+  container-type: inline-size;
+  max-width: 840px;
+  padding: 1rem;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 14.5cqw;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 3.5cqw;
+  margin: 0;
+  padding: 0;
 }
 
 a {

@@ -86,3 +86,54 @@ nav {
 #members > div > a {
   font-size: 1.5rem;
 }
+
+footer {
+  align-self: center;
+  border-top: 1px solid #dcd7ba;
+  max-width: 840px;
+  padding: 1rem;
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+    "coop about contact"
+    "registration registration registration";
+}
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-areas:
+      "about"
+      "contact"
+      "coop"
+      "registration";
+  }
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 0.5rem 0;
+}
+
+#coop {
+  height: 5rem;
+  display: block;
+  margin: 1rem;
+  grid-area: coop;
+}
+
+#footer-about {
+  grid-area: about;
+}
+
+#footer-contact {
+  grid-area: contact;
+}
+
+#footer-registration {
+  grid-area: registration;
+}

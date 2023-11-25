@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ metadata.language }}">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -14,13 +14,15 @@
 
 <body>
   <nav>
-    <a href="/"><img id="logo" src="/images/logo-transparent-256x256.png"></a>
+    <a href="/" aria-label="Back to the home page">
+      <img id="logo" alt="Digital Society Ltd logo" src="/images/logo-transparent-256x256.png">
+    </a>
   </nav>
   <main>
     {{ content | safe }}
   </main>
   <footer>
-    <img id="coop" src="/images/coop.svg">
+    <img id="coop" alt="Cooperatives UK logo" src="/images/coop.svg">
     <div id="footer-about">
       <h3>About us</h3>
       <ul>

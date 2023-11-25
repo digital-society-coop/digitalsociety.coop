@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/WorkSans-Light.ttf');
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
@@ -61,6 +65,7 @@ nav {
 
 #logo {
   height: 3rem;
+  aspect-ratio: 1;
   display: block;
 }
 
@@ -121,6 +126,7 @@ footer ul li {
 
 #coop {
   height: 5rem;
+  aspect-ratio: 1;
   display: block;
   margin: 1rem;
   grid-area: coop;

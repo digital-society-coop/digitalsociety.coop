@@ -124,6 +124,12 @@ footer ul li {
   margin: 0.5rem 0;
 }
 
+@media (max-width: 768px) {
+  footer ul li {
+    margin: 1rem 0;
+  }
+}
+
 #coop {
   height: 5rem;
   aspect-ratio: 1;

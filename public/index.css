@@ -30,6 +30,7 @@ main {
 }
 
 .container {
+  line-height: 1.25;
   max-width: 960px;
   padding: 1rem;
   width: 100vw;

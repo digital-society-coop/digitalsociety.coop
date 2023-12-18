@@ -1,4 +1,5 @@
 const bundlePlugin = require('@11ty/eleventy-plugin-bundle')
+const tocPlugin = require('eleventy-plugin-nesting-toc')
 const { EleventyHtmlBasePlugin } = require('@11ty/eleventy')
 
 module.exports = function (eleventyConfig) {
@@ -6,6 +7,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
   eleventyConfig.addPlugin(bundlePlugin)
+  eleventyConfig.addPlugin(tocPlugin, {
+    wrapperClass: '',
+  })
 
   eleventyConfig.addWatchTarget("./public/")
 

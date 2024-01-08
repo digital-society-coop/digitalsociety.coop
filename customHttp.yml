@@ -1,0 +1,9 @@
+customHeaders:
+  - pattern: /WorkSans-Light.ttf
+    headers:
+      - key: Cache-Control
+        value: max-age=31536000
+  - pattern: /images/**
+    headers:
+      - key: Cache-Control
+        value: max-age=31536000

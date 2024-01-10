@@ -49,6 +49,10 @@ h2 {
   padding: 0;
 }
 
+strong {
+  color: #7aa89f;
+}
+
 a {
   color: #7fb4ca;
   text-decoration: none;
@@ -105,28 +109,20 @@ header>nav {
   display: block;
 }
 
-#members {
+#members-container {
   display: flex;
   flex-direction: row;
-  max-width: 600px;
+  justify-content: center;
 }
 
-#members>div {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
+#members-container>figure {
+  display: block;
   text-align: center;
-  width: 50%;
+  margin: 0 1rem;
 }
 
-#members>div>img {
+#members-container>figure>img {
   aspect-ratio: 0.75;
-  width: 100%;
-}
-
-#members>div>a {
-  margin-top: 0.5rem;
-  font-size: 1.5rem;
 }
 
 #privacy {

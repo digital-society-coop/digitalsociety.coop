@@ -62,7 +62,8 @@ a:hover {
   text-decoration: underline;
 }
 
-p {
+p,
+li {
   & a {
     text-decoration: underline;
 

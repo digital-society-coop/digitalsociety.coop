@@ -49,6 +49,11 @@ h2 {
   padding: 0;
 }
 
+.container>h3 {
+  margin-top: 2.5rem;
+  color: #e6e3cf;
+}
+
 strong {
   color: #7aa89f;
 }
@@ -62,7 +67,8 @@ a:hover {
   text-decoration: underline;
 }
 
-p {
+p,
+li {
   & a {
     text-decoration: underline;
 

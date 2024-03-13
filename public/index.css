@@ -116,6 +116,30 @@ header>nav {
   }
 }
 
+.home-text {
+
+  p,
+  figcaption {
+    font-size: 1.25rem;
+  }
+
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 450px) {
+  .home-text {
+
+    p,
+    figcaption {
+      font-size: 1rem;
+    }
+  }
+}
+
+.home-subtitle {
+  margin-top: 1rem;
+}
+
 #logo {
   height: 3rem;
   aspect-ratio: 1;
@@ -146,56 +170,29 @@ header>nav {
   }
 }
 
-#home-us {
-  p {
-    font-size: 1.25rem;
-  }
-}
+#offer-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-@media (max-width: 450px) {
-  #home-us {
-    p {
-      font-size: 1rem;
-    }
-
-    margin-bottom: 2rem;
-  }
-}
-
-#members {
-  display: grid;
-  grid-template-areas:
-    "members-title members-container";
-}
-
-@media (max-width: 768px) {
-  #members {
-    grid-template-areas:
-      "members-title"
-      "members-container";
-  }
-}
-
-#members-title {
-  grid-area: members-title;
-  margin-top: 1rem;
-}
-
-@media (min-width: 768px) and (max-width: 800px) {
-  #members-title {
+  figure {
+    text-align: center;
     width: 12rem;
+
+    img {
+      height: 7.5rem;
+      aspect-ratio: 1;
+    }
   }
 }
 
 #members-container {
-  grid-area: members-container;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: right;
+  justify-content: center;
 
   figure {
-    display: block;
     text-align: center;
     margin: 1rem 0 0 0;
 
@@ -206,12 +203,6 @@ header>nav {
     img {
       aspect-ratio: 0.75;
     }
-  }
-}
-
-@media (max-width: 768px) {
-  #members-container {
-    justify-content: left;
   }
 }
 

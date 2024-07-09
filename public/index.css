@@ -170,19 +170,25 @@ header>nav {
   }
 }
 
-#offer-services {
+.centered-figures {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
 
-  figure {
-    text-align: center;
-    width: 12rem;
+.centered-figures a {
+  margin: 0 auto;
+}
 
-    img {
-      height: 7.5rem;
-      aspect-ratio: 1;
-    }
+.centered-figures figure {
+  text-align: center;
+  width: 12rem;
+  margin: 2rem auto;
+
+  img {
+    height: 7.5rem;
+    aspect-ratio: 1;
+    object-fit: contain;
   }
 }
 

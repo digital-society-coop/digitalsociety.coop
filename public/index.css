@@ -188,6 +188,7 @@ header>nav {
   img {
     height: 7.5rem;
     aspect-ratio: 1;
+    object-fit: contain;
   }
 }
 

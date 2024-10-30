@@ -11,3 +11,7 @@ To start it in watch mode run:
 ```bash
 npm run start
 ```
+
+## Deployment
+
+Deployment is done to AWS automatically via amplify after a pull request.

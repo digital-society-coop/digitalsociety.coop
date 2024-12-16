@@ -38,9 +38,17 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 @media (max-width: 450px) {
   h2 {
     font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -80,6 +88,10 @@ header>nav {
   }
 }
 
+section:not(.light) {
+  color: #e6e3cf;
+}
+
 .container {
   line-height: 1.25;
   max-width: 1060px;
@@ -88,7 +100,6 @@ header>nav {
 
   h3 {
     margin-top: 2.5rem;
-    color: #e6e3cf;
   }
 }
 
@@ -186,7 +197,7 @@ header>nav {
   margin: 2rem auto;
 
   img {
-    height: 7.5rem;
+    height: 6rem;
     aspect-ratio: 1;
     object-fit: contain;
   }
@@ -226,6 +237,11 @@ footer {
   grid-template-areas:
     "coop about contact"
     "registration registration registration";
+
+  h3 {
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -236,6 +252,10 @@ footer {
       "coop"
       "registration";
   }
+}
+
+ul>li {
+  margin-bottom: 0.5rem;
 }
 
 footer ul {
@@ -272,4 +292,62 @@ footer ul li {
 
 #footer-registration {
   grid-area: registration;
+}
+
+.news {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.125rem;
+  background: #dcd7ba;
+  color: #35677E;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  align-items: flex-start;
+
+  img {
+    height: 15rem;
+    max-width: 20rem;
+    justify-self: center;
+    align-self: center;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .news {
+    flex-direction: column;
+  }
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-end;
+
+  div>h2 {
+    margin: 0;
+  }
+
+  img {
+    align-self: center;
+    max-width: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .article {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

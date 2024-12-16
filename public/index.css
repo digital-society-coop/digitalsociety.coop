@@ -254,6 +254,10 @@ footer {
   }
 }
 
+ul>li {
+  margin-bottom: 0.5rem;
+}
+
 footer ul {
   list-style-type: none;
   margin: 0;
@@ -338,6 +342,7 @@ footer ul li {
     border-radius: 1rem;
     overflow: hidden;
   }
+
 }
 
 @media (max-width: 768px) {

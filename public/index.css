@@ -38,9 +38,17 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
 @media (max-width: 450px) {
   h2 {
     font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 }
 
@@ -80,6 +88,10 @@ header>nav {
   }
 }
 
+section:not(.light) {
+  color: #e6e3cf;
+}
+
 .container {
   line-height: 1.25;
   max-width: 1060px;
@@ -88,7 +100,6 @@ header>nav {
 
   h3 {
     margin-top: 2.5rem;
-    color: #e6e3cf;
   }
 }
 
@@ -186,7 +197,7 @@ header>nav {
   margin: 2rem auto;
 
   img {
-    height: 7.5rem;
+    height: 6rem;
     aspect-ratio: 1;
     object-fit: contain;
   }

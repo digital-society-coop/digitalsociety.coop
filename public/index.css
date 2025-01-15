@@ -294,7 +294,7 @@ footer ul li {
   grid-area: registration;
 }
 
-.news {
+.posts {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -321,7 +321,7 @@ footer ul li {
 }
 
 @media (max-width: 768px) {
-  .news {
+  .posts {
     flex-direction: column;
   }
 }

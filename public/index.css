@@ -42,6 +42,10 @@ h3 {
   font-size: 2rem;
 }
 
+h4 {
+  font-size: 1.5rem;
+}
+
 @media (max-width: 450px) {
   h2 {
     font-size: 2rem;
@@ -49,6 +53,10 @@ h3 {
 
   h3 {
     font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
   }
 }
 
@@ -101,6 +109,15 @@ section:not(.light) {
   h3 {
     margin-top: 2.5rem;
   }
+
+  h4 {
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.gap {
+  margin-top: 1.5rem;
 }
 
 .toc {
@@ -185,19 +202,29 @@ section:not(.light) {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: center;
 }
 
 .centered-figures a {
   margin: 0 auto;
 }
 
-.centered-figures figure {
-  text-align: center;
+.centered-figure {
   width: 12rem;
   margin: 2rem auto;
 
   img {
     height: 6rem;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+}
+
+.large {
+  align-self: center;
+
+  img {
+    height: 15rem;
     aspect-ratio: 1;
     object-fit: contain;
   }
@@ -342,7 +369,6 @@ footer ul li {
     border-radius: 1rem;
     overflow: hidden;
   }
-
 }
 
 @media (max-width: 768px) {

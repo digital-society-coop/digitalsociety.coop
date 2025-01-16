@@ -16,6 +16,21 @@ export default function Posts(): ReactNode {
         <PageTitle>Posts</PageTitle>
         <Container>
           <a
+            href="/posts/job-satisfaction"
+            className="flex flex-col sm:flex-row gap-8 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
+          >
+            <img
+              alt="Zen rocks in front of water"
+              src="/images/zen.jpg"
+              className="max-h-[15rem] max-w-[20rem] w-full self-center rounded-xl overflow-hidden"
+            />
+            <div className="flex flex-col gap-4 text-springBlue">
+              <Heading>Job satisfaction</Heading>
+              <p>31/03/2025</p>
+              <p>A self-reflection exercise.</p>
+            </div>
+          </a>
+          <a
             href="/posts/first-year"
             className="flex flex-col sm:flex-row gap-8 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
           >
@@ -25,9 +40,7 @@ export default function Posts(): ReactNode {
               className="max-h-[15rem] max-w-[20rem] w-full self-center rounded-xl overflow-hidden"
             />
             <div className="flex flex-col gap-4 text-springBlue">
-              <Heading>
-                Digital Society is 1 years old!
-              </Heading>
+              <Heading>Digital Society is 1 years old!</Heading>
               <p>11/12/2024</p>
               <p>Celebrating our first year projects.</p>
             </div>

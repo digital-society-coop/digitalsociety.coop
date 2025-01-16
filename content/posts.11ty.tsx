@@ -15,6 +15,14 @@ export default function Posts(): ReactNode {
       <Section>
         <PageTitle>Posts</PageTitle>
         <Post
+          href="/posts/job-satisfaction"
+          title="Job satisfaction"
+          date="27/05/2025"
+          description="A self-reflection exercise"
+          alt="Zen rock in front of water"
+          src="/images/zen.jpg"
+        />
+        <Post
           href="/posts/tap-generally-available"
           title="tap is generally available!"
           date="15/05/2025"

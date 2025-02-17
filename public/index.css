@@ -203,23 +203,39 @@ section:not(.light) {
   }
 }
 
-#members-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+#projects {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-  figure {
-    text-align: center;
-    margin: 1rem 0 0 0;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-    &:first-child {
-      margin: 1rem 1rem 0 0;
+    > div {
+      display: flex;
+      flex-direction: column;
     }
+  }
 
-    img {
-      aspect-ratio: 0.75;
-    }
+  img {
+    height: 4rem;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+
+  h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+
+  .tbc {
+    font-weight: normal;
+  }
+
+  p {
+    margin: 0.5rem 0;
   }
 }
 

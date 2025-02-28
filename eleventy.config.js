@@ -1,8 +1,8 @@
-const bundlePlugin = require('@11ty/eleventy-plugin-bundle')
-const tocPlugin = require('eleventy-plugin-nesting-toc')
-const { EleventyHtmlBasePlugin } = require('@11ty/eleventy')
+import bundlePlugin from '@11ty/eleventy-plugin-bundle'
+import tocPlugin from 'eleventy-plugin-nesting-toc'
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ './public/': '/' })
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin)

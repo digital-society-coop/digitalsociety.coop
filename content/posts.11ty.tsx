@@ -6,17 +6,17 @@ import Container from "../components/Container";
 import PageTitle from "../components/PageTitle";
 import Heading from "../components/Heading";
 
-export default function News(): ReactNode {
+export default function Posts(): ReactNode {
   return (
     <Page
-      title="News"
-      description="Digital Society, a not-for-profit cooperative building digital products for social good. News."
+      title="Posts"
+      description="Digital Society, a not-for-profit cooperative building digital products for social good. Posts."
     >
       <Section>
-        <PageTitle>News</PageTitle>
+        <PageTitle>Posts</PageTitle>
         <Container>
           <a
-            href="/news/first-year"
+            href="/posts/first-year"
             className="flex flex-col sm:flex-row gap-8 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
           >
             <img

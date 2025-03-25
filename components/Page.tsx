@@ -62,7 +62,7 @@ export default function Page(props: {
             <h3 className="mb-2 text-lg">About us</h3>
             <ul className="flex flex-col gap-1">
               <li>
-                <Link href="/news">News</Link>
+                <Link href="/posts">Posts</Link>
               </li>
               <li>
                 <Link href="/how">How we work</Link>

@@ -8,10 +8,10 @@ import Link from "../../components/Link";
 import Strong from "../../components/Strong";
 import PageTitle from "../../components/PageTitle";
 
-export default function NotFound(): ReactNode {
+export default function FirstYear(): ReactNode {
   return (
     <Page
-      title="News | First year"
+      title="Posts | First year"
       description="Digital Society, a not-for-profit cooperative building digital products for social good. First year."
     >
       <Section>

@@ -10,7 +10,7 @@ import Heading from "../components/Heading";
 import Subheading from "../components/Subheading";
 import PageTitle from "../components/PageTitle";
 
-export default function News(): ReactNode {
+export default function How(): ReactNode {
   return (
     <Page
       title="How we work"

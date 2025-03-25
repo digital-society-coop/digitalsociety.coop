@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "The landing page website for Digital Society Ltd",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npm-run-all -p dev:*",
+    "dev:11ty": "tsx watch --clear-screen=false node_modules/@11ty/eleventy/cmd.cjs --serve --config=eleventy.config.ts",
+    "dev:css": "tsx node_modules/@tailwindcss/cli/dist/index.mjs -i tailwind.css -o _site/tailwind.css --watch",
+    "build:11ty": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
+    "build:css": "tsx node_modules/@tailwindcss/cli/dist/index.mjs -i tailwind.css -o _site/tailwind.css --minify",
+    "build": "run-s build:*"
   },
   "repository": {
     "type": "git",
@@ -16,7 +20,15 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-bundle": "^3.0.1",
-    "eleventy-plugin-nesting-toc": "^1.3.0"
+    "@tailwindcss/cli": "^4.0.9",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eleventy-plugin-nesting-toc": "^1.3.0",
+    "npm-run-all": "^4.1.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.9",
+    "tsx": "^4.19.3"
   },
   "type": "module"
 }

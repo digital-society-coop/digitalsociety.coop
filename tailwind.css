@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('/WorkSans-Light.ttf');
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Work Sans', sans-serif;
+  --color-lighterYellow: #E6E3CF;
+  --color-linkBlue: #35677E;
+  --color-lighterBlue: #7FB4CA;
+  --color-autumnGreen: #76946A;
+  --color-autumnRed: #C34043;
+  --color-autumnYellow: #DCA561;
+  --color-boatYellow1: #938056;
+  --color-boatYellow2: #C0A36E;
+  --color-carpYellow: #E6C384;
+  --color-crystalBlue: #7E9CD8;
+  --color-dragonBlue: #658594;
+  --color-fujiGray: #727169;
+  --color-fujiWhite: #DCD7BA;
+  --color-katanaGray: #717C7C;
+  --color-lightBlue: #A3D4D5;
+  --color-oldWhite: #C8C093;
+  --color-oniViolet2: #B8B4D0;
+  --color-oniViolet: #957FB8;
+  --color-peachRed: #FF5D62;
+  --color-roninYellow: #FF9E3B;
+  --color-sakuraPink: #D27E99;
+  --color-samuraiRed: #E82424;
+  --color-seaFoam: #C7CCD1;
+  --color-springBlue: #35677E;
+  --color-springGreen: #98BB6C;
+  --color-springViolet1: #938AA9;
+  --color-springViolet2: #9CABCA;
+  --color-sumiInk0: #16161D;
+  --color-sumiInk1: #1F1F28;
+  --color-sumiInk2: #2A2A37;
+  --color-sumiInk3: #363646;
+  --color-sumiInk4: #2A2A37;
+  --color-sumiInk6: #54546D;
+  --color-surimiOrange: #FFA066;
+  --color-waveAqua1: #6A9589;
+  --color-waveAqua2: #7AA89F;
+  --color-waveBlue1: #223249;
+  --color-waveBlue2: #2D4F67;
+  --color-waveRed: #E46876;
+  --color-winterBlue: #252535;
+  --color-winterGreen: #2B3328;
+  --color-winterRed: #43242B;
+  --color-winterYellow: #49443C;
+}

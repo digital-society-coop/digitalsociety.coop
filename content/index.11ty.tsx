@@ -40,9 +40,7 @@ export default function Home(): ReactNode {
       </Section>
       <Section light>
         <Container>
-          <Heading>
-            We get your projects off the ground
-          </Heading>
+          <Heading>We get your projects off the ground</Heading>
 
           <div className="text-base sm:text-lg flex flex-col gap-4">
             <p>

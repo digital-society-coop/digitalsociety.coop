@@ -25,9 +25,7 @@ export default function Posts(): ReactNode {
               className="max-h-[15rem] max-w-[20rem] w-full self-center rounded-xl overflow-hidden"
             />
             <div className="flex flex-col gap-4 text-springBlue">
-              <Heading>
-                Digital Society is 1 years old!
-              </Heading>
+              <Heading>Digital Society is 1 years old!</Heading>
               <p>11/12/2024</p>
               <p>Celebrating our first year projects.</p>
             </div>

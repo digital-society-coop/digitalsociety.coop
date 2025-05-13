@@ -23,7 +23,10 @@ export default function How(): ReactNode {
 
           <p>
             We subscribe to the{" "}
-            <Link href="https://agilemanifesto.org/principles.html">
+            <Link
+              href="https://agilemanifesto.org/principles.html"
+              target="_blank"
+            >
               principles behind the Agile Manifesto
             </Link>{" "}
             and this is reflected in how we work:
@@ -67,8 +70,7 @@ export default function How(): ReactNode {
           <List>
             <li>
               <Strong>Decision logs</Strong>: Our most frequently produced
-              documentation, underpinning our{" "}
-              <Link href="#decision-making">technical decision making</Link>.
+              documentation, underpinning our technical decision making.
             </li>
             <li>
               <Strong>Technical documentation</Strong>: Mostly applicable at the
@@ -93,8 +95,7 @@ export default function How(): ReactNode {
 
           <p>
             In this phase we deliver the work agreed in the Discovery phase to
-            the standards defined in our{" "}
-            <Link href="#dod">Definition of done</Link>.
+            the standards defined in our "Definition of done".
           </p>
 
           <p>
@@ -125,11 +126,14 @@ export default function How(): ReactNode {
             in a lightweight and standardised format has benefits, both to
             support better decisions and as a reference. For this we use
             Decision Logs, an iteration on{" "}
-            <Link href="https://www.ietf.org/standards/rfcs/">
+            <Link href="https://www.ietf.org/standards/rfcs/" target="_blank">
               Requests for comment (RFCs)
             </Link>{" "}
             and{" "}
-            <Link href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html">
+            <Link
+              href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html"
+              target="_blank"
+            >
               Architectural decision records (ADRs)
             </Link>
             . A decision log captures:
@@ -169,11 +173,14 @@ export default function How(): ReactNode {
 
           <p>
             We use standards, such as{" "}
-            <Link href="https://www.conventionalcommits.org/en/v1.0.0/">
+            <Link
+              href="https://www.conventionalcommits.org/en/v1.0.0/"
+              target="_blank"
+            >
               conventional commits
             </Link>{" "}
             and{" "}
-            <Link href="https://conventionalcomments.org/">
+            <Link href="https://conventionalcomments.org/" target="_blank">
               conventional comments
             </Link>{" "}
             with our code. They enable clearer communication and automation.

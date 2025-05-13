@@ -40,50 +40,63 @@ export default function Home(): ReactNode {
       </Section>
       <Section light>
         <Container>
-          <Heading>
-            We get your projects off the ground
-          </Heading>
+          <Heading>We can help you with</Heading>
 
-          <div className="text-base sm:text-lg flex flex-col gap-4">
-            <p>
-              <Link event="out-mail" href="mailto:hello@digitalsociety.coop">
-                Get in touch
-              </Link>{" "}
-              if you have a project you want to kick-start with best practices
-              and at pace.
-            </p>
-            <p>We have extensive experience in:</p>
-            <div className="flex flex-row flex-wrap justify-between">
-              <Figure
-                alt="coding representation"
-                src="/images/code.svg"
-                caption="Web and application development"
-              />
-              <Figure
-                alt="data representation"
-                src="/images/database.svg"
-                caption="Data engineering"
-              />
-              <Figure
-                alt="cloud representation"
-                src="/images/cloud.svg"
-                caption="Cloud engineering"
-              />
+          <div className="text-base sm:text-lg flex flex-col gap-6">
+            <div className="flex flex-col md:flex-row gap-6 justify-between">
+              <div className="flex-1 flex flex-col gap-4">
+                <img
+                  className="h-[6rem] aspect-square object-contain self-start"
+                  alt="coding representation"
+                  src="/images/code.svg"
+                />
+                <h3 className="text-lg sm:text-xl font-bold">
+                  Getting your projects off the ground
+                </h3>
+                <p>
+                  With our bespoke application development experience, no
+                  requirement is too complex or ambitious. We will bring your
+                  project to life with best practice and at pace.
+                </p>
+              </div>
+              <div className="flex-1 flex flex-col gap-4">
+                <img
+                  className="h-[6rem] aspect-square object-contain self-start"
+                  alt="data representation"
+                  src="/images/database.svg"
+                />
+                <h3 className="text-lg sm:text-xl font-bold">
+                  Help you realise the value of your data
+                </h3>
+                <p>
+                  We enjoy working across the data pipeline, from the
+                  foundational "plumbing" and modelling to the last-mile
+                  prediction and insights.
+                </p>
+              </div>
             </div>
             <p>
-              We recognize that development extends far beyond delivery and
-              ensure that we meet evolving needs and remain sustainable over
-              time. Read more on <Link href="/how">how we work</Link>.
+              With our agile, sprint-based approach, our engagements last as
+              long as you need and evolve with your priorities. Read more on{" "}
+              <Link href="/how">how we work</Link>.
             </p>
+            <a
+              data-umami-event="out-mail"
+              href="mailto:hello@digitalsociety.coop"
+              className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue"
+            >
+              Get in touch
+            </a>
           </div>
 
-          <Heading>Who we've worked with</Heading>
+          <Heading>Our clients include</Heading>
 
           <div className="flex flex-row flex-wrap justify-between">
             <Link
               className="mx-auto"
               event="out-dudley-editions"
               href="https://dudleyeditions.com/"
+              target="_blank"
             >
               <Figure
                 alt="Dudley Editions Logo"
@@ -95,6 +108,7 @@ export default function Home(): ReactNode {
               className="mx-auto"
               event="out-lost-dot"
               href="https://www.lostdot.cc/"
+              target="_blank"
             >
               <Figure
                 alt="Lost Dot Logo"
@@ -106,6 +120,7 @@ export default function Home(): ReactNode {
               className="mx-auto"
               event="out-peterborough-city-council"
               href="https://www.peterborough.gov.uk/"
+              target="_blank"
             >
               <Figure
                 alt="Peterborough City Council Logo"
@@ -117,6 +132,7 @@ export default function Home(): ReactNode {
               className="mx-auto"
               event="out-turbine-education"
               href="https://www.turbine.education/"
+              target="_blank"
             >
               <Figure
                 alt="Turbine Education Logo"
@@ -128,11 +144,24 @@ export default function Home(): ReactNode {
               className="mx-auto"
               event="out-vouchsafe"
               href="https://vouchsafe.id/"
+              target="_blank"
             >
               <Figure
                 alt="Vouchsafe Logo"
                 src="/images/vouchsafe.jpg"
-                caption="Vouchsave"
+                caption="Vouchsafe"
+              />
+            </Link>
+            <Link
+              className="mx-auto"
+              event="out-youthlink-scotland"
+              href="https://www.youthlink.scot/"
+              target="_blank"
+            >
+              <Figure
+                alt="YouthLink Scotland Logo"
+                src="/images/youthlink-logo.svg"
+                caption="YouthLink Scotland"
               />
             </Link>
           </div>

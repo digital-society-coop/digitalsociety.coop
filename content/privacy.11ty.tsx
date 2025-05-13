@@ -14,7 +14,7 @@ export default function PrivacyPolicy(): ReactNode {
   return (
     <Page
       title="Privacy policy"
-      description="Digital Society, a not-for-profit cooperative building digital products for social good | Privacy policy"
+      description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our privacy policy."
     >
       <Section>
         <PageTitle>Privacy policy</PageTitle>
@@ -55,18 +55,18 @@ export default function PrivacyPolicy(): ReactNode {
           </p>
           <List>
             <li>
-              <a href="https://github.com/">GitHub</a>(
+              <a href="https://github.com/">GitHub</a> (
               <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">
                 privacy policy
               </a>
               )
             </li>
             <li>
-              <a href="https://www.google.com/drive/">Google Drive</a>(
+              <a href="https://www.google.com/drive/">Google Drive</a> (
               <a href="https://policies.google.com/privacy">privacy policy</a>)
             </li>
             <li>
-              <a href="https://slack.com/">Slack</a>(
+              <a href="https://slack.com/">Slack</a> (
               <a href="https://slack.com/intl/en-gb/trust/privacy/privacy-policy">
                 privacy policy
               </a>

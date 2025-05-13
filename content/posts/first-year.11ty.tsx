@@ -12,7 +12,7 @@ export default function FirstYear(): ReactNode {
   return (
     <Page
       title="Posts | First year"
-      description="Digital Society, a not-for-profit cooperative building digital products for social good. First year."
+      description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our first year anniversary."
     >
       <Section>
         <Container>

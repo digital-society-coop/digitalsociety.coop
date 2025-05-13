@@ -6,7 +6,7 @@ export default function Figure(props: {
   caption: string;
 }): ReactNode {
   return (
-    <figure className="text-center mx-auto my-8 w-[12rem]">
+    <figure className="text-center mx-auto my-6 w-[10rem]">
       <img
         className="h-[6rem] aspect-square object-contain mx-auto"
         alt={props.alt}

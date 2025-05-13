@@ -10,7 +10,7 @@ export default function Posts(): ReactNode {
   return (
     <Page
       title="Posts"
-      description="Digital Society, a not-for-profit cooperative building digital products for social good. Posts."
+      description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our posts."
     >
       <Section>
         <PageTitle>Posts</PageTitle>

@@ -14,7 +14,7 @@ export default function PrivacyPolicy(): ReactNode {
   return (
     <Page
       title="Privacy policy"
-      description="Digital Society, a not-for-profit cooperative building digital products for social good | Privacy policy"
+      description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our privacy policy."
     >
       <Section>
         <PageTitle>Privacy policy</PageTitle>

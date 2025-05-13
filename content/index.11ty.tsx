@@ -11,7 +11,7 @@ export default function Home(): ReactNode {
   return (
     <Page
       title="Home"
-      description="Digital Society, a not-for-profit cooperative building digital products for social good | Home page"
+      description="The home page for Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data."
     >
       <Section className="min-h-screen">
         <Container>

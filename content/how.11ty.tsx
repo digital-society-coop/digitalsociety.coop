@@ -14,7 +14,7 @@ export default function How(): ReactNode {
   return (
     <Page
       title="How we work"
-      description="Digital Society, a not-for-profit cooperative building digital products for social good. How we work."
+      description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. How we work."
     >
       <Section>
         <PageTitle>How we work</PageTitle>

@@ -83,9 +83,9 @@ export default function Home(): ReactNode {
             <a
               data-umami-event="out-mail"
               href="mailto:hello@digitalsociety.coop"
-              className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue"
+              className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
             >
-              Get in touch
+              Start your project with us
             </a>
           </div>
 

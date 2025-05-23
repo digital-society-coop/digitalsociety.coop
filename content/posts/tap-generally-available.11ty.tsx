@@ -137,6 +137,13 @@ export default function TapGenerallyAvailable(): ReactNode {
             public and private data by making it accessible to those who can use
             it to benefit their communities.
           </p>
+          <a
+            href="https://app.tapintodata.com"
+            aria-label="Open tap app"
+            className="text-xl sm:text-2xl self-center mt-4 px-3 py-2 rounded-xl border border-linkBlue hover:outline outline-linkBlue"
+          >
+            Try <strong>tap</strong>
+          </a>
         </Container>
       </Section>
     </Page>

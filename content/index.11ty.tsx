@@ -83,9 +83,9 @@ export default function Home(): ReactNode {
             <a
               data-umami-event="out-mail"
               href="mailto:hello@digitalsociety.coop"
-              className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue"
+              className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
             >
-              Get in touch
+              Start your project with us
             </a>
           </div>
 
@@ -193,6 +193,34 @@ export default function Home(): ReactNode {
                 logo="/images/tap.svg"
               />
             </ul>
+          </div>
+
+          <Heading>Meet the team</Heading>
+          <div className="flex flex-row flex-wrap justify-between gap-6">
+            <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
+              <img
+                className="h-[8rem] object-contain rounded-xl"
+                alt="Photo of Chris Connelly"
+                src="/images/chris.jpg"
+              />
+              <div className="flex flex-col gap-2 align-start justify-end">
+                <h3 className="text-lg sm:text-xl font-bold">Chris Connelly</h3>
+                <p>Founder & all-rounder</p>
+                <p>Chat to him about Rust, running or coffee.</p>
+              </div>
+            </div>
+            <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
+              <img
+                className="h-[8rem] object-contain rounded-xl"
+                alt="Photo of Endre Kadas"
+                src="/images/endre.jpg"
+              />
+              <div className="flex flex-col gap-2 align-start justify-end">
+                <h3 className="text-lg sm:text-xl font-bold">Endre Kadas</h3>
+                <p>Founder & all-rounder</p>
+                <p>Chat to him about DIY, ferments or gardening.</p>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>

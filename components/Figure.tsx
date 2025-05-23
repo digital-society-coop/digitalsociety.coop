@@ -8,7 +8,7 @@ export default function Figure(props: {
   return (
     <figure className="text-center mx-auto my-6 w-[10rem]">
       <img
-        className="h-[6rem] aspect-square object-contain mx-auto"
+        className="h-[6rem] aspect-square object-contain mx-auto rounded-xl"
         alt={props.alt}
         src={props.src}
       />

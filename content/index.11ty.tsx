@@ -197,30 +197,18 @@ export default function Home(): ReactNode {
 
           <Heading>Meet the team</Heading>
           <div className="flex flex-row flex-wrap justify-between gap-6">
-            <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
-              <img
-                className="h-[8rem] object-contain rounded-xl"
-                alt="Photo of Chris Connelly"
-                src="/images/chris.jpg"
-              />
-              <div className="flex flex-col gap-2 align-start justify-end">
-                <h3 className="text-lg sm:text-xl font-bold">Chris Connelly</h3>
-                <p>Founder & all-rounder</p>
-                <p>Chat to him about Rust, running or coffee.</p>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
-              <img
-                className="h-[8rem] object-contain rounded-xl"
-                alt="Photo of Endre Kadas"
-                src="/images/endre.jpg"
-              />
-              <div className="flex flex-col gap-2 align-start justify-end">
-                <h3 className="text-lg sm:text-xl font-bold">Endre Kadas</h3>
-                <p>Founder & all-rounder</p>
-                <p>Chat to him about DIY, ferments or gardening.</p>
-              </div>
-            </div>
+            <Member
+              name="Chris Connelly"
+              src="/images/chris.jpg"
+              title="Founder & all-rounder"
+              description="Chat to him about Rust, running or coffee."
+            />
+            <Member
+              name="Endre Kadas"
+              src="/images/endre.jpg"
+              title="Founder & all-rounder"
+              description="Chat to him about DIY, ferments or gardening."
+            />
           </div>
         </Container>
       </Section>
@@ -247,5 +235,27 @@ function Example(props: {
         <p>{props.description}</p>
       </div>
     </li>
+  );
+}
+
+function Member(props: {
+  name: string;
+  src: string;
+  title: string;
+  description: string;
+}): ReactNode {
+  return (
+    <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
+      <img
+        className="h-[8rem] object-contain rounded-xl"
+        alt={`Photo of ${props.name}`}
+        src={props.src}
+      />
+      <div className="flex flex-col gap-2 align-start justify-end">
+        <h3 className="text-lg sm:text-xl font-bold">{props.name}</h3>
+        <p>{props.title}</p>
+        <p>{props.description}</p>
+      </div>
+    </div>
   );
 }

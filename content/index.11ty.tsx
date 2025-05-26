@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import Page from "../components/Page";
 import Section from "../components/Section";
 import Container from "../components/Container";
-import Figure from "../components/Figure";
 import Link from "../components/Link";
 import Heading from "../components/Heading";
 
@@ -88,86 +87,63 @@ export default function Home(): ReactNode {
               Start your project with us
             </a>
           </div>
-
-          <Heading>Our clients include</Heading>
-
-          <div className="flex flex-row flex-wrap justify-between">
-            <Link
-              className="mx-auto"
-              event="out-dudley-editions"
-              href="https://dudleyeditions.com/"
-              target="_blank"
-            >
-              <Figure
-                alt="Dudley Editions Logo"
-                src="/images/dudley-editions.png"
-                caption="Dudley Editions"
-              />
-            </Link>
-            <Link
-              className="mx-auto"
-              event="out-lost-dot"
-              href="https://www.lostdot.cc/"
-              target="_blank"
-            >
-              <Figure
-                alt="Lost Dot Logo"
-                src="/images/lost-dot.webp"
-                caption="Lost Dot"
-              />
-            </Link>
-            <Link
-              className="mx-auto"
-              event="out-peterborough-city-council"
-              href="https://www.peterborough.gov.uk/"
-              target="_blank"
-            >
-              <Figure
-                alt="Peterborough City Council Logo"
-                src="/images/peterborough-city-council.png"
-                caption="Peterborough City Council"
-              />
-            </Link>
-            <Link
-              className="mx-auto"
-              event="out-turbine-education"
-              href="https://www.turbine.education/"
-              target="_blank"
-            >
-              <Figure
-                alt="Turbine Education Logo"
-                src="/images/turbine-education.webp"
-                caption="Turbine Education"
-              />
-            </Link>
-            <Link
-              className="mx-auto"
-              event="out-vouchsafe"
-              href="https://vouchsafe.id/"
-              target="_blank"
-            >
-              <Figure
-                alt="Vouchsafe Logo"
-                src="/images/vouchsafe.jpg"
-                caption="Vouchsafe"
-              />
-            </Link>
-            <Link
-              className="mx-auto"
-              event="out-youthlink-scotland"
-              href="https://www.youthlink.scot/"
-              target="_blank"
-            >
-              <Figure
-                alt="YouthLink Scotland Logo"
-                src="/images/youthlink-logo.svg"
-                caption="YouthLink Scotland"
-              />
-            </Link>
-          </div>
         </Container>
       </Section>
       <Section>
+        <Container>
+          <Heading>Our client projects include</Heading>
+
+          <div className="flex flex-col gap-10">
+            <ClientProject
+              title="Orang Energy"
+              href="https://orang.energy"
+              screenshots={
+                <>
+                  <img
+                    alt="Screenshot from Orang Energy showing the calculator page"
+                    src="/images/orang-energy-screenshot-1.png"
+                    className="h-[11rem] object-contain rounded-xl"
+                  />
+                  <img
+                    alt="Screenshot from Orang Energy showing the installer-directory"
+                    src="/images/orang-energy-screenshot-2.png"
+                    className="h-[11rem] object-contain rounded-xl"
+                  />
+                </>
+              }
+              description="We are the development partner for Orang Energy, helping people save energy and money through a comprehensive energy savings calculator and connecting them with qualified local installers."
+              stack="Built using Next.js and Tailwind CSS. Deployed to DigitalOcean App Platform via Github Actions."
+            />
+            <ClientProject
+              title="Dudley Editions"
+              href="https://dudleyeditions.com"
+              screenshots={
+                <>
+                  <img
+                    alt="Screenshot from Dudley Editions app showing the book library"
+                    src="/images/dudley-editions-screenshot-2.jpg"
+                    className="h-[12rem] object-contain rounded-xl"
+                  />
+                  <img
+                    alt="Screenshot from Dudley Editions app showing a book description"
+                    src="/images/dudley-editions-screenshot-1.jpg"
+                    className="h-[12rem] object-contain rounded-xl"
+                  />
+                  <img
+                    alt="Screenshot from Dudley Editions app showing my library"
+                    src="/images/dudley-editions-screenshot-3.jpg"
+                    className="h-[12rem] object-contain rounded-xl"
+                  />
+                </>
+              }
+              description="We are the development partner for Dudley Editions, a mobile app to create and share personalised audiobooks in minutes."
+              stack="Built using Flutter and NestJS. Deployed to AWS via Github Actions and available on both iOS and Android app stores."
+              testimonial="The team at Digital Society are a delight to work with. They're always professional, approachable and flexible. They're committed to delivering high quality products and we couldn't be happier with the ongoing partnership we have them."
+            />
+          </div>
+        </Container>
+      </Section>
+      <Section light>
         <Container>
           <Heading>What we're building</Heading>
 
@@ -175,52 +151,41 @@ export default function Home(): ReactNode {
             <p>Tools we're building ourselves for general use.</p>
           </div>
 
-          <div className="mb-12">
-            <ul className="flex flex-col gap-6">
-              <Example
-                hostname="epcdata.scot"
-                description="An unofficial REST API for Scottish domestic Energy Performance Certificates (EPCs)."
-                logo="/images/epcdata-scot.svg"
-              />
-              <Example
-                hostname="healthdata.scot"
-                description="An unofficial REST API for Scottish health service location data."
-                logo="/images/healthdata-scot.svg"
-              />
-              <Example
-                hostname="tapintodata.com"
-                description="A minimalist platform to unlock the social value of public and private data."
-                logo="/images/tap.svg"
-              />
-            </ul>
-          </div>
-
+          <ul className="flex flex-col gap-6">
+            <Example
+              hostname="epcdata.scot"
+              description="An unofficial REST API for Scottish domestic Energy Performance Certificates (EPCs)."
+              logo="/images/epcdata-scot.svg"
+            />
+            <Example
+              hostname="healthdata.scot"
+              description="An unofficial REST API for Scottish health service location data."
+              logo="/images/healthdata-scot.svg"
+            />
+            <Example
+              hostname="tapintodata.com"
+              description="A minimalist platform to unlock the social value of public and private data."
+              logo="/images/tap.svg"
+            />
+          </ul>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
           <Heading>Meet the team</Heading>
           <div className="flex flex-row flex-wrap justify-between gap-6">
-            <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
-              <img
-                className="h-[8rem] object-contain rounded-xl"
-                alt="Photo of Chris Connelly"
-                src="/images/chris.jpg"
-              />
-              <div className="flex flex-col gap-2 align-start justify-end">
-                <h3 className="text-lg sm:text-xl font-bold">Chris Connelly</h3>
-                <p>Founder & all-rounder</p>
-                <p>Chat to him about Rust, running or coffee.</p>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
-              <img
-                className="h-[8rem] object-contain rounded-xl"
-                alt="Photo of Endre Kadas"
-                src="/images/endre.jpg"
-              />
-              <div className="flex flex-col gap-2 align-start justify-end">
-                <h3 className="text-lg sm:text-xl font-bold">Endre Kadas</h3>
-                <p>Founder & all-rounder</p>
-                <p>Chat to him about DIY, ferments or gardening.</p>
-              </div>
-            </div>
+            <Member
+              name="Chris Connelly"
+              src="/images/chris.jpg"
+              title="Founder & all-rounder"
+              description="Chat to him about Rust, running or coffee."
+            />
+            <Member
+              name="Endre Kadas"
+              src="/images/endre.jpg"
+              title="Founder & all-rounder"
+              description="Chat to him about DIY, ferments or gardening."
+            />
           </div>
         </Container>
       </Section>
@@ -247,5 +212,56 @@ function Example(props: {
         <p>{props.description}</p>
       </div>
     </li>
+  );
+}
+
+function Member(props: {
+  name: string;
+  src: string;
+  title: string;
+  description: string;
+}): ReactNode {
+  return (
+    <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
+      <img
+        className="h-[8rem] object-contain rounded-xl"
+        alt={`Photo of ${props.name}`}
+        src={props.src}
+      />
+      <div className="flex flex-col gap-2 align-start justify-end">
+        <h3 className="text-lg sm:text-xl font-bold">{props.name}</h3>
+        <p>{props.title}</p>
+        <p>{props.description}</p>
+      </div>
+    </div>
+  );
+}
+
+function ClientProject(props: {
+  title: string;
+  href: string;
+  screenshots: ReactNode;
+  description: string;
+  stack: string;
+  testimonial?: string;
+}): ReactNode {
+  return (
+    <div className="flex flex-col gap-3">
+      <Link
+        href={props.href}
+        className="text-lg sm:text-xl font-bold mb-2"
+        target="_blank"
+      >
+        {props.title}
+      </Link>
+      <div className="flex flex-row flex-wrap gap-4 items-center">
+        {props.screenshots}
+      </div>
+      <p>{props.description}</p>
+      <p>{props.stack}</p>
+      {props.testimonial != null && (
+        <q className="italic">{props.testimonial}</q>
+      )}
+    </div>
   );
 }

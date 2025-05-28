@@ -111,8 +111,9 @@ export default function Home(): ReactNode {
                   />
                 </>
               }
-              description="We are the development partner for Orang Energy, helping people save energy and money through a comprehensive energy savings calculator and connecting them with qualified local installers."
+              description="We developed the software for Orang Energy, an energy savings calculator, aimed at showing the savings achievable through sustainable technology in the home and connecting them with qualified local installers."
               stack="Built using Next.js and Tailwind CSS. Deployed to DigitalOcean App Platform via Github Actions."
+              testimonial="Working in an agile way, Chris and Endre consistently met the aims of development sprints. Where the technical challenges arose or when late requirement changes were introduced, they communicated in a timely and proactive manner to solve any issues. Not only did they perform as an excellent software development team, they also showed great interest in the product design, and provided their own intelligent insights to help with the product design. I highly recommend Digital Society!"
             />
             <ClientProject
               title="Dudley Editions"

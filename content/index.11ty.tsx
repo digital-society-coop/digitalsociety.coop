@@ -20,81 +20,35 @@ export default function Home(): ReactNode {
           </h1>
 
           <Heading>
-            A not-for-profit cooperative building digital products for social
-            good
+            We build bespoke digital tools for complex requirements in web
+            applications, data engineering and cloud.
           </Heading>
 
-          <div className="mb-12 text-lg sm:text-xl flex flex-col gap-2">
+          <div className="mb-12 text-lg sm:text-xl flex flex-col gap-4">
             <p>
-              Our mission is to harness technology for the betterment of
-              society, whether through client projects or in-house product
-              development.
+              With our agile, sprint-based approach, engagements last as long as
+              you need and evolve with your priorities.
             </p>
             <p>
-              Believing that people thrive when motivated by ownership and
-              agency, we operate as a worker-owned cooperative.
+              We are motivated by our mission to harness technology to improve
+              society and operate as a worker-owned not-for-profit co-operative.
             </p>
           </div>
         </Container>
       </Section>
       <Section light>
         <Container>
-          <Heading>We can help you with</Heading>
-
-          <div className="text-base sm:text-lg flex flex-col gap-6">
-            <div className="flex flex-col md:flex-row gap-6 justify-between">
-              <div className="flex-1 flex flex-col gap-4">
-                <img
-                  className="h-[6rem] aspect-square object-contain self-start"
-                  alt="coding representation"
-                  src="/images/code.svg"
-                />
-                <h3 className="text-lg sm:text-xl font-bold">
-                  Getting your projects off the ground
-                </h3>
-                <p>
-                  With our bespoke application development experience, no
-                  requirement is too complex or ambitious. We will bring your
-                  project to life with best practice and at pace.
-                </p>
-              </div>
-              <div className="flex-1 flex flex-col gap-4">
-                <img
-                  className="h-[6rem] aspect-square object-contain self-start"
-                  alt="data representation"
-                  src="/images/database.svg"
-                />
-                <h3 className="text-lg sm:text-xl font-bold">
-                  Help you realise the value of your data
-                </h3>
-                <p>
-                  We enjoy working across the data pipeline, from the
-                  foundational "plumbing" and modelling to the last-mile
-                  prediction and insights.
-                </p>
-              </div>
-            </div>
-            <p>
-              With our agile, sprint-based approach, our engagements last as
-              long as you need and evolve with your priorities. Read more on{" "}
-              <Link href="/how">how we work</Link>.
-            </p>
-            <a
-              data-umami-event="out-mail"
-              href="mailto:hello@digitalsociety.coop"
-              className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
-            >
-              Start your project with us
-            </a>
-          </div>
-        </Container>
-      </Section>
-      <Section>
-        <Container>
-          <Heading>Our client projects include</Heading>
-
+          <Heading>We get your projects off the ground</Heading>
+          <p className="text-base sm:text-lg">
+            With our bespoke application development experience, no requirement
+            is too complex or ambitious. We will bring your project to life with
+            best practice and at pace.
+          </p>
+          <h3 className="text-lg sm:text-xl font-bold mt-6">
+            Some examples of our work
+          </h3>
           <div className="flex flex-col gap-10">
-            <ClientProject
+            <Example
               title="Orang Energy"
               href="https://orang.energy"
               screenshots={
@@ -115,7 +69,7 @@ export default function Home(): ReactNode {
               stack="Built using Next.js and Tailwind CSS. Deployed to DigitalOcean App Platform via Github Actions."
               testimonial="Working in an agile way, Chris and Endre consistently met the aims of development sprints. Where the technical challenges arose or when late requirement changes were introduced, they communicated in a timely and proactive manner to solve any issues. Not only did they perform as an excellent software development team, they also showed great interest in the product design, and provided their own intelligent insights to help with the product design. I highly recommend Digital Society!"
             />
-            <ClientProject
+            <Example
               title="Dudley Editions"
               href="https://dudleyeditions.com"
               screenshots={
@@ -142,33 +96,99 @@ export default function Home(): ReactNode {
               testimonial="The team at Digital Society are a delight to work with. They're always professional, approachable and flexible. They're committed to delivering high quality products and we couldn't be happier with the ongoing partnership we have them."
             />
           </div>
+          <a
+            data-umami-event="out-mail"
+            href="mailto:hello@digitalsociety.coop"
+            className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+          >
+            Start your project with us
+          </a>
         </Container>
       </Section>
-      <Section light>
+      <Section>
         <Container>
-          <Heading>What we're building</Heading>
+          <Heading>We help you realise the value of your data</Heading>
 
-          <div className="mb-6 text-base sm:text-lg">
-            <p>Tools we're building ourselves for general use.</p>
+          <p className="text-base sm:text-lg">
+            Poor fundamentals can limit the value you get from your data. We
+            will help you lay your data foundations with our data engineering,
+            modelling and integration expertise.
+          </p>
+
+          <h3 className="text-lg sm:text-xl font-bold mt-6">
+            Some examples of our work
+          </h3>
+          <div className="flex flex-col gap-10">
+            <Example
+              title="tap"
+              href="https://tapintodata.com"
+              screenshots={
+                <>
+                  <img
+                    alt="Screenshot of defining data in tap"
+                    src="/images/data.png"
+                    className="h-[11rem] object-contain rounded-xl"
+                  />
+                  <img
+                    alt="Screenshot of defining models in tap"
+                    src="/images/models.png"
+                    className="h-[11rem] object-contain rounded-xl"
+                  />
+                  <img
+                    alt="Screenshot of listing APIs in tap"
+                    src="/images/apis.png"
+                    className="h-[11rem] object-contain rounded-xl"
+                  />
+                </>
+              }
+              description="A SaaS platform allowing you to transform, join and serve data with flexible and powerful SQL queries and documented, secured APIs. We built this tool to unlock the social value of public and private data."
+              stack="Built using Rust, Apache DataFusion and SolidJS. Deployed to AWS via Github Actions."
+            />
+            <div className="flex flex-col gap-3">
+              <h4 className="text-lg sm:text-xl font-bold mb-2">
+                Data portals powered by tap
+              </h4>
+              <div className="flex flex-row flex-wrap gap-4 items-center">
+                <img
+                  alt="Screenshot of the home page for epcdata.scot"
+                  src="/images/home-epcdata.png"
+                  className="h-[11rem] object-contain rounded-xl"
+                />
+                <img
+                  alt="Screenshot of the API documenation page for epcdata.scot"
+                  src="/images/documentation-epcdata.png"
+                  className="h-[11rem] object-contain rounded-xl"
+                />
+                <img
+                  alt="Screenshot of the Example usage page for healthdata.scot"
+                  src="/images/example-healthdata.png"
+                  className="h-[11rem] object-contain rounded-xl"
+                />
+              </div>
+              <p>
+                <Link href="https://epcdata.scot" target="_blank">
+                  epcdata.scot
+                </Link>{" "}
+                and{" "}
+                <Link href="https://healthdata.scot" target="_blank">
+                  healthdata.scot
+                </Link>{" "}
+                are data portals that enable consuming datasets from
+                applications, removing the toil and enabling innovation. Powered
+                by tap.
+              </p>
+              <p>
+                Built using Fresh. Deployed to Kubernetes via Github Actions.
+              </p>
+            </div>
           </div>
-
-          <ul className="flex flex-col gap-6">
-            <Example
-              hostname="epcdata.scot"
-              description="An unofficial REST API for Scottish domestic Energy Performance Certificates (EPCs)."
-              logo="/images/epcdata-scot.svg"
-            />
-            <Example
-              hostname="healthdata.scot"
-              description="An unofficial REST API for Scottish health service location data."
-              logo="/images/healthdata-scot.svg"
-            />
-            <Example
-              hostname="tapintodata.com"
-              description="A minimalist platform to unlock the social value of public and private data."
-              logo="/images/tap.svg"
-            />
-          </ul>
+          <a
+            data-umami-event="out-mail"
+            href="mailto:hello@digitalsociety.coop"
+            className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+          >
+            Get more from your data
+          </a>
         </Container>
       </Section>
       <Section>
@@ -194,28 +214,6 @@ export default function Home(): ReactNode {
   );
 }
 
-function Example(props: {
-  logo: string;
-  hostname: string;
-  description: string;
-}): ReactNode {
-  return (
-    <li className="flex flex-row items-center gap-6 text-lg sm:text-xl">
-      <img
-        alt={`${props.hostname} logo`}
-        src={props.logo}
-        className="w-16 aspect-1"
-      />
-      <div className="flex flex-col gap-2">
-        <Link href={`https://${props.hostname}`} target="_blank">
-          {props.hostname}
-        </Link>
-        <p>{props.description}</p>
-      </div>
-    </li>
-  );
-}
-
 function Member(props: {
   name: string;
   src: string;
@@ -238,7 +236,7 @@ function Member(props: {
   );
 }
 
-function ClientProject(props: {
+function Example(props: {
   title: string;
   href: string;
   screenshots: ReactNode;

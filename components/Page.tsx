@@ -6,6 +6,9 @@ export default function Page(props: {
   description: string;
   children: ReactNode;
 }): ReactNode {
+  const webAnalyticsSrc = process.env.WEB_ANALYTICS_SRC;
+  const webAnalyticsId = process.env.WEB_ANALYTICS_ID;
+
   return (
     <>
       <html lang="en" className="h-full margin-0">
@@ -22,8 +25,8 @@ export default function Page(props: {
           <link rel="stylesheet" href="/tailwind.css" />
           <script
             defer
-            src="https://web-analytics.runtime-prod.digitalsociety.coop/script.js"
-            data-website-id="fca41b92-83a4-457a-a251-e3947a37092a"
+            src={webAnalyticsSrc}
+            data-website-id={webAnalyticsId}
           ></script>
         </head>
 

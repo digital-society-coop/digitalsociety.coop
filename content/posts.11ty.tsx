@@ -15,7 +15,7 @@ export default function Posts(): ReactNode {
       <Section>
         <PageTitle>Posts</PageTitle>
         <Post
-          href="/posts/job-satisfaction"
+          href="/posts/job-satisfaction/"
           title="Job satisfaction"
           date="27/05/2025"
           description="A self-reflection exercise"
@@ -23,7 +23,7 @@ export default function Posts(): ReactNode {
           src="/images/zen.jpg"
         />
         <Post
-          href="/posts/tap-generally-available"
+          href="/posts/tap-generally-available/"
           title="tap is generally available!"
           date="15/05/2025"
           description="Our first SaaS product, enabling teams to transform, join and serve data with flexible and powerful SQL queries and documented, secured APIs"
@@ -31,7 +31,7 @@ export default function Posts(): ReactNode {
           src="/images/tap.svg"
         />
         <Post
-          href="/posts/first-year"
+          href="/posts/first-year/"
           title="Digital Society is 1 years old!"
           date="11/12/2024"
           description="Celebrating our first year projects."

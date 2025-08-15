@@ -15,6 +15,15 @@ export default function Insights(): ReactNode {
         <PageTitle>Insights</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Post
+            href="/posts/migrating-to-hetzner-cloud/"
+            title="Migrating to Hetzner"
+            date="02/10/2025"
+            description="Saving 76% on our cloud bills and tripling our capacity"
+            alt=""
+            src="/images/hetzner-logo.png"
+            imgContainerClass="bg-[#d50c2d]!"
+          />
+          <Post
             href="/posts/job-satisfaction/"
             title="Job satisfaction"
             date="27/05/2025"
@@ -51,13 +60,14 @@ function Post(props: {
   description: string;
   alt: string;
   src: string;
+  imgContainerClass?: string;
 }): React.ReactNode {
   return (
     <a
       href={props.href}
-      className="flex-1 flex flex-col p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
+      className="flex-1 flex flex-col p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline max-w-full"
     >
-      <div className="max-h-[15rem] max-w-[20rem] w-full self-center rounded-xl overflow-hidden bg-sumiInk1 aspect-320/213 flex flex-col justify-center">
+      <div className={`max-h-[15rem] max-w-[20rem] w-full self-center rounded-xl overflow-hidden bg-sumiInk1 aspect-320/213 flex flex-col justify-center ${props.imgContainerClass}`}>
         <img alt={props.alt} src={props.src} className="w-full" />
       </div>
       <div className="flex-1 flex flex-col justify-between text-springBlue min-w-0 overflow-hidden w-full">

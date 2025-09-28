@@ -49,6 +49,27 @@ export default function Home(): ReactNode {
           </h3>
           <div className="flex flex-col gap-10">
             <Example
+              title="Youth Work SkillsTrack"
+              href="https://impact.youthlink.scot"
+              screenshots={[
+                {
+                  alt: "Screenshot from impact.youthlink.scot showing the login page",
+                  src: "/images/youthlink-form.png",
+                },
+                {
+                  alt: "Screenshot from impact.youthlink.scot showing the programme details page",
+                  src: "/images/youthlink-programme.png",
+                },
+                {
+                  alt: "Screenshot from impact.youthlink.scot showing an organisation dashboard",
+                  src: "/images/youthlink-dashboard.png",
+                },
+              ]}
+              description="We built a bespoke web application for YouthLink Scotland to measure and report the impact of youth work across their member organisations. Youth workers record progress session-by-session and the application anonymises and aggregates progress to report at project, programme, and national levels."
+              stack="Built using Next.js and Tailwind CSS. Deployed to DigitalOcean App Platform via Github Actions."
+              testimonial="We couldn’t be happier with the experience we’ve had of working with Chris and Endre. Not only is the tool they designed exactly what we wanted (and more), their support to help us (and our co-design partners) realise it on behalf of the youth work sector was “above and beyond”. They were really interested in what we were trying to achieve and that together with their expertise, professionalism, friendliness and conscientiousness made them a pleasure to work with. The sprint model worked so well for us, it kept momentum going and it felt that every aspect of the work was purposeful and in-hand. We’re delighted that we will have an ongoing partnership with them as the tool is rolled out."
+            />
+            <Example
               title="Orang Energy"
               href="https://orang.energy"
               screenshots={[

@@ -51,20 +51,16 @@ export default function Home(): ReactNode {
             <Example
               title="Orang Energy"
               href="https://orang.energy"
-              screenshots={
-                <>
-                  <img
-                    alt="Screenshot from Orang Energy showing the calculator page"
-                    src="/images/orang-energy-screenshot-1.png"
-                    className="h-[11rem] object-contain rounded-xl"
-                  />
-                  <img
-                    alt="Screenshot from Orang Energy showing the installer-directory"
-                    src="/images/orang-energy-screenshot-2.png"
-                    className="h-[11rem] object-contain rounded-xl"
-                  />
-                </>
-              }
+              screenshots={[
+                {
+                  alt: "Screenshot from Orang Energy showing the calculator page",
+                  src: "/images/orang-energy-screenshot-1.png",
+                },
+                {
+                  alt: "Screenshot from Orang Energy showing the installer-directory",
+                  src: "/images/orang-energy-screenshot-2.png",
+                },
+              ]}
               description="We developed the software for Orang Energy, an energy savings calculator, aimed at showing the savings achievable through sustainable technology in the home and connecting them with qualified local installers."
               stack="Built using Next.js and Tailwind CSS. Deployed to DigitalOcean App Platform via Github Actions."
               testimonial="Working in an agile way, Chris and Endre consistently met the aims of development sprints. Where the technical challenges arose or when late requirement changes were introduced, they communicated in a timely and proactive manner to solve any issues. Not only did they perform as an excellent software development team, they also showed great interest in the product design, and provided their own intelligent insights to help with the product design. I highly recommend Digital Society!"
@@ -72,25 +68,20 @@ export default function Home(): ReactNode {
             <Example
               title="Dudley Editions"
               href="https://dudleyeditions.com"
-              screenshots={
-                <>
-                  <img
-                    alt="Screenshot from Dudley Editions app showing the book library"
-                    src="/images/dudley-editions-screenshot-2.jpg"
-                    className="h-[12rem] object-contain rounded-xl"
-                  />
-                  <img
-                    alt="Screenshot from Dudley Editions app showing a book description"
-                    src="/images/dudley-editions-screenshot-1.jpg"
-                    className="h-[12rem] object-contain rounded-xl"
-                  />
-                  <img
-                    alt="Screenshot from Dudley Editions app showing my library"
-                    src="/images/dudley-editions-screenshot-3.jpg"
-                    className="h-[12rem] object-contain rounded-xl"
-                  />
-                </>
-              }
+              screenshots={[
+                {
+                  alt: "Screenshot from Dudley Editions app showing the book library",
+                  src: "/images/dudley-editions-screenshot-2.jpg",
+                },
+                {
+                  alt: "Screenshot from Dudley Editions app showing a book description",
+                  src: "/images/dudley-editions-screenshot-1.jpg",
+                },
+                {
+                  alt: "Screenshot from Dudley Editions app showing my library",
+                  src: "/images/dudley-editions-screenshot-3.jpg",
+                },
+              ]}
               description="We are the development partner for Dudley Editions, a mobile app to create and share personalised audiobooks in minutes."
               stack="Built using Flutter and NestJS. Deployed to AWS via Github Actions and available on both iOS and Android app stores."
               testimonial="The team at Digital Society are a delight to work with. They're always professional, approachable and flexible. They're committed to delivering high quality products and we couldn't be happier with the ongoing partnership we have them."
@@ -122,65 +113,55 @@ export default function Home(): ReactNode {
             <Example
               title="tap"
               href="https://tapintodata.com"
-              screenshots={
-                <>
-                  <img
-                    alt="Screenshot of defining data in tap"
-                    src="/images/data.png"
-                    className="h-[11rem] object-contain rounded-xl"
-                  />
-                  <img
-                    alt="Screenshot of defining models in tap"
-                    src="/images/models.png"
-                    className="h-[11rem] object-contain rounded-xl"
-                  />
-                  <img
-                    alt="Screenshot of listing APIs in tap"
-                    src="/images/apis.png"
-                    className="h-[11rem] object-contain rounded-xl"
-                  />
-                </>
-              }
+              screenshots={[
+                {
+                  alt: "Screenshot of defining data in tap",
+                  src: "/images/data.png",
+                },
+                {
+                  alt: "Screenshot of defining models in tap",
+                  src: "/images/models.png",
+                },
+                {
+                  alt: "Screenshot of listing APIs in tap",
+                  src: "/images/apis.png",
+                },
+              ]}
               description="A SaaS platform allowing you to transform, join and serve data with flexible and powerful SQL queries and documented, secured APIs. We built this tool to unlock the social value of public and private data."
               stack="Built using Rust, Apache DataFusion and SolidJS. Deployed to AWS via Github Actions."
             />
-            <div className="flex flex-col gap-3">
-              <h4 className="text-lg sm:text-xl font-bold mb-2">
-                Data portals powered by tap
-              </h4>
-              <div className="flex flex-row flex-wrap gap-4 items-center">
-                <img
-                  alt="Screenshot of the home page for epcdata.scot"
-                  src="/images/home-epcdata.png"
-                  className="h-[11rem] object-contain rounded-xl"
-                />
-                <img
-                  alt="Screenshot of the API documenation page for epcdata.scot"
-                  src="/images/documentation-epcdata.png"
-                  className="h-[11rem] object-contain rounded-xl"
-                />
-                <img
-                  alt="Screenshot of the Example usage page for healthdata.scot"
-                  src="/images/example-healthdata.png"
-                  className="h-[11rem] object-contain rounded-xl"
-                />
-              </div>
-              <p>
-                <Link href="https://epcdata.scot" target="_blank">
-                  epcdata.scot
-                </Link>{" "}
-                and{" "}
-                <Link href="https://healthdata.scot" target="_blank">
-                  healthdata.scot
-                </Link>{" "}
-                are data portals that enable consuming datasets from
-                applications, removing the toil and enabling innovation. Powered
-                by tap.
-              </p>
-              <p>
-                Built using Fresh. Deployed to Kubernetes via Github Actions.
-              </p>
-            </div>
+            <Example
+              title="Data portals powered by tap"
+              screenshots={[
+                {
+                  alt: "Screenshot of the home page for epcdata.scot",
+                  src: "/images/home-epcdata.png",
+                },
+                {
+                  alt: "Screenshot of the API documenation page for e: cdata.scot",
+                  src: "/images/documentation-epcdata.png",
+                },
+                {
+                  alt: "Screenshot of the Example usage page for h: althdata.scot",
+                  src: "/images/example-healthdata.png",
+                },
+              ]}
+              description={(
+                <>
+                  <Link href="https://epcdata.scot" target="_blank">
+                    epcdata.scot
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="https://healthdata.scot" target="_blank">
+                    healthdata.scot
+                  </Link>{" "}
+                  are data portals that enable consuming datasets from
+                  applications, removing the toil and enabling innovation. Powered
+                  by tap.
+                </>
+              )}
+              stack="Built using Fresh. Deployed to Kubernetes via Github Actions."
+            />
           </div>
           <a
             data-umami-event="out-mail"
@@ -236,25 +217,39 @@ function Member(props: {
   );
 }
 
+type Screenshot = {
+  alt: string;
+  src: string;
+}
+
 function Example(props: {
   title: string;
-  href: string;
-  screenshots: ReactNode;
-  description: string;
+  href?: string;
+  screenshots: Screenshot[];
+  description: ReactNode;
   stack: string;
   testimonial?: string;
 }): ReactNode {
   return (
     <div className="flex flex-col gap-3">
-      <Link
-        href={props.href}
-        className="text-lg sm:text-xl font-bold mb-2"
-        target="_blank"
-      >
-        {props.title}
-      </Link>
+      {props.href
+        ? (
+            <Link
+              href={props.href}
+              className="text-lg sm:text-xl font-bold mb-2"
+              target="_blank"
+            >
+              {props.title}
+            </Link>
+          )
+        : (
+            <h3 className="text-lg sm:text-xl font-bold mb-2">
+              {props.title}
+            </h3>
+          )
+      }
       <div className="flex flex-row flex-wrap gap-4 items-center">
-        {props.screenshots}
+        {props.screenshots.map(s => <Screenshot screenshot={s} />)}
       </div>
       <p>{props.description}</p>
       <p>{props.stack}</p>
@@ -262,5 +257,100 @@ function Example(props: {
         <q className="italic">{props.testimonial}</q>
       )}
     </div>
+  );
+}
+
+function Screenshot(props: {
+  screenshot: Screenshot;
+}): ReactNode {
+  return (
+    <>
+      <img
+        id={`${props.screenshot.src}-thumb`}
+        alt={props.screenshot.alt}
+        src={props.screenshot.src}
+        className="h-[12rem] object-contain rounded-xl cursor-pointer"
+      />
+      <dialog
+        id={`${props.screenshot.src}-dialog`}
+        className="fixed left-1/2 top-1/2 translate-[-50%] max-w-full size-max md:max-h-[calc(100%-24*var(--spacing))] md:max-w-[calc(100%-24*var(--spacing))] backdrop:backdrop-blur-sm bg-linkBlue border-4 md:border-8 rounded-lg md:rounded-xl border-linkBlue outline-0 open:flex flex-col"
+        /* @ts-ignore */
+        closedBy="any"
+      >
+        <div className="flex justify-end bg-linkBlue pb-[8px] pr-[8px]">
+          <a
+            id={`${props.screenshot.src}-close`}
+            className="p-1 rounded-sm cursor-pointer text-lighterYellow! hover:bg-waveBlue2!"
+          >
+            Close
+          </a>
+        </div>
+        <div id={`${props.screenshot.src}-scroll`} className="overflow-y-auto">
+          <img
+            id={`${props.screenshot.src}-img`}
+            alt={props.screenshot.alt}
+            src={props.screenshot.src}
+            className="object-contain rounded-sm"
+          />
+        </div>
+      </dialog>
+      <script
+        children={`((id) => {
+          window.screenshots = window.screenshots || [];
+          window.screenshots.push(id);
+          const idx = window.screenshots.length - 1;
+          let currentIdx = idx;
+
+          const thumb = document.getElementById(\`\${id}-thumb\`);
+          const dialog = document.getElementById(\`\${id}-dialog\`);
+          const close = document.getElementById(\`\${id}-close\`);
+          const scroll = document.getElementById(\`\${id}-scroll\`);
+          const img = document.getElementById(\`\${id}-img\`);
+
+          thumb.addEventListener("click", () => {
+            dialog.showModal();
+            document.body.classList.add("overflow-hidden");
+            document.addEventListener("keydown", onKeydown);
+          });
+
+          close.addEventListener("click", (e) => {
+            e.preventDefault();
+            dialog.close();
+          })
+
+          dialog.addEventListener("cancel", () => {
+            onClose();
+          });
+
+          dialog.addEventListener("close", () => {
+            onClose();
+          });
+
+          function onClose () {
+            currentIdx = idx;
+            img.src = window.screenshots[idx];
+            document.body.classList.remove("overflow-hidden");
+            document.removeEventListener("keydown", onKeydown);
+          }
+
+          function onKeydown (e) {
+            switch (e.keyCode) {
+              case 37:
+                if (currentIdx > 0) {
+                  img.src = window.screenshots[--currentIdx];
+                  scroll.scrollTop = 0;
+                }
+                break
+              case 39:
+                if (currentIdx < window.screenshots.length - 1) {
+                  img.src = window.screenshots[++currentIdx];
+                  scroll.scrollTop = 0;
+                }
+                break
+            }
+          }
+        })(${JSON.stringify(props.screenshot.src)})`}
+      />
+    </>
   );
 }

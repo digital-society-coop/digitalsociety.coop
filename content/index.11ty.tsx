@@ -230,19 +230,19 @@ function Example(props: {
     <div className="flex flex-col gap-3">
       {props.href
         ? (
-            <Link
-              href={props.href}
-              className="text-lg sm:text-xl font-bold mb-2"
-              target="_blank"
-            >
-              {props.title}
-            </Link>
-          )
+          <Link
+            href={props.href}
+            className="text-lg sm:text-xl font-bold mb-2"
+            target="_blank"
+          >
+            {props.title}
+          </Link>
+        )
         : (
-            <h3 className="text-lg sm:text-xl font-bold mb-2">
-              {props.title}
-            </h3>
-          )
+          <h3 className="text-lg sm:text-xl font-bold mb-2">
+            {props.title}
+          </h3>
+        )
       }
       <div className="flex flex-row flex-wrap gap-4 items-center">
         {props.screenshots.map(t => <Thumbnail {...t} />)}

@@ -11,14 +11,43 @@ export default function Projects(): ReactNode {
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our projects."
     >
       <Section>
-        <PageTitle>Projects</PageTitle>
-        <div className="max-w-6xl p-4 w-screen flex flex-col sm:flex-row flex-wrap items-center sm:justify-start gap-4">
+        <PageTitle>Featured projects</PageTitle>
+        <div className="max-w-6xl p-4 w-screen flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Project
-            href="/posts/first-year/"
-            title="Digital Society is 1 years old!"
-            description="Celebrating our first year projects."
-            alt="Birthday cake with one candle"
-            src="/images/cake.jpg"
+            href="/projects/orang-energy/"
+            title="Orang Energy"
+            description="Helping reduce your energy bills"
+            screenshots={
+              <img
+                alt="Screenshot from Orang Energy showing the calculator page"
+                src="/images/orang-energy-screenshot-1.png"
+                className="w-full object-cover"
+              />
+            }
+          />
+          <Project
+            href="/projects/dudley-editions/"
+            title="Dudley Editions"
+            description="Creating connections through personalised audiobooks"
+            screenshots={
+              <>
+                <img
+                  alt="Screenshot from Dudley Editions app showing the book library"
+                  src="/images/dudley-editions-screenshot-1.jpg"
+                  className="w-full object-cover"
+                />
+                <img
+                  alt="Screenshot from Dudley Editions app showing a book description"
+                  src="/images/dudley-editions-screenshot-2.jpg"
+                  className="w-full object-cover"
+                />
+                <img
+                  alt="Screenshot from Dudley Editions app showing my library"
+                  src="/images/dudley-editions-screenshot-2.jpg"
+                  className="w-full object-cover"
+                />
+              </>
+            }
           />
         </div>
       </Section>
@@ -30,25 +59,20 @@ function Project(props: {
   href: string;
   title: string;
   description: string;
-  alt: string;
-  src: string;
+  screenshots: React.ReactNode;
 }): React.ReactNode {
   return (
     <a
       href={props.href}
-      className="flex flex-col max-w-[24rem] gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
+      className="flex flex-col sm:max-w-1/3 gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
     >
-      <div className="max-h-[15rem] w-full self-center rounded-xl overflow-hidden bg-sumiInk1 aspect-320/213 flex flex-col justify-center">
-        <img alt={props.alt} src={props.src} className="w-full" />
+      <div className="max-h-[15rem] w-full self-center rounded-xl overflow-hidden aspect-320/213 flex gap-2 items-between">
+        {props.screenshots}
       </div>
-      <div className="flex flex-col gap-2 text-springBlue min-w-0 overflow-hidden w-full">
-        <h2 className="text-2xl sm:text-3xl">
-          {props.title}
-        </h2>
-        <p className="overflow-hidden text-ellipsis text-nowrap">
-          {props.description}
-        </p>
-      </div>
+      <h2 className="text-2xl sm:text-3xl text-springBlue min-w-0">
+        <strong className="font-extrabold">{props.title}</strong>{" "}
+        <span className="font-light">-</span> {props.description}
+      </h2>
     </a>
   );
 }

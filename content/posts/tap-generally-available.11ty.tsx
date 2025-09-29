@@ -10,7 +10,7 @@ import PageTitle from "../../components/PageTitle";
 export default function TapGenerallyAvailable(): ReactNode {
   return (
     <Page
-      title="Posts | tap is generally available"
+      title="Insights | tap is generally available"
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. tap is generally available!"
     >
       <Section>

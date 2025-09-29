@@ -106,7 +106,7 @@ export default function Page(props: {
                     </li>
                     <li>
                       <Link href="/posts/" className="font-bold text-xl">
-                        Posts
+                        Insights
                       </Link>
                     </li>
                     <li>
@@ -126,7 +126,7 @@ export default function Page(props: {
               <Link href="/#projects" className="font-bold">Projects</Link>
               <Link href="/#products" className="font-bold">Products</Link>
               <Link href="/#team" className="font-bold">Team</Link>
-              <Link href="/posts/" className="font-bold">Posts</Link>
+              <Link href="/posts/" className="font-bold">Insights</Link>
               <a
                 data-umami-event="out-mail"
                 href="mailto:hello@digitalsociety.coop"
@@ -160,7 +160,7 @@ export default function Page(props: {
           <h3 className="mb-2 text-lg">About us</h3>
           <ul className="flex flex-col gap-1">
             <li>
-              <Link href="/posts">Posts</Link>
+              <Link href="/posts">Insights</Link>
             </li>
             <li>
               <Link href="/how">How we work</Link>

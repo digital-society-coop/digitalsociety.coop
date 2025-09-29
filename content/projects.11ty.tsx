@@ -14,6 +14,20 @@ export default function Projects(): ReactNode {
         <PageTitle>Some of our projects</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Project
+            href="/projects/tap/"
+            title="tap"
+            description="Unlocking the value of data"
+            screenshots={
+              <div className="max-h-[15rem] w-full self-center rounded-xl overflow-hidden bg-sumiInk1 aspect-320/213 flex flex-col justify-center">
+                <img
+                  alt="Logo for tap"
+                  src="/images/tap.svg"
+                  className="w-full"
+                />
+              </div>
+            }
+          />
+          <Project
             href="/projects/orang-energy/"
             title="Orang Energy"
             description="Helping reduce your energy bills"

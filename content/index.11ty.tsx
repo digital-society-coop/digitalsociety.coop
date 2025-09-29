@@ -42,6 +42,20 @@ export default function Home(): ReactNode {
         <h3 className="text-lg sm:text-xl font-bold mt-6">Featured projects</h3>
         <div className="flex flex-col sm:flex-row sm:justify-start gap-8">
           <Project
+            href="/projects/tap/"
+            title="tap"
+            description="Unlocking the value of data"
+            screenshots={
+              <div className="max-h-[15rem] w-full self-center rounded-xl overflow-hidden bg-sumiInk1 aspect-320/213 flex flex-col justify-center">
+                <img
+                  alt="Logo for tap"
+                  src="/images/tap.svg"
+                  className="w-full"
+                />
+              </div>
+            }
+          />
+          <Project
             href="/projects/orang-energy/"
             title="Orang Energy"
             description="Helping reduce your energy bills"
@@ -78,6 +92,9 @@ export default function Home(): ReactNode {
             }
           />
         </div>
+        <p className="text-start">
+          <Link href="/projects/">More projects {"\u2192"}</Link>
+        </p>
       </Section>
       <Section>
         <Heading anchor="products">
@@ -94,26 +111,6 @@ export default function Home(): ReactNode {
           Some examples of our work
         </h3>
         <div className="flex flex-col gap-10">
-          <Example
-            title="tap"
-            href="https://tapintodata.com"
-            screenshots={[
-              {
-                alt: "Screenshot of defining data in tap",
-                src: "/images/data.png",
-              },
-              {
-                alt: "Screenshot of defining models in tap",
-                src: "/images/models.png",
-              },
-              {
-                alt: "Screenshot of listing APIs in tap",
-                src: "/images/apis.png",
-              },
-            ]}
-            description="A SaaS platform allowing you to transform, join and serve data with flexible and powerful SQL queries and documented, secured APIs. We built this tool to unlock the social value of public and private data."
-            stack="Built using Rust, Apache DataFusion and SolidJS. Deployed to AWS via Github Actions."
-          />
           <Example
             title="Data portals powered by tap"
             screenshots={[

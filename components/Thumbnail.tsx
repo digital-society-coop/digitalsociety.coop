@@ -4,6 +4,8 @@ import ClientScript from "./ClientScript";
 export type ThumbnailProps = {
   alt: string;
   src: string;
+  thumbClassName?: string;
+  containerClassName?: string;
 };
 
 export default function Thumbnail(props: ThumbnailProps): ReactNode {
@@ -13,7 +15,7 @@ export default function Thumbnail(props: ThumbnailProps): ReactNode {
         id={`${props.src}-thumb`}
         alt={props.alt}
         src={props.src}
-        className="h-[12rem] object-contain rounded-xl cursor-pointer"
+        className={`h-[12rem] object-contain rounded-xl cursor-pointer ${props.thumbClassName ?? ""}`}
       />
       <dialog
         id={`${props.src}-dialog`}
@@ -23,7 +25,7 @@ export default function Thumbnail(props: ThumbnailProps): ReactNode {
       >
         <div
           id={`${props.src}-container`}
-          className="relative max-w-full max-h-full overflow-hidden rounded-lg bg-linkBlue text-right"
+          className={`relative max-w-full max-h-full overflow-hidden rounded-lg bg-linkBlue text-right ${props.containerClassName ?? ""}`}
         >
           <a
             id={`${props.src}-close`}

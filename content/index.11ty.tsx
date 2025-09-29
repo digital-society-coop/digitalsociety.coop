@@ -23,7 +23,7 @@ export default function Home(): ReactNode {
           tools with best practice and at pace.
         </Heading>
         <p className="text-end">
-          <Link href="">More about us {"\u2192"}</Link>
+          <Link href="/about/">More about us {"\u2192"}</Link>
         </p>
       </Section>
       <Section light>
@@ -155,46 +155,7 @@ export default function Home(): ReactNode {
           Get more from your data
         </a>
       </Section>
-      <Section>
-        <Heading anchor="team">Meet the team</Heading>
-        <div className="flex flex-row flex-wrap justify-between gap-6">
-          <Member
-            name="Chris Connelly"
-            src="/images/chris.jpg"
-            title="Founder & all-rounder"
-            description="Chat to him about Rust, running or coffee."
-          />
-          <Member
-            name="Endre Kadas"
-            src="/images/endre.jpg"
-            title="Founder & all-rounder"
-            description="Chat to him about DIY, ferments or gardening."
-          />
-        </div>
-      </Section>
     </Page>
-  );
-}
-
-function Member(props: {
-  name: string;
-  src: string;
-  title: string;
-  description: string;
-}): ReactNode {
-  return (
-    <div className="flex-1 flex flex-row gap-4 min-w-[280px]">
-      <img
-        className="h-[8rem] object-contain rounded-xl"
-        alt={`Photo of ${props.name}`}
-        src={props.src}
-      />
-      <div className="flex flex-col gap-2 align-start justify-end">
-        <h3 className="text-lg sm:text-xl font-bold">{props.name}</h3>
-        <p>{props.title}</p>
-        <p>{props.description}</p>
-      </div>
-    </div>
   );
 }
 

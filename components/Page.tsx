@@ -82,8 +82,8 @@ export default function Page(props: {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#team" className="text-xl">
-                        Team
+                      <Link href="/about/" className="text-xl">
+                        About
                       </Link>
                     </li>
                     <li>
@@ -107,7 +107,7 @@ export default function Page(props: {
             <div className="hidden sm:flex flex-row items-center gap-3 gap-2 md:gap-10 z-100">
               <Link href="/projects">Projects</Link>
               <Link href="/#products">Products</Link>
-              <Link href="/#team">Team</Link>
+              <Link href="/about/">About</Link>
               <Link href="/posts/">Insights</Link>
               <a
                 data-umami-event="out-mail"
@@ -139,16 +139,22 @@ export default function Page(props: {
           />
         </div>
         <div className="order-first sm:order-2">
-          <h3 className="mb-2 text-lg">About us</h3>
+          <h3 className="mb-2 text-lg">Explore</h3>
           <ul className="flex flex-col gap-1">
             <li>
-              <Link href="/posts">Insights</Link>
+              <Link href="/about/">About</Link>
             </li>
             <li>
-              <Link href="/how">How we work</Link>
+              <Link href="/projects/">Projects</Link>
             </li>
             <li>
-              <Link href="/privacy">Privacy Policy</Link>
+              <Link href="/posts/">Insights</Link>
+            </li>
+            <li>
+              <Link href="/how/">How we work</Link>
+            </li>
+            <li>
+              <Link href="/privacy/">Privacy Policy</Link>
             </li>
           </ul>
         </div>

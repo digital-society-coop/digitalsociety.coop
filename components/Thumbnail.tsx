@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import ClientScript from "./ClientScript";
 
 export type ThumbnailProps = {
   alt: string;
@@ -38,17 +39,12 @@ export default function Thumbnail(props: ThumbnailProps): ReactNode {
           />
         </div>
       </dialog>
-      <script
-        children={`(${String(setupThumbnail)})(
-          window.thumbnails || (window.thumbnails = []),
-          ${JSON.stringify(props.src)},
-        )
-
-        /* Our String(...) trick above injects references to this unknown function. */
-        function __name(arg) {
-          return arg;
-        }
-        `}
+      <ClientScript
+        fn={setupThumbnail}
+        args={[
+          "window.thumbnails || (window.thumbnails = [])",
+          JSON.stringify(props.src),
+        ]}
       />
     </>
   );

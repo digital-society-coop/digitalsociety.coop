@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "./Link";
+import ClientScript from "./ClientScript";
 
 export default function Page(props: {
   title: string;
@@ -24,26 +25,7 @@ export default function Page(props: {
           src={webAnalyticsSrc}
           data-website-id={webAnalyticsId}
         ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.getElementById('mobile-menu');
-
-            window.addEventListener('hashchange', function() {
-              menuToggle.checked = false;
-            });
-
-            const anchorLinks = document.querySelectorAll('a[href^="/#"]');
-            anchorLinks.forEach(link => {
-              link.addEventListener('click', function() {
-                menuToggle.checked = false;
-              });
-            });
-          });
-          `,
-          }}
-        />
+        <ClientScript fn={initMenu} />
       </head>
 
       <body className="h-full margin-0 flex flex-col bg-sumiInk1 text-lighterYellow has-[#mobile-menu:checked]:overflow-hidden">
@@ -203,4 +185,24 @@ export default function Page(props: {
       </footer>
     </html>
   );
+}
+
+function initMenu (): void {
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('mobile-menu');
+    if (!(menuToggle instanceof HTMLInputElement)) {
+      throw new Error("Failed to initialise menu: couldn't find valid mobile-menu");
+    }
+
+    window.addEventListener('hashchange', function() {
+      menuToggle.checked = false;
+    });
+
+    const anchorLinks = document.querySelectorAll('a[href^="/#"]');
+    anchorLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menuToggle.checked = false;
+      });
+    });
+  });
 }

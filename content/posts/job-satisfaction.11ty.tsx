@@ -11,7 +11,7 @@ import Heading from "../../components/Heading";
 export default function JobSatisfaction(): ReactNode {
   return (
     <Page
-      title="Posts | Job satisfaction"
+      title="Insights | Job satisfaction"
       description="Digital Society, a not-for-profit cooperative building digital products for social good. Job satisfaction."
     >
       <Section>

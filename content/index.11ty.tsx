@@ -38,7 +38,7 @@ export default function Home(): ReactNode {
       </Section>
       <Section light>
         <Container>
-          <Heading>We get your projects off the ground</Heading>
+          <Heading anchor="projects">We get your projects off the ground</Heading>
           <p className="text-base sm:text-lg">
             With our bespoke application development experience, no requirement
             is too complex or ambitious. We will bring your project to life with
@@ -98,7 +98,7 @@ export default function Home(): ReactNode {
       </Section>
       <Section>
         <Container>
-          <Heading>We help you realise the value of your data</Heading>
+          <Heading anchor="products">We help you realise the value of your data</Heading>
 
           <p className="text-base sm:text-lg">
             Poor fundamentals can limit the value you get from your data. We
@@ -174,7 +174,7 @@ export default function Home(): ReactNode {
       </Section>
       <Section>
         <Container>
-          <Heading>Meet the team</Heading>
+          <Heading anchor="team">Meet the team</Heading>
           <div className="flex flex-row flex-wrap justify-between gap-6">
             <Member
               name="Chris Connelly"

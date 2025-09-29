@@ -10,7 +10,7 @@ import PageTitle from "../../components/PageTitle";
 export default function TapGenerallyAvailable(): ReactNode {
   return (
     <Page
-      title="Posts | tap is generally available"
+      title="Insights | tap is generally available"
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. tap is generally available!"
     >
       <Section>
@@ -140,7 +140,7 @@ export default function TapGenerallyAvailable(): ReactNode {
           <a
             href="https://app.tapintodata.com"
             aria-label="Open tap app"
-            className="text-xl sm:text-2xl self-center mt-4 px-3 py-2 rounded-xl border border-linkBlue hover:outline outline-linkBlue"
+            className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
           >
             Try <strong>tap</strong>
           </a>

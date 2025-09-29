@@ -5,6 +5,7 @@ import Section from "../../components/Section";
 import Link from "../../components/Link";
 import Strong from "../../components/Strong";
 import PageTitle from "../../components/PageTitle";
+import Thumbnail from "../../components/Thumbnail";
 
 export default function OrangEnergy(): ReactNode {
   return (
@@ -14,16 +15,14 @@ export default function OrangEnergy(): ReactNode {
     >
       <Section>
         <article className="w-full">
-          <div className="mb-8 sm:mb-1 mr-0 min-sm:mr-6 max-sm:w-full sm:max-w-1/2 lg:max-w-1/3 flex flex-col gap-2 float-left">
-            <img
+          <div className="mb-8 sm:mb-1 mr-0 min-sm:mr-6 max-sm:w-full flex flex-col gap-2 float-left">
+            <Thumbnail
               alt="Screenshot from Orang Energy showing the calculator page"
               src="/images/orang-energy-screenshot-1.png"
-              className="w-full"
             />
-            <img
+            <Thumbnail
               alt="Screenshot from Orang Energy showing the installer-directory"
               src="/images/orang-energy-screenshot-2.png"
-              className="w-full"
             />
           </div>
           <PageTitle>Orang Energy</PageTitle>

@@ -5,6 +5,7 @@ import Section from "../../components/Section";
 import Link from "../../components/Link";
 import Strong from "../../components/Strong";
 import PageTitle from "../../components/PageTitle";
+import Thumbnail from "../../components/Thumbnail";
 
 export default function DudleyEditions(): ReactNode {
   return (
@@ -14,21 +15,18 @@ export default function DudleyEditions(): ReactNode {
     >
       <Section>
         <article className="w-full">
-          <div className="mr-0 min-sm:mr-6 max-sm:w-full sm:max-w-1/2 flex flex-row gap-2 float-left">
-            <img
+          <div className="mb-8 sm:mb-1 mr-0 min-sm:mr-6 max-sm:w-full flex flex-row gap-2 float-left">
+            <Thumbnail
               alt="Screenshot from Dudley Editions app showing the book library"
               src="/images/dudley-editions-screenshot-1.jpg"
-              className="w-full"
             />
-            <img
+            <Thumbnail
               alt="Screenshot from Dudley Editions app showing a book description"
               src="/images/dudley-editions-screenshot-2.jpg"
-              className="w-full"
             />
-            <img
+            <Thumbnail
               alt="Screenshot from Dudley Editions app showing my library"
               src="/images/dudley-editions-screenshot-3.jpg"
-              className="w-full"
             />
           </div>
           <PageTitle>Dudley Editions</PageTitle>

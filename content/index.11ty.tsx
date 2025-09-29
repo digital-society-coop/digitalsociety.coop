@@ -273,24 +273,25 @@ function Screenshot(props: {
       />
       <dialog
         id={`${props.screenshot.src}-dialog`}
-        className="fixed left-1/2 top-1/2 translate-[-50%] max-w-full size-max md:max-h-[calc(100%-24*var(--spacing))] md:max-w-[calc(100%-24*var(--spacing))] backdrop:backdrop-blur-sm bg-linkBlue border-4 md:border-8 rounded-lg md:rounded-xl border-linkBlue outline-0 open:flex flex-col"
+        className="inset-0 size-full max-h-full max-w-full bg-transparent backdrop-blur-sm open:flex items-center justify-center p-2 md:p-12"
         /* @ts-ignore */
         closedBy="any"
       >
-        <div className="flex justify-end bg-linkBlue pb-[8px] pr-[8px]">
+        <div
+          id={`${props.screenshot.src}-container`}
+          className="relative max-w-full max-h-full overflow-hidden rounded-lg bg-linkBlue text-right"
+        >
           <a
             id={`${props.screenshot.src}-close`}
-            className="p-1 rounded-sm cursor-pointer text-lighterYellow! hover:bg-waveBlue2!"
+            className="inline-block m-1 mr-2 p-1 rounded-sm cursor-pointer text-lighterYellow! hover:bg-waveBlue2!"
           >
             Close
           </a>
-        </div>
-        <div id={`${props.screenshot.src}-scroll`} className="overflow-y-auto">
           <img
             id={`${props.screenshot.src}-img`}
             alt={props.screenshot.alt}
             src={props.screenshot.src}
-            className="object-contain rounded-sm"
+            className="max-w-full max-h-[calc(100vh-4rem)] md:max-h-[calc(100vh-8rem)] w-auto h-auto"
           />
         </div>
       </dialog>
@@ -303,8 +304,8 @@ function Screenshot(props: {
 
           const thumb = document.getElementById(\`\${id}-thumb\`);
           const dialog = document.getElementById(\`\${id}-dialog\`);
+          const container = document.getElementById(\`\${id}-container\`);
           const close = document.getElementById(\`\${id}-close\`);
-          const scroll = document.getElementById(\`\${id}-scroll\`);
           const img = document.getElementById(\`\${id}-img\`);
 
           thumb.addEventListener("click", () => {
@@ -317,6 +318,14 @@ function Screenshot(props: {
             e.preventDefault();
             dialog.close();
           })
+
+          dialog.addEventListener("click", () => {
+            dialog.close();
+          });
+
+          container.addEventListener("click", (e) => {
+            e.stopPropagation();
+          });
 
           dialog.addEventListener("cancel", () => {
             onClose();
@@ -338,13 +347,11 @@ function Screenshot(props: {
               case 37:
                 if (currentIdx > 0) {
                   img.src = window.screenshots[--currentIdx];
-                  scroll.scrollTop = 0;
                 }
                 break
               case 39:
                 if (currentIdx < window.screenshots.length - 1) {
                   img.src = window.screenshots[++currentIdx];
-                  scroll.scrollTop = 0;
                 }
                 break
             }

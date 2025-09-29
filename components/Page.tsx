@@ -72,22 +72,22 @@ export default function Page(props: {
                 <div className="float-top bg-sumiInk2 p-4 shadow-lg">
                   <menu className="flex flex-col gap-6 items-center">
                     <li>
-                      <Link href="/projects" className="font-bold text-xl">
+                      <Link href="/projects" className="text-xl">
                         Projects
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#products" className="font-bold text-xl">
+                      <Link href="/#products" className="text-xl">
                         Products
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#team" className="font-bold text-xl">
+                      <Link href="/#team" className="text-xl">
                         Team
                       </Link>
                     </li>
                     <li>
-                      <Link href="/posts/" className="font-bold text-xl">
+                      <Link href="/posts/" className="text-xl">
                         Insights
                       </Link>
                     </li>
@@ -95,7 +95,7 @@ export default function Page(props: {
                       <a
                         data-umami-event="out-mail"
                         href="mailto:hello@digitalsociety.coop"
-                        className="font-bold text-xl self-center px-3 py-1 sm:mt-0 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+                        className="text-xl self-center px-3 py-1 sm:mt-0 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
                       >
                         Get in touch {"\u2197"}
                       </a>
@@ -105,14 +105,14 @@ export default function Page(props: {
               </div>
             </label>
             <div className="hidden sm:flex flex-row items-center gap-3 gap-2 md:gap-10 z-100">
-              <Link href="/projects" className="font-bold">Projects</Link>
-              <Link href="/#products" className="font-bold">Products</Link>
-              <Link href="/#team" className="font-bold">Team</Link>
-              <Link href="/posts/" className="font-bold">Insights</Link>
+              <Link href="/projects">Projects</Link>
+              <Link href="/#products">Products</Link>
+              <Link href="/#team">Team</Link>
+              <Link href="/posts/">Insights</Link>
               <a
                 data-umami-event="out-mail"
                 href="mailto:hello@digitalsociety.coop"
-                className="font-bold self-center px-3 py-1 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+                className="self-center px-3 py-1 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
               >
                 Get in touch {"\u2197"}
               </a>

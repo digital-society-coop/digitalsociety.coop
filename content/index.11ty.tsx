@@ -5,6 +5,7 @@ import Section from "../components/Section";
 import Container from "../components/Container";
 import Link from "../components/Link";
 import Heading from "../components/Heading";
+import Thumbnail, { ThumbnailProps } from "../components/Thumbnail";
 
 export default function Home(): ReactNode {
   return (
@@ -217,15 +218,10 @@ function Member(props: {
   );
 }
 
-type Screenshot = {
-  alt: string;
-  src: string;
-}
-
 function Example(props: {
   title: string;
   href?: string;
-  screenshots: Screenshot[];
+  screenshots: ThumbnailProps[];
   description: ReactNode;
   stack: string;
   testimonial?: string;
@@ -249,7 +245,7 @@ function Example(props: {
           )
       }
       <div className="flex flex-row flex-wrap gap-4 items-center">
-        {props.screenshots.map(s => <Screenshot screenshot={s} />)}
+        {props.screenshots.map(t => <Thumbnail {...t} />)}
       </div>
       <p>{props.description}</p>
       <p>{props.stack}</p>
@@ -257,107 +253,5 @@ function Example(props: {
         <q className="italic">{props.testimonial}</q>
       )}
     </div>
-  );
-}
-
-function Screenshot(props: {
-  screenshot: Screenshot;
-}): ReactNode {
-  return (
-    <>
-      <img
-        id={`${props.screenshot.src}-thumb`}
-        alt={props.screenshot.alt}
-        src={props.screenshot.src}
-        className="h-[12rem] object-contain rounded-xl cursor-pointer"
-      />
-      <dialog
-        id={`${props.screenshot.src}-dialog`}
-        className="inset-0 size-full max-h-full max-w-full bg-transparent backdrop-blur-sm open:flex items-center justify-center p-2 md:p-12"
-        /* @ts-ignore */
-        closedBy="any"
-      >
-        <div
-          id={`${props.screenshot.src}-container`}
-          className="relative max-w-full max-h-full overflow-hidden rounded-lg bg-linkBlue text-right"
-        >
-          <a
-            id={`${props.screenshot.src}-close`}
-            className="inline-block m-1 mr-2 p-1 rounded-sm cursor-pointer text-lighterYellow! hover:bg-waveBlue2!"
-          >
-            Close
-          </a>
-          <img
-            id={`${props.screenshot.src}-img`}
-            alt={props.screenshot.alt}
-            src={props.screenshot.src}
-            className="max-w-full max-h-[calc(100vh-4rem)] md:max-h-[calc(100vh-8rem)] w-auto h-auto"
-          />
-        </div>
-      </dialog>
-      <script
-        children={`((id) => {
-          window.screenshots = window.screenshots || [];
-          window.screenshots.push(id);
-          const idx = window.screenshots.length - 1;
-          let currentIdx = idx;
-
-          const thumb = document.getElementById(\`\${id}-thumb\`);
-          const dialog = document.getElementById(\`\${id}-dialog\`);
-          const container = document.getElementById(\`\${id}-container\`);
-          const close = document.getElementById(\`\${id}-close\`);
-          const img = document.getElementById(\`\${id}-img\`);
-
-          thumb.addEventListener("click", () => {
-            dialog.showModal();
-            document.body.classList.add("overflow-hidden");
-            document.addEventListener("keydown", onKeydown);
-          });
-
-          close.addEventListener("click", (e) => {
-            e.preventDefault();
-            dialog.close();
-          })
-
-          dialog.addEventListener("click", () => {
-            dialog.close();
-          });
-
-          container.addEventListener("click", (e) => {
-            e.stopPropagation();
-          });
-
-          dialog.addEventListener("cancel", () => {
-            onClose();
-          });
-
-          dialog.addEventListener("close", () => {
-            onClose();
-          });
-
-          function onClose () {
-            currentIdx = idx;
-            img.src = window.screenshots[idx];
-            document.body.classList.remove("overflow-hidden");
-            document.removeEventListener("keydown", onKeydown);
-          }
-
-          function onKeydown (e) {
-            switch (e.keyCode) {
-              case 37:
-                if (currentIdx > 0) {
-                  img.src = window.screenshots[--currentIdx];
-                }
-                break
-              case 39:
-                if (currentIdx < window.screenshots.length - 1) {
-                  img.src = window.screenshots[++currentIdx];
-                }
-                break
-            }
-          }
-        })(${JSON.stringify(props.screenshot.src)})`}
-      />
-    </>
   );
 }

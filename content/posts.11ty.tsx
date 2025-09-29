@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 
 import Page from "../components/Page";
 import Section from "../components/Section";
-import Container from "../components/Container";
 import PageTitle from "../components/PageTitle";
 import Heading from "../components/Heading";
 
@@ -14,32 +13,30 @@ export default function Insights(): ReactNode {
     >
       <Section>
         <PageTitle>Insights</PageTitle>
-        <Container>
-          <Post
-            href="/posts/job-satisfaction/"
-            title="Job satisfaction"
-            date="27/05/2025"
-            description="A self-reflection exercise"
-            alt="Zen rock in front of water"
-            src="/images/zen.jpg"
-          />
-          <Post
-            href="/posts/tap-generally-available/"
-            title="tap is generally available!"
-            date="15/05/2025"
-            description="Our first data SaaS product"
-            alt="Logo for tap"
-            src="/images/tap.svg"
-          />
-          <Post
-            href="/posts/first-year/"
-            title="Digital Society is 1 years old!"
-            date="11/12/2024"
-            description="Celebrating our first year projects."
-            alt="Birthday cake with one candle"
-            src="/images/cake.jpg"
-          />
-        </Container>
+        <Post
+          href="/posts/job-satisfaction/"
+          title="Job satisfaction"
+          date="27/05/2025"
+          description="A self-reflection exercise"
+          alt="Zen rock in front of water"
+          src="/images/zen.jpg"
+        />
+        <Post
+          href="/posts/tap-generally-available/"
+          title="tap is generally available!"
+          date="15/05/2025"
+          description="Our first data SaaS product"
+          alt="Logo for tap"
+          src="/images/tap.svg"
+        />
+        <Post
+          href="/posts/first-year/"
+          title="Digital Society is 1 years old!"
+          date="11/12/2024"
+          description="Celebrating our first year projects."
+          alt="Birthday cake with one candle"
+          src="/images/cake.jpg"
+        />
       </Section>
     </Page>
   );

@@ -13,8 +13,8 @@ export default function OrangEnergy(): ReactNode {
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Orang Energy energy savings calculator."
     >
       <Section>
-        <article className="max-w-6xl p-4 w-screen">
-          <div className="mb-8 sm:mb-0 mr-0 sm:mr-8 sm:max-w-1/2 lg:max-w-1/3 flex flex-col gap-2 float-left">
+        <article className="w-full">
+          <div className="mb-8 sm:mb-1 mr-0 min-sm:mr-6 max-sm:w-full sm:max-w-1/2 lg:max-w-1/3 flex flex-col gap-2 float-left">
             <img
               alt="Screenshot from Orang Energy showing the calculator page"
               src="/images/orang-energy-screenshot-1.png"

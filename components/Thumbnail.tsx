@@ -4,7 +4,7 @@ import ClientScript from "./ClientScript";
 export type ThumbnailProps = {
   alt: string;
   src: string;
-}
+};
 
 export default function Thumbnail(props: ThumbnailProps): ReactNode {
   return (
@@ -51,7 +51,7 @@ export default function Thumbnail(props: ThumbnailProps): ReactNode {
 }
 
 // This function isn't called inline, but is injected into the HTML.
-function setupThumbnail (items: string[], src: string) {
+function setupThumbnail(items: string[], src: string) {
   items.push(src);
 
   const idx = items.length - 1;
@@ -63,18 +63,22 @@ function setupThumbnail (items: string[], src: string) {
   const close = document.getElementById(`${src}-close`);
   const imgEl = document.getElementById(`${src}-img`);
 
-  let dialog: HTMLDialogElement
+  let dialog: HTMLDialogElement;
   if (dialogEl instanceof HTMLDialogElement) {
     dialog = dialogEl;
   } else {
-    throw new Error(`Unable to configure thumbnail for src=${src}: couldn't find ${src}-dialog`)
+    throw new Error(
+      `Unable to configure thumbnail for src=${src}: couldn't find ${src}-dialog`,
+    );
   }
 
-  let img: HTMLImageElement
+  let img: HTMLImageElement;
   if (imgEl instanceof HTMLImageElement) {
     img = imgEl;
   } else {
-    throw new Error(`Unable to configure thumbnail for src=${src}: couldn't find ${src}-img`)
+    throw new Error(
+      `Unable to configure thumbnail for src=${src}: couldn't find ${src}-img`,
+    );
   }
 
   thumb.addEventListener("click", () => {
@@ -86,7 +90,7 @@ function setupThumbnail (items: string[], src: string) {
   close.addEventListener("click", (e) => {
     e.preventDefault();
     dialog.close();
-  })
+  });
 
   dialog.addEventListener("click", () => {
     dialog.close();
@@ -104,25 +108,25 @@ function setupThumbnail (items: string[], src: string) {
     onClose();
   });
 
-  function onClose () {
+  function onClose() {
     currentIdx = idx;
     img.src = items[idx];
     document.body.classList.remove("overflow-hidden");
     document.removeEventListener("keydown", onKeydown);
   }
 
-  function onKeydown (e: KeyboardEvent) {
+  function onKeydown(e: KeyboardEvent) {
     switch (e.key) {
       case "ArrowLeft":
         if (currentIdx > 0) {
           img.src = items[--currentIdx];
         }
-        break
+        break;
       case "ArrowRight":
         if (currentIdx < items.length - 1) {
           img.src = items[++currentIdx];
         }
-        break
+        break;
     }
   }
 }

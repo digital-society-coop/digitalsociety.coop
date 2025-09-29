@@ -4,11 +4,11 @@ import Page from "../components/Page";
 import Link from "../components/Link";
 import List from "../components/List";
 import Section from "../components/Section";
-import Container from "../components/Container";
 import Strong from "../components/Strong";
 import Heading from "../components/Heading";
 import Subheading from "../components/Subheading";
 import PageTitle from "../components/PageTitle";
+import Container from "../components/Container";
 
 export default function PrivacyPolicy(): ReactNode {
   return (

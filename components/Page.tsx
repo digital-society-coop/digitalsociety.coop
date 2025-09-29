@@ -187,20 +187,22 @@ export default function Page(props: {
   );
 }
 
-function initMenu (): void {
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('mobile-menu');
+function initMenu(): void {
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("mobile-menu");
     if (!(menuToggle instanceof HTMLInputElement)) {
-      throw new Error("Failed to initialise menu: couldn't find valid mobile-menu");
+      throw new Error(
+        "Failed to initialise menu: couldn't find valid mobile-menu",
+      );
     }
 
-    window.addEventListener('hashchange', function() {
+    window.addEventListener("hashchange", function () {
       menuToggle.checked = false;
     });
 
     const anchorLinks = document.querySelectorAll('a[href^="/#"]');
-    anchorLinks.forEach(link => {
-      link.addEventListener('click', function() {
+    anchorLinks.forEach((link) => {
+      link.addEventListener("click", function () {
         menuToggle.checked = false;
       });
     });

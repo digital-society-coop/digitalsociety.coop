@@ -12,7 +12,7 @@ export default function Projects(): ReactNode {
     >
       <Section>
         <PageTitle>Featured projects</PageTitle>
-        <div className="max-w-6xl p-4 w-screen flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
+        <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Project
             href="/projects/orang-energy/"
             title="Orang Energy"
@@ -64,12 +64,12 @@ function Project(props: {
   return (
     <a
       href={props.href}
-      className="flex flex-col sm:max-w-1/3 gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
+      className="flex-1 flex flex-col gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
     >
       <div className="max-h-[15rem] w-full self-center rounded-xl overflow-hidden aspect-320/213 flex gap-2 items-between">
         {props.screenshots}
       </div>
-      <h2 className="text-2xl sm:text-3xl text-springBlue min-w-0">
+      <h2 className="text-xl sm:text-2xl text-springBlue min-w-0">
         <strong className="font-extrabold">{props.title}</strong>{" "}
         <span className="font-light">-</span> {props.description}
       </h2>

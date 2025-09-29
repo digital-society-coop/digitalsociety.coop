@@ -72,7 +72,7 @@ export default function Page(props: {
                 <div className="float-top bg-sumiInk2 p-4 shadow-lg">
                   <menu className="flex flex-col gap-6 items-center">
                     <li>
-                      <Link href="/#projects" className="font-bold text-xl">
+                      <Link href="/projects" className="font-bold text-xl">
                         Projects
                       </Link>
                     </li>
@@ -105,7 +105,7 @@ export default function Page(props: {
               </div>
             </label>
             <div className="hidden sm:flex flex-row items-center gap-3 gap-2 md:gap-10 z-100">
-              <Link href="/#projects" className="font-bold">Projects</Link>
+              <Link href="/projects" className="font-bold">Projects</Link>
               <Link href="/#products" className="font-bold">Products</Link>
               <Link href="/#team" className="font-bold">Team</Link>
               <Link href="/posts/" className="font-bold">Insights</Link>

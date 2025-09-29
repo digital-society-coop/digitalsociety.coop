@@ -11,7 +11,7 @@ export default function Projects(): ReactNode {
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our projects."
     >
       <Section>
-        <PageTitle>Featured projects</PageTitle>
+        <PageTitle>Some of our projects</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Project
             href="/projects/orang-energy/"

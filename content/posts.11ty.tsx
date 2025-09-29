@@ -13,30 +13,32 @@ export default function Insights(): ReactNode {
     >
       <Section>
         <PageTitle>Insights</PageTitle>
-        <Post
-          href="/posts/job-satisfaction/"
-          title="Job satisfaction"
-          date="27/05/2025"
-          description="A self-reflection exercise"
-          alt="Zen rock in front of water"
-          src="/images/zen.jpg"
-        />
-        <Post
-          href="/posts/tap-generally-available/"
-          title="tap is generally available!"
-          date="15/05/2025"
-          description="Our first data SaaS product"
-          alt="Logo for tap"
-          src="/images/tap.svg"
-        />
-        <Post
-          href="/posts/first-year/"
-          title="Digital Society is 1 years old!"
-          date="11/12/2024"
-          description="Celebrating our first year projects."
-          alt="Birthday cake with one candle"
-          src="/images/cake.jpg"
-        />
+        <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
+          <Post
+            href="/posts/job-satisfaction/"
+            title="Job satisfaction"
+            date="27/05/2025"
+            description="A self-reflection exercise"
+            alt="Zen rock in front of water"
+            src="/images/zen.jpg"
+          />
+          <Post
+            href="/posts/tap-generally-available/"
+            title="tap is generally available!"
+            date="15/05/2025"
+            description="Our first data SaaS product"
+            alt="Logo for tap"
+            src="/images/tap.svg"
+          />
+          <Post
+            href="/posts/first-year/"
+            title="Digital Society is 1 years old!"
+            date="11/12/2024"
+            description="Celebrating our first year projects."
+            alt="Birthday cake with one candle"
+            src="/images/cake.jpg"
+          />
+        </div>
       </Section>
     </Page>
   );
@@ -53,17 +55,19 @@ function Post(props: {
   return (
     <a
       href={props.href}
-      className="flex flex-col sm:flex-row gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
+      className="flex-1 flex flex-col p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
     >
       <div className="max-h-[15rem] max-w-[20rem] w-full self-center rounded-xl overflow-hidden bg-sumiInk1 aspect-320/213 flex flex-col justify-center">
         <img alt={props.alt} src={props.src} className="w-full" />
       </div>
-      <div className="flex flex-col gap-2 text-springBlue min-w-0 overflow-hidden w-full">
+      <div className="flex-1 flex flex-col justify-between text-springBlue min-w-0 overflow-hidden w-full">
         <Heading>{props.title}</Heading>
-        <p>{props.date}</p>
-        <p className="overflow-hidden text-ellipsis text-nowrap">
-          {props.description}
-        </p>
+        <div className="flex flex-col gap-2 min-w-0 overflow-hidden w-full">
+          <p>{props.date}</p>
+          <p className="overflow-hidden text-ellipsis text-nowrap">
+            {props.description}
+          </p>
+        </div>
       </div>
     </a>
   );

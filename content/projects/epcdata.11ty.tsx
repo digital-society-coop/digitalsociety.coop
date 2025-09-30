@@ -20,12 +20,17 @@ export default function EpcData(): ReactNode {
             <Thumbnail
               alt="Screenshot of the home page for epcdata.scot"
               src="/images/home-epcdata.png"
-              thumbClassName="object-cover"
+              thumbClassName="object-cover max-sm:hidden"
             />
             <Thumbnail
               alt="Screenshot of epcdata.scot statistics map"
               src="/images/epcdata-example.png"
               thumbClassName="object-cover"
+            />
+            <Thumbnail
+              alt="Screenshot of the API documenation page for epccdata.scot"
+              src="/images/epcdata-documentation.png"
+              thumbClassName="object-cover max-sm:hidden"
             />
           </div>
           <PageTitle>epcdata.scot</PageTitle>

@@ -119,7 +119,7 @@ export default function Page(props: {
             </div>
           </nav>
         </header>
-        <main>{props.children}</main>
+        <main className="py-8">{props.children}</main>
       </body>
       <footer className="self-center max-w-6xl p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-1 sm:grid-cols-3 gap-4 border-t border-fujiWhite [&_a]:text-lighterBlue pb-8">
         <div className="flex flex-row gap-2 order-3 sm:order-first">
@@ -197,7 +197,7 @@ export default function Page(props: {
 }
 
 function initMenu(): void {
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("mobile-menu");
     if (!(menuToggle instanceof HTMLInputElement)) {
       throw new Error(
@@ -205,13 +205,13 @@ function initMenu(): void {
       );
     }
 
-    window.addEventListener("hashchange", function() {
+    window.addEventListener("hashchange", function () {
       menuToggle.checked = false;
     });
 
     const anchorLinks = document.querySelectorAll('a[href^="/#"]');
     anchorLinks.forEach((link) => {
-      link.addEventListener("click", function() {
+      link.addEventListener("click", function () {
         menuToggle.checked = false;
       });
     });

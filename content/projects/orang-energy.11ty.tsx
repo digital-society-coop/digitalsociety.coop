@@ -56,10 +56,7 @@ export default function OrangEnergy(): ReactNode {
           <p>
             Enabling Orang Energy for Scottish users was an inspiration for{" "}
             <Link href="/projects/tap/">tap</Link> and{" "}
-            <Link href="https://epcdata.scot" target="_blank">
-              epcdata.scot
-            </Link>
-            .
+            <Link href="/projects/epcdata">epcdata.scot</Link>.
           </p>
         </article>
 

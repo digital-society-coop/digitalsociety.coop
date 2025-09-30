@@ -106,10 +106,7 @@ export default function Tap(): ReactNode {
           </p>
           <p>
             <strong>tap</strong> serves{" "}
-            <Link href="https://epcdata.scot" target="_blank">
-              epcdata.scot
-            </Link>
-            .
+            <Link href="/projects/epcdata/">epcdata.scot</Link>.
           </p>
         </article>
 

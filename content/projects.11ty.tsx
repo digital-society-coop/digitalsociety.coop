@@ -40,6 +40,18 @@ export default function Projects(): ReactNode {
             }
           />
           <Project
+            href="/projects/epcdata/"
+            title="epcdata.scot"
+            description="Serving Scottish EPC data as an API"
+            screenshots={
+              <img
+                alt="Screenshot of epcdata.scot statistics map"
+                src="/images/epcdata-example.png"
+                className="w-full object-cover"
+              />
+            }
+          />
+          <Project
             href="/projects/dudley-editions/"
             title="Dudley Editions"
             description="Creating connections through personalised audiobooks"
@@ -78,7 +90,7 @@ function Project(props: {
   return (
     <a
       href={props.href}
-      className="flex-1 flex flex-col gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
+      className="flex-1 basis-1/3 flex flex-col gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
     >
       <div className="max-h-[15rem] w-full self-center rounded-xl overflow-hidden aspect-320/213 flex gap-2 items-between">
         {props.screenshots}

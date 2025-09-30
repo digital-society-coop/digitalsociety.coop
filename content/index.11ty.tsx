@@ -4,7 +4,6 @@ import Page from "../components/Page";
 import Section from "../components/Section";
 import Link from "../components/Link";
 import Heading from "../components/Heading";
-import Thumbnail, { ThumbnailProps } from "../components/Thumbnail";
 
 export default function Home(): ReactNode {
   return (
@@ -107,43 +106,6 @@ export default function Home(): ReactNode {
           modelling and integration expertise.
         </p>
 
-        <h3 className="text-lg sm:text-xl font-bold mt-6">
-          Some examples of our work
-        </h3>
-        <div className="flex flex-col gap-10">
-          <Example
-            title="Data portals powered by tap"
-            screenshots={[
-              {
-                alt: "Screenshot of the home page for epcdata.scot",
-                src: "/images/home-epcdata.png",
-              },
-              {
-                alt: "Screenshot of the API documenation page for e: cdata.scot",
-                src: "/images/documentation-epcdata.png",
-              },
-              {
-                alt: "Screenshot of the Example usage page for h: althdata.scot",
-                src: "/images/example-healthdata.png",
-              },
-            ]}
-            description={
-              <>
-                <Link href="https://epcdata.scot" target="_blank">
-                  epcdata.scot
-                </Link>{" "}
-                and{" "}
-                <Link href="https://healthdata.scot" target="_blank">
-                  healthdata.scot
-                </Link>{" "}
-                are data portals that enable consuming datasets from
-                applications, removing the toil and enabling innovation. Powered
-                by tap.
-              </>
-            }
-            stack="Built using Fresh. Deployed to Kubernetes via Github Actions."
-          />
-        </div>
         <a
           data-umami-event="out-mail"
           href="mailto:hello@digitalsociety.coop"
@@ -153,41 +115,6 @@ export default function Home(): ReactNode {
         </a>
       </Section>
     </Page>
-  );
-}
-
-function Example(props: {
-  title: string;
-  href?: string;
-  screenshots: ThumbnailProps[];
-  description: ReactNode;
-  stack: string;
-  testimonial?: string;
-}): ReactNode {
-  return (
-    <div className="flex flex-col gap-3">
-      {props.href ? (
-        <Link
-          href={props.href}
-          className="text-lg sm:text-xl font-bold mb-2"
-          target="_blank"
-        >
-          {props.title}
-        </Link>
-      ) : (
-        <h3 className="text-lg sm:text-xl font-bold mb-2">{props.title}</h3>
-      )}
-      <div className="flex flex-row flex-wrap gap-4 items-center">
-        {props.screenshots.map((t) => (
-          <Thumbnail {...t} />
-        ))}
-      </div>
-      <p>{props.description}</p>
-      <p>{props.stack}</p>
-      {props.testimonial != null && (
-        <q className="italic">{props.testimonial}</q>
-      )}
-    </div>
   );
 }
 

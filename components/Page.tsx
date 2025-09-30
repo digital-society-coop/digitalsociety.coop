@@ -72,13 +72,13 @@ export default function Page(props: {
                 <div className="float-top bg-sumiInk2 p-4 shadow-lg">
                   <menu className="flex flex-col gap-6 items-center">
                     <li>
-                      <Link href="/projects" className="text-xl">
-                        Projects
+                      <Link href="/#services" className="text-xl">
+                        Services
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#products" className="text-xl">
-                        Products
+                      <Link href="/projects" className="text-xl">
+                        Projects
                       </Link>
                     </li>
                     <li>
@@ -105,8 +105,8 @@ export default function Page(props: {
               </div>
             </label>
             <div className="hidden sm:flex flex-row items-center gap-3 gap-2 md:gap-10 z-100">
+              <Link href="/#services">Services</Link>
               <Link href="/projects">Projects</Link>
-              <Link href="/#products">Products</Link>
               <Link href="/about/">About</Link>
               <Link href="/posts/">Insights</Link>
               <a
@@ -143,6 +143,9 @@ export default function Page(props: {
           <ul className="flex flex-col gap-1">
             <li>
               <Link href="/about/">About</Link>
+            </li>
+            <li>
+              <Link href="/#services">Services</Link>
             </li>
             <li>
               <Link href="/projects/">Projects</Link>
@@ -194,7 +197,7 @@ export default function Page(props: {
 }
 
 function initMenu(): void {
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.getElementById("mobile-menu");
     if (!(menuToggle instanceof HTMLInputElement)) {
       throw new Error(
@@ -202,13 +205,13 @@ function initMenu(): void {
       );
     }
 
-    window.addEventListener("hashchange", function () {
+    window.addEventListener("hashchange", function() {
       menuToggle.checked = false;
     });
 
     const anchorLinks = document.querySelectorAll('a[href^="/#"]');
     anchorLinks.forEach((link) => {
-      link.addEventListener("click", function () {
+      link.addEventListener("click", function() {
         menuToggle.checked = false;
       });
     });

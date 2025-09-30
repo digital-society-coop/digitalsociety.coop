@@ -96,23 +96,36 @@ export default function Home(): ReactNode {
         </p>
       </Section>
       <Section>
-        <Heading anchor="products">
-          We help you realise the value of your data
-        </Heading>
-
-        <p className="text-base sm:text-lg">
-          Poor fundamentals can limit the value you get from your data. We will
-          help you lay your data foundations with our data engineering,
-          modelling and integration expertise.
-        </p>
-
-        <a
-          data-umami-event="out-mail"
-          href="mailto:hello@digitalsociety.coop"
-          className="text-xl sm:text-2xl self-center my-4 p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
-        >
-          Get more from your data
-        </a>
+        <div className="flex flex-col sm:flex-row justify-between gap-8 items-start">
+          <Heading anchor="services">
+            Flexible services that adapt to your organisation
+          </Heading>
+          <a
+            data-umami-event="out-mail"
+            href="mailto:hello@digitalsociety.coop"
+            className="text-nowrap text-xl sm:text-2xl self-center p-3 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+          >
+            Tell us how we can help
+          </a>
+        </div>
+        <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-8">
+          <Service
+            title="Agile product development"
+            description="Whether web, mobile, or custom software, our sprint-based approach adapts to your timeline and evolves with your priorities."
+          />
+          <Service
+            title="Staff augmentation"
+            description="Need to accelerate development with people who deliver from day one? That's our specialty."
+          />
+          <Service
+            title="Data engineering"
+            description="Get more from your data by building it on solid foundations. We handle the engineering, modeling, and integration."
+          />
+          <Service
+            title="DevOps bootstrapping"
+            description="We'll help with your infrastructure, optimize your cloud spending, and transform how your team ships code."
+          />
+        </div>
       </Section>
     </Page>
   );
@@ -137,5 +150,17 @@ function Project(props: {
         <span className="font-light">-</span> {props.description}
       </h2>
     </a>
+  );
+}
+
+function Service(props: {
+  title: string;
+  description: string;
+}): React.ReactNode {
+  return (
+    <div className="flex-[1_0_45%] flex flex-col gap-4 p-4 rounded-xl bg-sumiInk2 shadow justify-start">
+      <h2 className="text-xl sm:text-2xl min-w-0 font-bold">{props.title}</h2>
+      <p className="min-w-0">{props.description}</p>
+    </div>
   );
 }

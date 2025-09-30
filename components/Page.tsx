@@ -72,22 +72,22 @@ export default function Page(props: {
                 <div className="float-top bg-sumiInk2 p-4 shadow-lg">
                   <menu className="flex flex-col gap-6 items-center">
                     <li>
-                      <Link href="/#projects" className="font-bold text-xl">
+                      <Link href="/#services" className="text-xl">
+                        Services
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/projects" className="text-xl">
                         Projects
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#products" className="font-bold text-xl">
-                        Products
+                      <Link href="/about/" className="text-xl">
+                        About
                       </Link>
                     </li>
                     <li>
-                      <Link href="/#team" className="font-bold text-xl">
-                        Team
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/posts/" className="font-bold text-xl">
+                      <Link href="/posts/" className="text-xl">
                         Insights
                       </Link>
                     </li>
@@ -95,7 +95,7 @@ export default function Page(props: {
                       <a
                         data-umami-event="out-mail"
                         href="mailto:hello@digitalsociety.coop"
-                        className="font-bold text-xl self-center px-3 py-1 sm:mt-0 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+                        className="text-xl self-center px-3 py-1 sm:mt-0 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
                       >
                         Get in touch {"\u2197"}
                       </a>
@@ -105,21 +105,21 @@ export default function Page(props: {
               </div>
             </label>
             <div className="hidden sm:flex flex-row items-center gap-3 gap-2 md:gap-10 z-100">
-              <Link href="/#projects" className="font-bold">Projects</Link>
-              <Link href="/#products" className="font-bold">Products</Link>
-              <Link href="/#team" className="font-bold">Team</Link>
-              <Link href="/posts/" className="font-bold">Insights</Link>
+              <Link href="/#services">Services</Link>
+              <Link href="/projects">Projects</Link>
+              <Link href="/about/">About</Link>
+              <Link href="/posts/">Insights</Link>
               <a
                 data-umami-event="out-mail"
                 href="mailto:hello@digitalsociety.coop"
-                className="font-bold self-center px-3 py-1 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+                className="self-center px-3 py-1 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
               >
                 Get in touch {"\u2197"}
               </a>
             </div>
           </nav>
         </header>
-        <main>{props.children}</main>
+        <main className="py-8">{props.children}</main>
       </body>
       <footer className="self-center max-w-6xl p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-1 sm:grid-cols-3 gap-4 border-t border-fujiWhite [&_a]:text-lighterBlue pb-8">
         <div className="flex flex-row gap-2 order-3 sm:order-first">
@@ -139,16 +139,25 @@ export default function Page(props: {
           />
         </div>
         <div className="order-first sm:order-2">
-          <h3 className="mb-2 text-lg">About us</h3>
+          <h3 className="mb-2 text-lg">Explore</h3>
           <ul className="flex flex-col gap-1">
             <li>
-              <Link href="/posts">Insights</Link>
+              <Link href="/about/">About</Link>
             </li>
             <li>
-              <Link href="/how">How we work</Link>
+              <Link href="/#services">Services</Link>
             </li>
             <li>
-              <Link href="/privacy">Privacy Policy</Link>
+              <Link href="/projects/">Projects</Link>
+            </li>
+            <li>
+              <Link href="/posts/">Insights</Link>
+            </li>
+            <li>
+              <Link href="/how/">How we work</Link>
+            </li>
+            <li>
+              <Link href="/privacy/">Privacy Policy</Link>
             </li>
           </ul>
         </div>
@@ -187,20 +196,22 @@ export default function Page(props: {
   );
 }
 
-function initMenu (): void {
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('mobile-menu');
+function initMenu(): void {
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("mobile-menu");
     if (!(menuToggle instanceof HTMLInputElement)) {
-      throw new Error("Failed to initialise menu: couldn't find valid mobile-menu");
+      throw new Error(
+        "Failed to initialise menu: couldn't find valid mobile-menu",
+      );
     }
 
-    window.addEventListener('hashchange', function() {
+    window.addEventListener("hashchange", function () {
       menuToggle.checked = false;
     });
 
     const anchorLinks = document.querySelectorAll('a[href^="/#"]');
-    anchorLinks.forEach(link => {
-      link.addEventListener('click', function() {
+    anchorLinks.forEach((link) => {
+      link.addEventListener("click", function () {
         menuToggle.checked = false;
       });
     });

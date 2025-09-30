@@ -41,6 +41,20 @@ export default function Home(): ReactNode {
         <h3 className="text-lg sm:text-xl font-bold mt-6">Featured projects</h3>
         <div className="flex flex-col sm:flex-row sm:justify-start gap-8">
           <Project
+            href="/projects/skillstrack/"
+            title="Youth Work SkillsTrack"
+            description="Recording and demonstrating the impact of youth work"
+            screenshots={
+              <div className="max-h-[15rem] w-full h-full self-center rounded-xl overflow-hidden flex flex-col justify-center bg-white">
+                <img
+                  alt="Logo for Youth Work SkillsTrack"
+                  src="/images/youthlink-logo.png"
+                  className="object-contain h-full"
+                />
+              </div>
+            }
+          />
+          <Project
             href="/projects/tap/"
             title="tap"
             description="Unlocking the value of data"
@@ -64,30 +78,6 @@ export default function Home(): ReactNode {
                 src="/images/orang-energy-screenshot-1.png"
                 className="w-full object-cover"
               />
-            }
-          />
-          <Project
-            href="/projects/dudley-editions/"
-            title="Dudley Editions"
-            description="Creating connections through personalised audiobooks"
-            screenshots={
-              <>
-                <img
-                  alt="Screenshot from Dudley Editions app showing the book library"
-                  src="/images/dudley-editions-screenshot-1.jpg"
-                  className="w-full object-cover"
-                />
-                <img
-                  alt="Screenshot from Dudley Editions app showing a book description"
-                  src="/images/dudley-editions-screenshot-2.jpg"
-                  className="w-full object-cover"
-                />
-                <img
-                  alt="Screenshot from Dudley Editions app showing my library"
-                  src="/images/dudley-editions-screenshot-3.jpg"
-                  className="w-full object-cover"
-                />
-              </>
             }
           />
         </div>

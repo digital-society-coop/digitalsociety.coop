@@ -14,6 +14,20 @@ export default function Projects(): ReactNode {
         <PageTitle>Some of our projects</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Project
+            href="/projects/skillstrack/"
+            title="Youth Work SkillsTrack"
+            description="Recording and demonstrating the impact of youth work"
+            screenshots={
+              <div className="max-h-[15rem] w-full h-full self-center rounded-xl overflow-hidden flex flex-col justify-center bg-white">
+                <img
+                  alt="Logo for Youth Work SkillsTrack"
+                  src="/images/youthlink-logo.png"
+                  className="object-contain h-full"
+                />
+              </div>
+            }
+          />
+          <Project
             href="/projects/tap/"
             title="tap"
             description="Unlocking the value of data"
@@ -90,7 +104,7 @@ function Project(props: {
   return (
     <a
       href={props.href}
-      className="flex-1 basis-1/3 flex flex-col gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
+      className="flex-[1_0_30%] flex flex-col gap-4 p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline"
     >
       <div className="max-h-[15rem] w-full self-center rounded-xl overflow-hidden aspect-320/213 flex gap-2 items-between">
         {props.screenshots}

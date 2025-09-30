@@ -116,6 +116,20 @@ export default function Home(): ReactNode {
             description="We'll help with your infrastructure, optimize your cloud spending, and transform how your team ships code."
           />
         </div>
+        <Quotes>
+          <Quote
+            quote="We couldn’t be happier with the experience we’ve had of working with Chris and Endre."
+            author="Jane Dailly (National Grants Manager, YouthLink Scotland)"
+          />
+          <Quote
+            quote="I highly recommend Digital Society!"
+            author="Andrew Hall (Founder & Director, Turbine Education)"
+          />
+          <Quote
+            quote="The team at Digital Society are a delight to work with."
+            author="Blythe Robertson (Director, Dudley Editions)"
+          />
+        </Quotes>
       </Section>
     </Page>
   );
@@ -151,6 +165,56 @@ function Service(props: {
     <div className="flex-[1_0_45%] flex flex-col gap-4 p-4 rounded-xl bg-sumiInk2 shadow justify-start">
       <h2 className="text-xl sm:text-2xl min-w-0 font-bold">{props.title}</h2>
       <p className="min-w-0">{props.description}</p>
+    </div>
+  );
+}
+
+function Quotes(props: { children: React.ReactNode }): React.ReactNode {
+  return (
+    <div className="slideshow-container relative self-center w-full max-w-2xl h-50 overflow-hidden cursor-pointer">
+      <style>
+        {`
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(20px); }
+            6.67% { opacity: 1; transform: translateY(0); }
+            33.33% { opacity: 1; transform: translateY(0); }
+            40% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+
+        .quote {
+            animation: fadeInOut 12s infinite;
+        }
+
+        .quote:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .quote:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .quote:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        .slideshow-container:hover .quote {
+            animation-play-state: paused;
+        }
+      `}
+      </style>
+      {props.children}
+    </div>
+  );
+}
+
+function Quote(props: { quote: string; author: string }): React.ReactNode {
+  return (
+    <div className="quote absolute inset-0 flex flex-col items-center justify-center p-10 text-center opacity-0">
+      <q className="quote-text text-lg sm:text-xl leading-relaxed mb-2 italic">
+        {props.quote}
+      </q>
+      <p className="sm:text-lg">— {props.author}</p>
     </div>
   );
 }

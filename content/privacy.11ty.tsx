@@ -149,7 +149,7 @@ export default function PrivacyPolicy(): ReactNode {
 
           <p>
             ICO website:{" "}
-            <Link href="https://www.ico.org.uk" target="_blank">
+            <Link href="https://www.ico.org.uk">
               https://www.ico.org.uk
             </Link>
           </p>

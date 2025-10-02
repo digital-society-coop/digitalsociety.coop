@@ -36,7 +36,7 @@ export default function DudleyEditions(): ReactNode {
             </Strong>
           </p>
           <p className="mb-5">
-            <Link href="https://dudleyeditions.com/" target="_blank">
+            <Link href="https://dudleyeditions.com/">
               Dudley Editions
             </Link>{" "}
             is a cross-platform (iOS and Android) mobile app that allows you to

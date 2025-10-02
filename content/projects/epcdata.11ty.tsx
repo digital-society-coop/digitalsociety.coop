@@ -42,7 +42,7 @@ export default function EpcData(): ReactNode {
           </p>
           <p className="mb-5">
             We built{" "}
-            <Link href="https://epcdata.scot" target="_blank">
+            <Link href="https://epcdata.scot">
               epcdata.scot
             </Link>{" "}
             while working on{" "}
@@ -57,7 +57,6 @@ export default function EpcData(): ReactNode {
             Wales has an API that returns EPC data from address lookup,{" "}
             <Link
               href="https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fdomestic-energy-performance-certificates--extended-historic-dataset"
-              target="_blank"
             >
               Scotland publishes
             </Link>{" "}
@@ -95,7 +94,7 @@ export default function EpcData(): ReactNode {
           </List>
 
           <p className="my-5">
-            <Link href="https://epcdata.scot" target="_blank">
+            <Link href="https://epcdata.scot">
               epcdata.scot
             </Link>{" "}
             is used both by us and external organisations that came across our

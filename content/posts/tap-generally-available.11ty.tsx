@@ -23,7 +23,7 @@ export default function TapGenerallyAvailable(): ReactNode {
             />
             <div className="flex flex-col gap-4">
               <PageTitle>
-                <Link href="https://tapintodata.com" target="_blank">
+                <Link href="https://tapintodata.com">
                   tap
                 </Link>{" "}
                 is generally available!
@@ -92,7 +92,6 @@ export default function TapGenerallyAvailable(): ReactNode {
               internal data, via{" "}
               <Link
                 href="https://tapintodata.com/data-apis.11ty.tsx"
-                target="_blank"
               >
                 Data APIs
               </Link>
@@ -101,11 +100,11 @@ export default function TapGenerallyAvailable(): ReactNode {
             <li>
               Unlock the social <strong>value</strong> of public and private
               data.{" "}
-              <Link href="https://tapintodata.com/contact-us" target="_blank">
+              <Link href="https://tapintodata.com/contact-us">
                 Speak to us
               </Link>{" "}
               about your{" "}
-              <Link href="https://tapintodata.com/data-portals" target="_blank">
+              <Link href="https://tapintodata.com/data-portals">
                 data sharing
               </Link>{" "}
               needs.

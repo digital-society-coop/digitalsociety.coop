@@ -55,10 +55,10 @@ export default function HetznerMigrationPost(): JSX.Element {
               </a>
               <div className="flex flex-col ml-4 gap-4">
                 <p>
-                  We use <Link href="https://aws.amazon.com/">AWS</Link> for some of our core hosting needs (DNS via Route53 and sending emails via SES).
+                  We use AWS for some of our core hosting needs (DNS via <Link href="https://aws.amazon.com/route53">Route53</Link> and sending emails via <Link href="https://aws.amazon.com/ses/">SES</Link>).
                 </p>
                 <p>
-                  We also chose AWS to host <Link href="https://tapintodata.com/">tap</Link>, our first SaaS product, using a variety of AWS services (ECS for container orchestration, RDS for relational databases, ALB for ingress, and a long tail of peripheral services, as is the AWS way).
+                  We also chose AWS to host <Link href="https://tapintodata.com/">tap</Link>, our first SaaS product, using a variety of AWS services (<Link href="https://aws.amazon.com/ecs/">ECS</Link> for container orchestration, <Link href="https://aws.amazon.com/rds/">RDS</Link> for relational databases, <Link href="https://aws.amazon.com/elasticloadbalancing/application-load-balancer/">ALB</Link> for ingress, and a long tail of peripheral services, as is the AWS way).
                 </p>
                 <p>
                   We chose AWS for familiarity since we have worked with it for nearly 15 years.
@@ -77,7 +77,7 @@ export default function HetznerMigrationPost(): JSX.Element {
               </a>
               <div className="flex flex-col ml-4 gap-4">
                 <p>
-                  We used DigitalOcean Kubernetes to host several lightweight services, such as <Link href="https://epcdata.scot/">epcdata.scot</Link>, and monitoring services (<Link href="https://umami.is/">Umami</Link> for web analytics, <Link href="https://openobserve.ai/">OpenObserve</Link> for telemetry, and <Link href="https://uptime.kuma.pet/">Uptime Kuma</Link> for availability monitoring).
+                  We used <Link href="https://www.digitalocean.com/products/kubernetes">DigitalOcean Kubernetes</Link> to host several lightweight services, such as <Link href="https://epcdata.scot/">epcdata.scot</Link>, and monitoring services (<Link href="https://umami.is/">Umami</Link> for web analytics, <Link href="https://openobserve.ai/">OpenObserve</Link> for telemetry, and <Link href="https://uptime.kuma.pet/">Uptime Kuma</Link> for availability monitoring).
                 </p>
                 <p>
                   We chose DigitalOcean for its relatively simple and cost-effective managed Kubernetes offering, where you pay for the cluster's resources (nodes, block storage, load balancers) but the controlplane is free.

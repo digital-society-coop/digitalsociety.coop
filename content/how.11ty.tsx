@@ -25,7 +25,6 @@ export default function How(): ReactNode {
             We subscribe to the{" "}
             <Link
               href="https://agilemanifesto.org/principles.html"
-              target="_blank"
             >
               principles behind the Agile Manifesto
             </Link>{" "}
@@ -126,13 +125,12 @@ export default function How(): ReactNode {
             in a lightweight and standardised format has benefits, both to
             support better decisions and as a reference. For this we use
             Decision Logs, an iteration on{" "}
-            <Link href="https://www.ietf.org/standards/rfcs/" target="_blank">
+            <Link href="https://www.ietf.org/standards/rfcs/">
               Requests for comment (RFCs)
             </Link>{" "}
             and{" "}
             <Link
               href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html"
-              target="_blank"
             >
               Architectural decision records (ADRs)
             </Link>
@@ -175,12 +173,11 @@ export default function How(): ReactNode {
             We use standards, such as{" "}
             <Link
               href="https://www.conventionalcommits.org/en/v1.0.0/"
-              target="_blank"
             >
               conventional commits
             </Link>{" "}
             and{" "}
-            <Link href="https://conventionalcomments.org/" target="_blank">
+            <Link href="https://conventionalcomments.org/">
               conventional comments
             </Link>{" "}
             with our code. They enable clearer communication and automation.

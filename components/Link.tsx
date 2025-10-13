@@ -11,7 +11,7 @@ export default function Link(props: {
     <a
       className={`hover:no-underline underline break-words ${props.className ?? ""}`}
       href={props.href}
-      target={props.target}
+      target={props.target ?? (props.href.startsWith("http") ? "_blank" : "")}
       data-umami-event={props.event}
     >
       {props.children}

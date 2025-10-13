@@ -34,18 +34,18 @@ export default function SkillsTrack(): ReactNode {
             </Strong>
           </p>
           <p className="mb-5">
-            <Link href="https://youthlink.scot/" target="_blank">
+            <Link href="https://youthlink.scot/">
               YouthLink Scotland
             </Link>{" "}
             are the national agency for youth work and the collective voice of
             the sector. We are their development partner for{" "}
-            <Link href="https://impact.youthlink.scot/" target="_blank">
+            <Link href="https://impact.youthlink.scot/">
               Youth Work SkillsTrack
             </Link>
             , which we continue to support.
           </p>
           <p className="mb-5">
-            <Link href="https://impact.youthlink.scot/" target="_blank">
+            <Link href="https://impact.youthlink.scot/">
               Youth Work SkillsTrack
             </Link>{" "}
             serves two key purposes. First, it provides youth work practitioners

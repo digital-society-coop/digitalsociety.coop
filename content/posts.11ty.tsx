@@ -15,6 +15,14 @@ export default function Insights(): ReactNode {
         <PageTitle>Insights</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Post
+            href="/posts/why-tap/"
+            title="Why we're building tap"
+            date="21/10/2025"
+            description="Bridging the gap between data and applications"
+            alt="A screenshot of tap showing a 3-step workflow to create an API from a data file."
+            src="/images/tap-screenshot.png"
+          />
+          <Post
             href="/posts/migrating-to-hetzner-cloud/"
             title="Migrating to Hetzner"
             date="02/10/2025"

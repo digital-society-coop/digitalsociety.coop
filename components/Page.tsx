@@ -77,7 +77,7 @@ export default function Page(props: {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/projects" className="text-xl">
+                      <Link href="/projects/" className="text-xl">
                         Projects
                       </Link>
                     </li>
@@ -106,7 +106,7 @@ export default function Page(props: {
             </label>
             <div className="hidden sm:flex flex-row items-center gap-3 gap-2 md:gap-10 z-100">
               <Link href="/#services">Services</Link>
-              <Link href="/projects">Projects</Link>
+              <Link href="/projects/">Projects</Link>
               <Link href="/about/">About</Link>
               <Link href="/posts/">Insights</Link>
               <a

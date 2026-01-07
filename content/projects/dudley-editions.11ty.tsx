@@ -36,11 +36,9 @@ export default function DudleyEditions(): ReactNode {
             </Strong>
           </p>
           <p className="mb-5">
-            <Link href="https://dudleyeditions.com/">
-              Dudley Editions
-            </Link>{" "}
-            is a cross-platform (iOS and Android) mobile app that allows you to
-            clone your voice and create and share audiobooks from your voice in
+            <Link href="https://dudleyeditions.com/">Dudley Editions</Link> is a
+            cross-platform (iOS and Android) mobile app that allows you to clone
+            your voice and create and share audiobooks from your voice in
             minutes.
           </p>
 

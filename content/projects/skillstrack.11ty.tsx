@@ -34,11 +34,9 @@ export default function SkillsTrack(): ReactNode {
             </Strong>
           </p>
           <p className="mb-5">
-            <Link href="https://youthlink.scot/">
-              YouthLink Scotland
-            </Link>{" "}
-            are the national agency for youth work and the collective voice of
-            the sector. We are their development partner for{" "}
+            <Link href="https://youthlink.scot/">YouthLink Scotland</Link> are
+            the national agency for youth work and the collective voice of the
+            sector. We are their development partner for{" "}
             <Link href="https://impact.youthlink.scot/">
               Youth Work SkillsTrack
             </Link>

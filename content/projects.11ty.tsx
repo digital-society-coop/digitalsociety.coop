@@ -14,6 +14,20 @@ export default function Projects(): ReactNode {
         <PageTitle>Some of our projects</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Project
+            href="/projects/vouchsafe/"
+            title="Vouchsafe"
+            description="Inclusive identity verification"
+            screenshots={
+              <div className="max-h-[15rem] w-full h-full self-center rounded-xl overflow-hidden flex flex-col justify-center bg-sumiInk1">
+                <img
+                  alt="Logo for Youth Work SkillsTrack"
+                  src="/images/vouchsafe.png"
+                  className="object-contain h-full"
+                />
+              </div>
+            }
+          />
+          <Project
             href="/projects/skillstrack/"
             title="Youth Work SkillsTrack"
             description="Recording and demonstrating the impact of youth work"

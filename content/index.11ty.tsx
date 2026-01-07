@@ -41,6 +41,20 @@ export default function Home(): ReactNode {
         <h3 className="text-lg sm:text-xl font-bold mt-6">Featured projects</h3>
         <div className="flex flex-col sm:flex-row sm:justify-start gap-8">
           <Project
+            href="/projects/vouchsafe/"
+            title="Vouchsafe"
+            description="Inclusive identity verification"
+            screenshots={
+              <div className="max-h-[15rem] w-full h-full self-center rounded-xl overflow-hidden flex flex-col justify-center bg-sumiInk1">
+                <img
+                  alt="Logo for Youth Work SkillsTrack"
+                  src="/images/vouchsafe.png"
+                  className="object-contain h-full"
+                />
+              </div>
+            }
+          />
+          <Project
             href="/projects/skillstrack/"
             title="Youth Work SkillsTrack"
             description="Recording and demonstrating the impact of youth work"
@@ -66,18 +80,6 @@ export default function Home(): ReactNode {
                   className="w-full"
                 />
               </div>
-            }
-          />
-          <Project
-            href="/projects/orang-energy/"
-            title="Orang Energy"
-            description="Helping reduce your energy bills"
-            screenshots={
-              <img
-                alt="Screenshot from Orang Energy showing the calculator page"
-                src="/images/orang-energy-screenshot-1.png"
-                className="w-full object-cover"
-              />
             }
           />
         </div>
@@ -120,6 +122,10 @@ export default function Home(): ReactNode {
           <Quote
             quote="We couldn’t be happier with the experience we’ve had of working with Chris and Endre."
             author="Jane Dailly (National Grants Manager, YouthLink Scotland)"
+          />
+          <Quote
+            quote="Digital Society exceeded our expectations and put us ahead of our anticipated schedule."
+            author="Jaye Hackett (CTO, Vouchsafe)"
           />
           <Quote
             quote="I highly recommend Digital Society!"

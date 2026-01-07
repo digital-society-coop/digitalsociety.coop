@@ -23,9 +23,7 @@ export default function How(): ReactNode {
 
           <p>
             We subscribe to the{" "}
-            <Link
-              href="https://agilemanifesto.org/principles.html"
-            >
+            <Link href="https://agilemanifesto.org/principles.html">
               principles behind the Agile Manifesto
             </Link>{" "}
             and this is reflected in how we work:
@@ -129,9 +127,7 @@ export default function How(): ReactNode {
               Requests for comment (RFCs)
             </Link>{" "}
             and{" "}
-            <Link
-              href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html"
-            >
+            <Link href="https://docs.aws.amazon.com/prescriptive-guidance/latest/architectural-decision-records/adr-process.html">
               Architectural decision records (ADRs)
             </Link>
             . A decision log captures:
@@ -171,9 +167,7 @@ export default function How(): ReactNode {
 
           <p>
             We use standards, such as{" "}
-            <Link
-              href="https://www.conventionalcommits.org/en/v1.0.0/"
-            >
+            <Link href="https://www.conventionalcommits.org/en/v1.0.0/">
               conventional commits
             </Link>{" "}
             and{" "}

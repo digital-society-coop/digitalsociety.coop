@@ -30,18 +30,14 @@ export default function OrangEnergy(): ReactNode {
             <Strong>Helps to reduce your energy bills</Strong>
           </p>
           <p className="mb-5">
-            <Link href="https://orang.energy/">
-              Orang Energy
-            </Link>{" "}
-            is an energy savings calculator, aimed at showing the savings
-            achievable through sustainable technology in the home and connecting
-            homeowners with qualified local installers.
+            <Link href="https://orang.energy/">Orang Energy</Link> is an energy
+            savings calculator, aimed at showing the savings achievable through
+            sustainable technology in the home and connecting homeowners with
+            qualified local installers.
           </p>
 
           <p className="mb-5">
-            <Link href="https://www.turbine.education/">
-              Turbine Education
-            </Link>{" "}
+            <Link href="https://www.turbine.education/">Turbine Education</Link>{" "}
             originally approached us to build a heatpump installer directory in
             time for an event. User research revealed that users actually needed
             a holistic energy-saving calculator, and a more varied installer

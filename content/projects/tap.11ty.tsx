@@ -45,12 +45,9 @@ export default function Tap(): ReactNode {
             </Strong>
           </p>
           <p className="mb-5">
-            <Link href="https://tapintodata.com/">
-              tap
-            </Link>{" "}
-            is our first SaaS product, enabling teams to transform, join and
-            serve data with flexible and powerful SQL queries and documented,
-            secured APIs
+            <Link href="https://tapintodata.com/">tap</Link> is our first SaaS
+            product, enabling teams to transform, join and serve data with
+            flexible and powerful SQL queries and documented, secured APIs
           </p>
 
           <p className="mb-5">

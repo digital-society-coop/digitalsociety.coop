@@ -41,13 +41,9 @@ export default function EpcData(): ReactNode {
             </Strong>
           </p>
           <p className="mb-5">
-            We built{" "}
-            <Link href="https://epcdata.scot">
-              epcdata.scot
-            </Link>{" "}
-            while working on{" "}
-            <Link href="/projects/orang-energy/">Orang Energy</Link>, an energy
-            savings calculator for properties across UK.
+            We built <Link href="https://epcdata.scot">epcdata.scot</Link> while
+            working on <Link href="/projects/orang-energy/">Orang Energy</Link>,
+            an energy savings calculator for properties across UK.
           </p>
           <p className="mb-5">
             Energy Performance Certificates (EPCs) provide energy efficiency
@@ -55,9 +51,7 @@ export default function EpcData(): ReactNode {
             and materials used. We needed to be able to lookup certificates
             based on addresses performantly across this data. While England and
             Wales has an API that returns EPC data from address lookup,{" "}
-            <Link
-              href="https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fdomestic-energy-performance-certificates--extended-historic-dataset"
-            >
+            <Link href="https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fdomestic-energy-performance-certificates--extended-historic-dataset">
               Scotland publishes
             </Link>{" "}
             the data as CSV files only. The data files are a ZIP of 18 CSV files
@@ -94,13 +88,11 @@ export default function EpcData(): ReactNode {
           </List>
 
           <p className="my-5">
-            <Link href="https://epcdata.scot">
-              epcdata.scot
-            </Link>{" "}
-            is used both by us and external organisations that came across our
-            data portal when looking for an API for EPCs. It enables focusing on
-            user value rather than the laborious process of data transformation
-            and building out a data service around the EPC dataset.
+            <Link href="https://epcdata.scot">epcdata.scot</Link> is used both
+            by us and external organisations that came across our data portal
+            when looking for an API for EPCs. It enables focusing on user value
+            rather than the laborious process of data transformation and
+            building out a data service around the EPC dataset.
           </p>
           <p className="mb-5">
             Rather than forcing each user to solve the same data challenges, the

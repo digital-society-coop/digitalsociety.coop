@@ -15,6 +15,14 @@ export default function Insights(): ReactNode {
         <PageTitle>Insights</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Post
+            href="/posts/second-year/"
+            title="Digital Society is 2 years old!"
+            date="20/01/2026"
+            description="Celebrating our second year operating."
+            alt="Sparkler (by KAVOWO from https://pixabay.com/photos/sparkler-spark-fireworks-light-4724867/)"
+            src="/images/sparkler-4724867_640.jpg"
+          />
+          <Post
             href="/posts/migrating-to-hetzner-cloud/"
             title="Migrating to Hetzner"
             date="02/10/2025"

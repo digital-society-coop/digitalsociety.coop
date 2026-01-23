@@ -37,29 +37,35 @@ export default function SecondYear(): ReactNode {
           </div>
 
           <p className="mt-6">
-            Just over a year we celebrated our{" "}
+            Just over a year ago we celebrated our{" "}
             <Link href="/posts/first-year/">first year</Link> and it's time for
             another retrospective post!
           </p>
 
           <Heading>Existing client work</Heading>
           <p>
-            We've had the pleasure to continue work with and support clients
-            from our first year:
+            We've had the pleasure to continue working with and supporting
+            clients from our first year:
           </p>
           <List>
             <li>
               Support, maintainance and smaller features for{" "}
-              <Link href="/projects/dudley-editions/">Dudley Editions</Link>.
+              <Link href="/projects/dudley-editions/">Dudley Editions</Link>, a
+              mobile app for creating connections through personalised
+              audiobooks.
             </li>
             <li>
-              Subcontracted for{" "}
-              <Link href="https://www.datnexa.com/">Datnexa</Link> to introduce
-              data warehousing best practices in a care related setting.
+              Working with <Link href="https://www.datnexa.com/">Datnexa</Link>{" "}
+              on some of their projects, including introducing data warehousing
+              best practices in a care related setting and developing a media
+              impact reporting tool for a public relations firm.
             </li>
             <li>
-              Did further feature acceleration for{" "}
-              <Link href="/projects/vouchsafe/">Vouchsafe</Link>.
+              Feature acceleration for{" "}
+              <Link href="/projects/vouchsafe/">Vouchsafe</Link>, a platform
+              that combines document checks, biometric vouching, and financial
+              data verification to help organisations verify identities securely
+              and fairly.
             </li>
           </List>
 
@@ -68,46 +74,46 @@ export default function SecondYear(): ReactNode {
           <List>
             <li>
               We built{" "}
-              <Link href="/projects/vouchsafe/">Youth Work SkillsTrack</Link>{" "}
+              <Link href="/projects/skillstrack/">Youth Work SkillsTrack</Link>{" "}
               for{" "}
               <Link href="https://www.youthlink.scot/">YouthLink Scotland</Link>
               . This is now transforming how 20+ youth work organisations are
               capturing and reporting on the impact of youth work in Scotland
-              and are excited to support the wider roll out this year!
+              and we are excited to support the wider roll out this year!
             </li>
             <li>
-              We help{" "}
+              We are helping{" "}
               <Link href="https://singularphotonics.com/">
                 Singular Photonics
               </Link>{" "}
               with the development of drivers, SDKs and user interface
               applications for their single photon avalanche diode (SPAD)
-              sensors. This is a completely new domain for us, with exciting
-              applications, such non-invasive health monitoring!
+              sensors. This is an exciting new domain for us, with applications
+              including allergen detection and non-invasive health monitoring.
             </li>
             <li>
               <Link href="https://quotech.io/">Quotech</Link> is our latest
-              client, who have built a tech platform for insurance underwiting
-              and continue to innovate in this space.
+              client, who build truly useful insurance technology for
+              underwriters and brokers. We are working with them to scale their
+              platform for larger customers and transaction volumes.
             </li>
           </List>
-          <p>On to the next one!</p>
 
-          <Heading>Our projects</Heading>
+          <Heading>Our own projects</Heading>
           <p>
             This year we launched{" "}
             <Link href="https://tapintodata.com/">tap</Link>, which makes it
             easy to create APIs from datasets. While we find great use for it
-            for our projects, we did not have great success in commercialising
-            it yet, albeit we've also prioritised client work.
+            for our projects, we have struggled to prioritise commercialisation
+            efforts alongside client work.
           </p>
           <p>
             The most successful service we've launched on top of{" "}
             <Link href="https://tapintodata.com/">tap</Link> is{" "}
-            <Link href="https://epcdata.scot/">epcdata.scot</Link> serving
+            <Link href="https://epcdata.scot/">epcdata.scot</Link>, serving
             Scottish energy performance certificate (EPC) data via API. It gets
-            weekly sign ups and have served around 310k requests to date since
-            we started counting.
+            organic weekly sign ups and has served around 310,000 requests to
+            date since we started counting.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
             <img
@@ -117,9 +123,9 @@ export default function SecondYear(): ReactNode {
             />
             <div className="flex flex-col gap-4 flex-1">
               <p>
-                Due to political, financial and because we had an "itch to
-                scratch", we made the decision to migrate our infrastructure
-                from US cloud providers to Hetzner. Our{" "}
+                For political, financial and "scratching an itch" reasons, we
+                made the decision to migrate our infrastructure from US cloud
+                providers to Hetzner. Our{" "}
                 <Link href="/posts/migrating-to-hetzner-cloud/">
                   post about this
                 </Link>{" "}
@@ -128,37 +134,44 @@ export default function SecondYear(): ReactNode {
                 <Link href="https://news.ycombinator.com/item?id=45614922">
                   Hacker News
                 </Link>
-                . Contrary to some of the commenters (mostly on Reddit)
-                prophesizing the overwhelming time we need to spend maintinging
-                our new more bare-bones infrastructure, this has not yet been
-                the case. There was a major{" "}
+                . Contrary to some Reddit commentators prophesizing the
+                overwhelming time we would need to spend maintaining our
+                less-managed infrastructure, this has not (yet) been the case.
+                There was however a major{" "}
                 <Link href="https://www.bbc.co.uk/news/articles/c0jdgp6n45po">
                   AWS outage on October 20th
-                </Link>{" "}
-                however, a few days after our post.
+                </Link>
+                , a few days after our post.
               </p>
               <p>
-                We also started to work on our friend's exciting new app, watch
+                We also started to work on our friend's exciting new app - watch
                 this space!
               </p>
             </div>
           </div>
           <Heading>Community</Heading>
           <p>
-            We made a bit more effort to be part of harmonious communities. In
-            March we attended our first{" "}
+            We made a bit more effort to participate in like-minded communities.
+          </p>
+          <p>
+            In March we attended our first{" "}
             <Link href="https://www.cotech.coop/">CoTech</Link> members meeting
-            in London and met a lot of great, like minded people. In Edinburgh,
-            we most enjoy Meetups organised by{" "}
+            in London and met a lot of great people.
+          </p>
+          <p>
+            In Edinburgh, we most enjoy Meetups organised by{" "}
             <Link href="https://thisiscodebase.com/greentech-futures">
               Greentech Futures
             </Link>
-            , as they always have inspiring talks and enjoyed meeting people
-            during our co-working sessions with the{" "}
-            <Link href="https://luma.com/founders-hub">Founders Hub</Link>. We
-            are now part of{" "}
-            <Link href="https://www.dovetail.network/">Dovetail</Link> and can
-            chat with us on{" "}
+            , as they always have inspiring talks and an engaged crowd for
+            networking. We have also enjoyed meeting people during co-working
+            sessions with the{" "}
+            <Link href="https://luma.com/founders-hub">Founders Hub</Link>.
+          </p>
+          <p>
+            Online, we are now part of{" "}
+            <Link href="https://www.dovetail.network/">Dovetail</Link> and you
+            can chat with us on{" "}
             <Link href="https://www.agenciesforgood.org/">
               Agencies for Good
             </Link>
@@ -166,8 +179,8 @@ export default function SecondYear(): ReactNode {
           </p>
           <Subheading>
             As always,{" "}
-            <Link href="mailto:hellog@digitalsociety.coop">get in touch</Link>{" "}
-            if you have any projects you need help with or would simply like a
+            <Link href="mailto:hello@digitalsociety.coop">get in touch</Link> if
+            you have any projects you need help with or would simply like a
             chat!
           </Subheading>
           <p>On to the next one!</p>

@@ -108,7 +108,7 @@ export default function SecondYear(): ReactNode {
             efforts alongside client work.
           </p>
           <p>
-            The most successful service we've launched on top of{" "}
+            The most successful service we've launched using{" "}
             <Link href="https://tapintodata.com/">tap</Link> is{" "}
             <Link href="https://epcdata.scot/">epcdata.scot</Link>, serving
             Scottish energy performance certificate (EPC) data via API. It gets
@@ -141,10 +141,10 @@ export default function SecondYear(): ReactNode {
                 <Link href="https://www.bbc.co.uk/news/articles/c0jdgp6n45po">
                   AWS outage on October 20th
                 </Link>
-                , a few days after our post.
+                , a few days after our post (also not us).
               </p>
               <p>
-                We also started to work on our friend's exciting new app - watch
+                We also started working on an exciting new app - watch
                 this space!
               </p>
             </div>

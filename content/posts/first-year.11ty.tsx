@@ -84,7 +84,7 @@ export default function FirstYear(): ReactNode {
               organising long distance bike races.
             </li>
             <li>
-              <Link href="https://www.datnexa.com/">WA Health</Link>: We
+              <Link href="https://www.wahealth.co.uk/">WA Health</Link>: We
               provided technical project scoping advice to WA Health, in their
               mission to streamline GP workflows.
             </li>

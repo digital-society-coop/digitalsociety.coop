@@ -182,14 +182,14 @@ function Quotes(props: { children: React.ReactNode }): React.ReactNode {
         {`
         @keyframes fadeInOut {
             0% { opacity: 0; transform: translateY(20px); }
-            6.67% { opacity: 1; transform: translateY(0); }
-            33.33% { opacity: 1; transform: translateY(0); }
-            40% { opacity: 0; transform: translateY(-20px); }
+            5% { opacity: 1; transform: translateY(0); }
+            20% { opacity: 1; transform: translateY(0); }
+            25% { opacity: 0; transform: translateY(-20px); }
             100% { opacity: 0; transform: translateY(-20px); }
         }
 
         .quote {
-            animation: fadeInOut 12s infinite;
+            animation: fadeInOut 16s infinite;
         }
 
         .quote:nth-child(1) {
@@ -202,6 +202,10 @@ function Quotes(props: { children: React.ReactNode }): React.ReactNode {
 
         .quote:nth-child(3) {
             animation-delay: 8s;
+        }
+
+        .quote:nth-child(4) {
+            animation-delay: 12s;
         }
 
         .slideshow-container:hover .quote {

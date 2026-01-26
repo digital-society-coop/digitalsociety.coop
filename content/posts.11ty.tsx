@@ -73,7 +73,7 @@ function Post(props: {
   return (
     <a
       href={props.href}
-      className="flex-1 flex flex-col p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline max-w-full"
+      className="flex-1 flex flex-col p-4 rounded-xl bg-fujiWhite shadow items-start hover:underline min-w-[calc((100%-2*4*var(--spacing))/3)] max-w-full"
     >
       <div
         className={`max-h-[15rem] max-w-[20rem] w-full self-center rounded-xl overflow-hidden bg-sumiInk1 aspect-320/213 flex flex-col justify-center ${props.imgContainerClass}`}
@@ -84,7 +84,7 @@ function Post(props: {
         <Heading>{props.title}</Heading>
         <div className="flex flex-col gap-2 min-w-0 overflow-hidden w-full">
           <p>{props.date}</p>
-          <p className="overflow-hidden text-ellipsis text-nowrap">
+          <p className="overflow-hidden text-ellipsis sm:text-nowrap" title={props.description}>
             {props.description}
           </p>
         </div>

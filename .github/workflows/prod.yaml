@@ -1,9 +1,9 @@
-name: main
+name: prod
 
 on:
   push:
     branches:
-      - main
+      - prod
 
 permissions:
   contents: read
@@ -12,5 +12,5 @@ jobs:
   deploy:
     uses: ./.github/workflows/deploy.yaml
     with:
-      environment: dev
+      environment: prod
     secrets: inherit

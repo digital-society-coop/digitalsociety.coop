@@ -1,0 +1,106 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: $NAMESPACE
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: $SERVICE
+  namespace: $NAMESPACE
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: $SERVICE
+    app.kubernetes.io/part-of: $SERVICE
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+      protocol: TCP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: $SERVICE
+  namespace: $NAMESPACE
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    acme.cert-manager.io/http01-edit-in-place: "true"
+spec:
+  tls:
+    - hosts:
+        - $MANAGED_DOMAIN
+      secretName: $SERVICE-tls-certificate
+    - hosts:
+        - $VANITY_DOMAIN
+      secretName: $SERVICE-vanity-tls-certificate
+  rules:
+    - host: $MANAGED_DOMAIN
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: $SERVICE
+                port:
+                  number: 80
+    - host: $VANITY_DOMAIN
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: $SERVICE
+                port:
+                  number: 80
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: web-analytics
+  namespace: $NAMESPACE
+  labels:
+    app.kubernetes.io/part-of: $SERVICE
+data:
+  src: "$WEB_ANALYTICS_SRC_BASE64"
+  id: "$WEB_ANALYTICS_ID_BASE64"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $SERVICE
+  namespace: $NAMESPACE
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: $SERVICE
+      app.kubernetes.io/part-of: $SERVICE
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: $SERVICE
+        app.kubernetes.io/part-of: $SERVICE
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: $SERVICE
+          image: $IMAGE
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: WEB_ANALYTICS_SRC
+              valueFrom:
+                secretKeyRef:
+                  name: web-analytics
+                  key: src
+            - name: WEB_ANALYTICS_ID
+              valueFrom:
+                secretKeyRef:
+                  name: web-analytics
+                  key: id

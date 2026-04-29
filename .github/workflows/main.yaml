@@ -1,0 +1,16 @@
+name: main
+
+on:
+  push:
+    branches:
+      - containerise
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/deploy.yaml
+    with:
+      environment: dev
+    secrets: inherit

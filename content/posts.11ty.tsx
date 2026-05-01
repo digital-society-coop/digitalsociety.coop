@@ -15,6 +15,14 @@ export default function Insights(): ReactNode {
         <PageTitle>Insights</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-4">
           <Post
+            href="/posts/pension-sovereignty/"
+            title="UK pensions"
+            date="05/05/2026"
+            description="Our pension fund should be made to invest more than 2.5% in the UK."
+            alt="Image by Alfons Landsmann from https://pixabay.com/photos/coins-money-poverty-homeless-8975531/"
+            src="/images/pension-sovereignty.jpg"
+          />
+          <Post
             href="/posts/second-year/"
             title="Digital Society is 2 years old!"
             date="20/01/2026"
@@ -84,7 +92,10 @@ function Post(props: {
         <Heading>{props.title}</Heading>
         <div className="flex flex-col gap-2 min-w-0 overflow-hidden w-full">
           <p>{props.date}</p>
-          <p className="overflow-hidden text-ellipsis sm:text-nowrap" title={props.description}>
+          <p
+            className="overflow-hidden text-ellipsis sm:text-nowrap"
+            title={props.description}
+          >
             {props.description}
           </p>
         </div>

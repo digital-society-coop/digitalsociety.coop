@@ -12,14 +12,18 @@ export default function Home(): ReactNode {
       description="The home page for Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data."
     >
       <Section>
-        <h1 className="text-8xl sm:text-9xl my-20">
-          <span className="text-oniViolet">Digital</span>&#8203;
-          <span className="text-waveAqua2">Society</span>
+        <h1 className="text-4xl sm:text-5xl my-20">
+          <span className="text-oniViolet text-5xl sm:text-6xl">Digital</span>
+          &#8203;
+          <span className="text-waveAqua2 text-5xl sm:text-6xl">
+            Society
+          </span>{" "}
+          is founded on the belief that technology can improve society.
         </h1>
 
         <Heading>
-          No requirement is too complex or ambitious. We build bespoke digital
-          tools with best practice and at pace.
+          We build bespoke digital tools with best practice and at pace, with no
+          project too complex or ambitious.
         </Heading>
         <p className="text-end">
           <Link href="/about/">More about us {"\u2192"}</Link>

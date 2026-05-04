@@ -144,8 +144,8 @@ export default function SecondYear(): ReactNode {
                 , a few days after our post (also not us).
               </p>
               <p>
-                We also started working on an exciting new app - watch
-                this space!
+                We also started working on an exciting new app - watch this
+                space!
               </p>
             </div>
           </div>

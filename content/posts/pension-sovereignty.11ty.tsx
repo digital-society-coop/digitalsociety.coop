@@ -128,11 +128,10 @@ export default function PensionSovereigntyPost(): JSX.Element {
             , a voluntary pledge from 17 of the largest pension providers to put
             at least 5% of their assets into UK private markets by 2030. The{" "}
             <Link href="https://bills.parliament.uk/bills/3982">
-              Pension Schemes Bill
+              Pension Schemes Act 2026
             </Link>
-            , introduced in June 2025 and still working through Parliament,
-            would consolidate the market into large "megafunds" and require
-            schemes to demonstrate value for money.
+            , passed in April 2026, consolidates the market into large
+            "megafunds" and requires schemes to demonstrate value for money.
           </p>
 
           <Heading>Why this is not enough</Heading>
@@ -140,10 +139,10 @@ export default function PensionSovereigntyPost(): JSX.Element {
           <p>
             The Mansion House Accord is voluntary, has low targets (5%), covers
             only private markets like infrastructure and private equity (not
-            ordinary shares in UK companies), and applies only to the default
-            funds of its 17 signatories, covering only a fraction of the total
-            UK pension market. Progress under a similar earlier pledge saw the
-            relevant allocation{" "}
+            ordinary shares in UK companies), and applies only to the defined
+            contribution default funds of its 17 signatories, not covering the
+            wider defined benefit market. Progress under a similar earlier
+            pledge saw the relevant allocation{" "}
             <Link href="https://www.abi.org.uk/globalassets/files/publications/public/lts/2025/mansionhousecompactprogressupdateoctober2025.pdf">
               grow from 0.36% to 0.6% over a year
             </Link>
@@ -151,7 +150,7 @@ export default function PensionSovereigntyPost(): JSX.Element {
           </p>
 
           <p>
-            The Pension Schemes Bill goes further in some respects, creating
+            The Pension Schemes Act goes further in some respects, creating
             large megafunds that could in theory unlock investment in
             infrastructure, housing and clean energy, and giving the government
             a reserve power to set mandatory UK investment targets if the

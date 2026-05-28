@@ -28,9 +28,9 @@ export default function Page(props: {
         <ClientScript fn={initMenu} />
       </head>
 
-      <body className="h-full margin-0 flex flex-col bg-sumiInk1 text-lighterYellow has-[#mobile-menu:checked]:overflow-hidden">
-        <header>
-          <nav className="flex flex-row justify-between p-4 shadow gap-1 w-full lg:z-1">
+      <body className="margin-0 flex flex-col bg-sumiInk1 text-lighterYellow has-[#mobile-menu:checked]:overflow-hidden">
+        <header className="sm:sticky sm:top-0 sm:z-50">
+          <nav className="flex flex-row justify-between p-4 shadow gap-1 w-full lg:z-1 bg-lighterYellow text-sumiInk1">
             <a href="/" aria-label="Back to the home page" className="z-50">
               <img
                 className="h-[3rem] aspect-square block"
@@ -65,11 +65,11 @@ export default function Page(props: {
                   />
                 </svg>
               </div>
-              <div className="fixed inset-0 z-40 h-full w-full bg-sumiInk3/50 backdrop-blur-sm hidden peer-checked:block">
+              <div className="fixed inset-0 z-40 h-full w-full backdrop-blur-sm hidden peer-checked:block">
                 &nbsp;
               </div>
               <div className="fixed top-[56px] right-0 z-40 w-full h-full -translate-y-full transition duration-300 hidden peer-checked:block peer-checked:translate-y-0">
-                <div className="float-top bg-sumiInk2 p-4 shadow-lg">
+                <div className="float-top p-4 shadow-lg bg-lighterYellow">
                   <menu className="flex flex-col gap-6 items-center">
                     <li>
                       <Link href="/#services" className="text-xl">
@@ -95,7 +95,7 @@ export default function Page(props: {
                       <a
                         data-umami-event="out-mail"
                         href="mailto:hello@digitalsociety.coop"
-                        className="text-xl self-center px-3 py-1 sm:mt-0 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+                        className="text-xl self-center px-3 py-1 sm:mt-0 rounded-xl border border-waveAqua2 hover:outline outline-waveAqua2 bg-waveAqua2! hover:bg-waveAqua1!"
                       >
                         Get in touch {"\u2197"}
                       </a>
@@ -104,7 +104,7 @@ export default function Page(props: {
                 </div>
               </div>
             </label>
-            <div className="hidden sm:flex flex-row items-center gap-3 gap-2 md:gap-10 z-100">
+            <div className="hidden sm:flex flex-row items-center gap-2 md:gap-10 z-100">
               <Link href="/#services">Services</Link>
               <Link href="/projects/">Projects</Link>
               <Link href="/about/">About</Link>
@@ -112,7 +112,7 @@ export default function Page(props: {
               <a
                 data-umami-event="out-mail"
                 href="mailto:hello@digitalsociety.coop"
-                className="self-center px-3 py-1 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+                className="self-center px-3 py-1 sm:mt-0 rounded-xl border border-waveAqua2 hover:outline outline-waveAqua2 bg-waveAqua2! hover:bg-waveAqua1!"
               >
                 Get in touch {"\u2197"}
               </a>
@@ -121,7 +121,7 @@ export default function Page(props: {
         </header>
         <main>{props.children}</main>
       </body>
-      <footer className="self-center max-w-6xl p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-1 sm:grid-cols-3 gap-4 border-t border-fujiWhite [&_a]:text-lighterBlue pb-8">
+      <footer className="self-center max-w-6xl p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-1 sm:grid-cols-3 gap-4 border-t border-fujiWhite [&_a]:text-oniViolet2 pb-8">
         <div className="flex flex-row gap-2 order-3 sm:order-first">
           <a
             href="https://www.uk.coop/directory/digital-society"

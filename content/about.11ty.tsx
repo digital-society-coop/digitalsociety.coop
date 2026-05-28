@@ -6,6 +6,7 @@ import PageTitle from "../components/PageTitle";
 import Heading from "../components/Heading";
 import Subheading from "../components/Subheading";
 import Link from "../components/Link";
+import DotRotation from "../components/DotRotation";
 
 export default function Insights(): ReactNode {
   return (
@@ -13,7 +14,8 @@ export default function Insights(): ReactNode {
       title="About"
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. About us."
     >
-      <Section>
+      <Section background={<DotRotation side="right" />}>
+        <div className="sm:w-[70%] py-12 flex flex-col gap-8">
         <PageTitle>
           We are an agile not-for-profit co-operative of technical experts
         </PageTitle>
@@ -48,6 +50,7 @@ export default function Insights(): ReactNode {
             title="Founder & all-rounder"
             description="Chat to him about DIY, ferments or gardening."
           />
+        </div>
         </div>
       </Section>
     </Page>

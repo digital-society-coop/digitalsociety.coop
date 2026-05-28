@@ -121,7 +121,7 @@ export default function Page(props: {
         </header>
         <main>{props.children}</main>
       </body>
-      <footer className="self-center max-w-6xl p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-1 sm:grid-cols-3 gap-4 border-t border-fujiWhite [&_a]:text-oniViolet2 pb-8">
+      <footer className="self-center max-w-6xl mt-4 p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-1 sm:grid-cols-3 gap-4 [&_a]:text-oniViolet2 pb-8">
         <div className="flex flex-row gap-2 order-3 sm:order-first">
           <a
             href="https://www.uk.coop/directory/digital-society"

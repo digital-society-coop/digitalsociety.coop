@@ -3,124 +3,7 @@ import type { ReactNode } from "react";
 import Page from "../components/Page";
 import Section from "../components/Section";
 import Heading from "../components/Heading";
-import ClientScript from "../components/ClientScript";
-
-function initDotGrid(): void {
-  const canvasEl = document.getElementById("dot-grid-canvas");
-  if (!(canvasEl instanceof HTMLCanvasElement)) return;
-  const canvas: HTMLCanvasElement = canvasEl;
-  const rawCtx = canvas.getContext("2d");
-  if (!rawCtx) return;
-  const ctx: CanvasRenderingContext2D = rawCtx;
-
-  let S: number = 0,
-    DOT_R: number = 0,
-    GAP: number = 0,
-    W: number = 0,
-    H: number = 0,
-    OX: number = 0,
-    OY: number = 0,
-    dpr: number = 1,
-    COLS: number = 0,
-    ROWS: number = 0,
-    CX: number = 0,
-    CY: number = 0;
-
-  let LINES: [number, number][] = [];
-
-  function buildGrid(): void {
-    COLS = Math.ceil(W / S) + 1;
-    ROWS = Math.ceil(H / S) + 1;
-    OX = (W - (COLS - 1) * S) / 2;
-    OY = (H - (ROWS - 1) * S) / 2;
-    CX = (COLS - 1) / 2;
-    CY = (ROWS - 1) / 2;
-    LINES = [];
-    for (let r = 0; r < ROWS; r++)
-      for (let c = 0; c < COLS - 1; c++)
-        LINES.push([r * COLS + c, r * COLS + c + 1]);
-    for (let r = 0; r < ROWS - 1; r++)
-      for (let c = 0; c < COLS; c++)
-        LINES.push([r * COLS + c, (r + 1) * COLS + c]);
-  }
-
-  function dotPos(i: number) {
-    const r = (i / COLS) | 0;
-    const c = i % COLS;
-    return { x: OX + c * S, y: OY + r * S, r, c };
-  }
-
-  function setup(): void {
-    dpr = window.devicePixelRatio || 1;
-    W = canvas.offsetWidth;
-    H = canvas.offsetHeight;
-    S = Math.min(Math.min(W, H) * 0.205, 60);
-    DOT_R = Math.max(4.5, S * 0.048);
-    GAP = DOT_R * 2.5;
-    buildGrid();
-    canvas.width = Math.round(W * dpr);
-    canvas.height = Math.round(H * dpr);
-  }
-
-  function draw(t: number): void {
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, W, H);
-    const theta = t * Math.PI * 2;
-    const env = Math.sin(t * Math.PI);
-    ctx.lineCap = "butt";
-    LINES.forEach(([ai, bi]) => {
-      const a = dotPos(ai);
-      const b = dotPos(bi);
-      const mx = (a.x + b.x) * 0.5;
-      const my = (a.y + b.y) * 0.5;
-      const dx = b.x - a.x;
-      const dy = b.y - a.y;
-      const origAngle = Math.atan2(dy, dx);
-      const halfLen = Math.hypot(dx, dy) * 0.5 - GAP;
-      if (halfLen <= 0) return;
-      const cr = (a.r + b.r) * 0.5;
-      const cc = (a.c + b.c) * 0.5;
-      const dist = Math.hypot(cr - CY, cc - CX);
-      const wave = Math.sin(theta * 2.6 + dist * 1.85) * env * 0.24;
-      const angle = origAngle + theta + wave;
-      const cosA = Math.cos(angle);
-      const sinA = Math.sin(angle);
-      ctx.beginPath();
-      ctx.moveTo(mx + halfLen * cosA, my + halfLen * sinA);
-      ctx.lineTo(mx - halfLen * cosA, my - halfLen * sinA);
-      ctx.strokeStyle = "#957fb8";
-      ctx.lineWidth = DOT_R * 1.3;
-      ctx.stroke();
-    });
-    ctx.fillStyle = "#957fb8";
-    for (let i = 0; i < COLS * ROWS; i++) {
-      const p = dotPos(i);
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, DOT_R, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-
-  let rafId: number = 0;
-  let currentT: number = 0;
-
-  function onScroll(): void {
-    const hero = canvas.parentElement;
-    if (!hero) return;
-    const t = Math.min(window.scrollY / hero.offsetHeight, 1);
-    currentT = t;
-    if (rafId) cancelAnimationFrame(rafId);
-    rafId = requestAnimationFrame(() => draw(t));
-  }
-
-  setup();
-  draw(0);
-  window.addEventListener("resize", () => {
-    setup();
-    draw(currentT);
-  });
-  window.addEventListener("scroll", onScroll, { passive: true });
-}
+import DotRotation from "../components/DotRotation";
 
 export default function Home(): ReactNode {
   return (
@@ -128,20 +11,7 @@ export default function Home(): ReactNode {
       title="Home"
       description="Digital Society, a not-for-profit co-operative helping you connect the dots and get your projects off the ground with best practice and at pace."
     >
-      <Section
-        background={
-          <canvas
-            id="dot-grid-canvas"
-            className="absolute right-0 top-0 h-full w-[60%] pointer-events-none"
-            style={{
-              WebkitMaskImage:
-                "linear-gradient(to right, rgba(0,0,0,0.01), rgba(0,0,0,0.3))",
-              maskImage:
-                "linear-gradient(to right, rgba(0,0,0,0.01), rgba(0,0,0,0.3))",
-            }}
-          />
-        }
-      >
+      <Section background={<DotRotation side="right" />}>
         <div className="sm:w-[70%] pb-12">
           <h1 className="text-4xl sm:text-5xl my-20 text-oniViolet font-semibold">
             Digital Society is founded on the belief that technology can improve
@@ -157,11 +27,10 @@ export default function Home(): ReactNode {
               href="/about/"
               className="mt-12 text-nowrap self-center p-2 rounded-lg border border-waveAqua2 hover:outline outline-waveAqua2 bg-waveAqua2! hover:bg-waveAqua1! text-sumiInk1!"
             >
-              More about us {"\u2192"}
+              More about us {"→"}
             </a>
           </p>
         </div>
-        <ClientScript fn={initDotGrid} />
       </Section>
       <Section color="green">
         <Heading anchor="projects">Featured Projects</Heading>
@@ -213,7 +82,7 @@ export default function Home(): ReactNode {
           href="/projects/"
           className="mt-4 self-end text-nowrap p-2 rounded-lg border border-oniViolet2 hover:outline outline-oniViolet2 bg-oniViolet2! hover:bg-oniViolet!"
         >
-          More projects {"\u2192"}
+          More projects {"→"}
         </a>
       </Section>
       <Section color="light">
@@ -239,10 +108,10 @@ export default function Home(): ReactNode {
           />
         </div>
       </Section>
-      <Section>
+      <Section background={<DotRotation side="left" />}>
         <Quotes>
           <Quote
-            quote="We couldn’t be happier with the experience we’ve had of working with Chris and Endre."
+            quote="We couldn't be happier with the experience we've had of working with Chris and Endre."
             author="Jane Dailly (National Grants Manager, YouthLink Scotland)"
           />
           <Quote
@@ -284,7 +153,7 @@ function Project(props: {
       <div className="max-h-[15rem] w-full self-center overflow-hidden aspect-320/213 flex gap-2 items-between">
         {props.screenshots}
       </div>
-      <div className="text-sumiInk2 min-w-0 p-4 text-center flex flex-col gap-2 justify-between">
+      <div className="text-sumiInk2 min-w-0 p-4 text-center flex flex-col gap-2 justify-between self-center">
         <h2 className="text-xl sm:text-2xl font-extrabold">{props.title}</h2>
         <p className="text-lg sm:text-xl">{props.description}</p>
       </div>

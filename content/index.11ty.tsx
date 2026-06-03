@@ -19,11 +19,11 @@ export default function Home(): ReactNode {
             society.
           </h1>
 
-          <h2 className="text-2xl sm:text-3xl my-6">
-            We build bespoke digital tools with best practice and at pace, with
-            no project too complex or ambitious.
+          <h2 className="text-2xl sm:text-3xl">
+            We connect the dots on your most complex and ambitious projects,
+            building bespoke digital solutions with best practice and at pace.
           </h2>
-          <p className="text-end">
+          <p className="text-end mt-12">
             <a
               href="/about/"
               className="mt-12 text-nowrap self-center p-2 rounded-lg border border-waveAqua2 hover:outline outline-waveAqua2 bg-waveAqua2! hover:bg-waveAqua1! text-sumiInk1!"

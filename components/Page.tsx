@@ -16,7 +16,7 @@ export default function Page(props: {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{`Digital Society | ${props.title}`}</title>
-        <link rel="icon" href="/images/logo-transparent-256x256.png" />
+        <link rel="icon" href="/images/DigitalSociety_Icon_Colour_Dark.png" />
         <meta name="description" content={props.description} />
 
         <link rel="stylesheet" href="/tailwind.css" />
@@ -33,9 +33,9 @@ export default function Page(props: {
           <nav className="flex flex-row justify-between p-4 shadow gap-1 w-full lg:z-1 bg-lighterYellow text-sumiInk1">
             <a href="/" aria-label="Back to the home page" className="z-50">
               <img
-                className="h-[3rem] aspect-square block"
+                className="h-[3rem] block"
                 alt="Digital Society Ltd logo"
-                src="/images/logo-transparent-256x256.png"
+                src="/images/DigitalSociety_Logo_Colour_Dark.png"
               />
             </a>
             <label

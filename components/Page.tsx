@@ -29,7 +29,7 @@ export default function Page(props: {
       </head>
 
       <body className="margin-0 flex flex-col bg-sumiInk1 text-lighterYellow has-[#mobile-menu:checked]:overflow-hidden">
-        <header className="sm:sticky sm:top-0 sm:z-50">
+        <header className="sticky top-0 z-50">
           <nav className="flex flex-row justify-between p-4 shadow gap-1 w-full lg:z-1 bg-lighterYellow text-sumiInk1">
             <a href="/" aria-label="Back to the home page" className="z-50">
               <img
@@ -121,8 +121,8 @@ export default function Page(props: {
         </header>
         <main>{props.children}</main>
       </body>
-      <footer className="self-center max-w-6xl mt-4 p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-1 sm:grid-cols-3 gap-4 [&_a]:text-oniViolet2 pb-8">
-        <div className="flex flex-row gap-2 order-3 sm:order-first">
+      <footer className="self-center max-w-6xl mt-4 p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-[repeat(2,minmax(min-content,1fr))] sm:grid-cols-3 gap-4 [&_a]:text-oniViolet2 pb-8">
+        <div className="flex flex-row gap-2 order-3 justify-center sm:justify-start  sm:order-first col-span-full sm:col-span-1">
           <a
             href="https://www.uk.coop/directory/digital-society"
             aria-label="To uk.coop"
@@ -138,21 +138,9 @@ export default function Page(props: {
             src="https://registry.blockmarktech.com/certificates/5755ab18-de66-4e41-a99e-709338cd7c3f/widget/?tooltip_position=bottom_right&theme=transparent&hover=t"
           />
         </div>
-        <div className="order-first sm:order-2">
-          <h3 className="mb-2 text-lg">Explore</h3>
+        <div className="order-2 text-nowrap">
+          <h3 className="mb-2 text-lg">More</h3>
           <ul className="flex flex-col gap-1">
-            <li>
-              <Link href="/about/">About</Link>
-            </li>
-            <li>
-              <Link href="/#services">Services</Link>
-            </li>
-            <li>
-              <Link href="/projects/">Projects</Link>
-            </li>
-            <li>
-              <Link href="/posts/">Insights</Link>
-            </li>
             <li>
               <Link href="/how/">How we work</Link>
             </li>
@@ -161,7 +149,7 @@ export default function Page(props: {
             </li>
           </ul>
         </div>
-        <div className="order-2 sm:order-3">
+        <div className="order-1 sm:order-2 text-nowrap">
           <h3 className="mb-2 text-lg">Contact us</h3>
           <ul className="flex flex-col gap-1">
             <li>
@@ -187,7 +175,7 @@ export default function Page(props: {
             </li>
           </ul>
         </div>
-        <p className="col-span-full order-last">
+        <p className="col-span-full order-last mt-8 text-center text-katanaGray">
           Digital Society Ltd is a private company limited by guarantee without
           share capital registered in Scotland (SC768012).
         </p>

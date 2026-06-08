@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Page from "../components/Page";
 import Section from "../components/Section";
 import PageTitle from "../components/PageTitle";
+import DotRotation from "../components/DotRotation";
 
 export default function Insights(): ReactNode {
   return (
@@ -10,7 +11,7 @@ export default function Insights(): ReactNode {
       title="Insights"
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our insights."
     >
-      <Section>
+      <Section background={<DotRotation side="left" />}>
         <PageTitle>Insights</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-8 sm:gap-16 sm:px-12">
           <Post

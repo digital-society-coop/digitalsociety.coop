@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Work Sans';
-  src: url('/WorkSans.ttf');
+  font-family: 'Outfit';
+  src: url('/Outfit.ttf');
   font-display: swap;
 }
 
 @theme {
-  --font-sans: 'Work Sans', sans-serif;
+  --font-sans: 'Outfit', sans-serif;
   --color-lighterYellow: #E6E3CF;
   --color-linkBlue: #35677E;
   --color-lighterBlue: #7FB4CA;

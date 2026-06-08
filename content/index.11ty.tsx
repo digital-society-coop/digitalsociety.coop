@@ -133,7 +133,7 @@ export default function Home(): ReactNode {
           href="mailto:hello@digitalsociety.coop"
           className="text-nowrap text-lg sm:text-xl self-center p-3 rounded-xl border border-waveAqua2 hover:outline outline-waveAqua2 bg-waveAqua2! hover:bg-waveAqua1! text-sumiInk1! mb-12"
         >
-          Say hello!
+          Say hello! 👋
         </a>
       </Section>
     </Page>

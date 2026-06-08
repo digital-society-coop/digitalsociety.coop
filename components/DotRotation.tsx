@@ -33,6 +33,7 @@ function initDotGrid(): void {
     OY = (H - (ROWS - 1) * S) / 2;
     CX = (COLS - 1) / 2;
     CY = (ROWS - 1) / 2;
+    MAX_PULSES = Math.ceil(COLS * ROWS * 0.1);
     LINES = [];
     for (let r = 0; r < ROWS; r++)
       for (let c = 0; c < COLS - 1; c++)
@@ -60,7 +61,10 @@ function initDotGrid(): void {
     canvas.height = Math.round(H * dpr);
   }
 
-  function draw(t: number): void {
+  function draw(
+    t: number,
+    pulsingDots: { dot: number; progress: number }[] = [],
+  ): void {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, W, H);
     const theta = t * Math.PI * 2;
@@ -90,19 +94,89 @@ function initDotGrid(): void {
       ctx.lineWidth = DOT_R * 1.3;
       ctx.stroke();
     });
-    ctx.fillStyle = "#957fb8";
     for (let i = 0; i < COLS * ROWS; i++) {
       const p = dotPos(i);
+      const pulse = pulsingDots.find((pd) => pd.dot === i);
       ctx.beginPath();
-      ctx.arc(p.x, p.y, DOT_R, 0, Math.PI * 2);
+      if (pulse) {
+        const bright = Math.sin(pulse.progress * Math.PI);
+        const ri = Math.round(149 + (255 - 149) * bright);
+        const gi = Math.round(127 + (255 - 127) * bright);
+        const bi = Math.round(184 + (255 - 184) * bright);
+        ctx.fillStyle = `rgb(${ri},${gi},${bi})`;
+        ctx.arc(p.x, p.y, DOT_R * 1.1, 0, Math.PI * 2);
+      } else {
+        ctx.arc(p.x, p.y, DOT_R, 0, Math.PI * 2);
+        ctx.fillStyle = "#957fb8";
+      }
       ctx.fill();
     }
   }
 
   let rafId: number = 0;
   let currentT: number = 0;
+  let idleRafId: number = 0;
+  let idleTimer: number = 0;
+  let pulses: { dot: number; start: number }[] = [];
+  let pulseOrder: number[] = [];
+  let pulseIdx: number = 0;
+  const PULSE_MS = 2000;
+  let MAX_PULSES = 10;
+  const STAGGER_MS = 200;
+
+  function shuffleDots(): void {
+    pulseOrder = Array.from({ length: COLS * ROWS }, (_, i) => i);
+    for (let i = pulseOrder.length - 1; i > 0; i--) {
+      const j = (Math.random() * (i + 1)) | 0;
+      const tmp = pulseOrder[i];
+      pulseOrder[i] = pulseOrder[j];
+      pulseOrder[j] = tmp;
+    }
+    pulseIdx = 0;
+  }
+
+  function idleTick(ts: number): void {
+    pulses = pulses.filter((p) => ts - p.start < PULSE_MS);
+    const canAdd =
+      pulses.length < MAX_PULSES &&
+      (pulses.length === 0 ||
+        ts - pulses[pulses.length - 1].start >= STAGGER_MS);
+    if (canAdd) {
+      if (pulseIdx >= pulseOrder.length) shuffleDots();
+      pulses.push({ dot: pulseOrder[pulseIdx++], start: ts });
+    }
+    const active = pulses.map((p) => ({
+      dot: p.dot,
+      progress: (ts - p.start) / PULSE_MS,
+    }));
+    draw(currentT, active);
+    idleRafId = requestAnimationFrame(idleTick);
+  }
+
+  function startIdle(): void {
+    if (idleRafId) return;
+    if (pulseOrder.length === 0) shuffleDots();
+    const now = performance.now();
+    pulses = [];
+    for (let i = 0; i < MAX_PULSES; i++) {
+      if (pulseIdx >= pulseOrder.length) shuffleDots();
+      pulses.push({
+        dot: pulseOrder[pulseIdx++],
+        start: now - i * (PULSE_MS / MAX_PULSES),
+      });
+    }
+    idleRafId = requestAnimationFrame(idleTick);
+  }
+
+  function stopIdle(): void {
+    cancelAnimationFrame(idleRafId);
+    idleRafId = 0;
+    pulses = [];
+  }
 
   function onScroll(): void {
+    stopIdle();
+    clearTimeout(idleTimer);
     const hero = canvas.parentElement;
     if (!hero) return;
     const viewportH = window.innerHeight;
@@ -118,11 +192,13 @@ function initDotGrid(): void {
     currentT = t;
     if (rafId) cancelAnimationFrame(rafId);
     rafId = requestAnimationFrame(() => draw(t));
+    idleTimer = setTimeout(startIdle, 800) as unknown as number;
   }
 
   function run(): void {
     setup();
     draw(0);
+    startIdle();
     window.addEventListener("resize", () => {
       setup();
       draw(currentT);

@@ -1,25 +1,31 @@
 import type { ReactNode } from "react";
 
+type Color = "green" | "light";
+
+function getColor(color?: Color): string {
+  if (color == null) return "[&_a]:text-oniViolet2";
+  switch (color) {
+    case "green":
+      return "bg-waveAqua2 text-sumiInk1";
+    case "light":
+      return "bg-lighterYellow text-sumiInk1";
+  }
+}
+
 export default function Section(props: {
-  light?: boolean;
+  color?: Color;
   className?: string;
   children: ReactNode;
+  background?: ReactNode;
 }): ReactNode {
   return (
-    <>
-      {props.light === true && (
-        <div className="bg-linear-to-bl h-10 md:h-20 from-sumiInk1 from-49% to-lighterYellow to-50%" />
-      )}
-      <section
-        className={`flex flex-col items-center justify-center ${props.light === true ? "bg-lighterYellow text-sumiInk1 [&_a]:text-linkBlue" : "[&_a]:text-lighterBlue"} ${props.className ?? ""} pb-8`}
-      >
-        <div className="max-w-6xl w-screen flex flex-col gap-8 p-4">
-          {props.children}
-        </div>
-      </section>
-      {props.light === true && (
-        <div className="bg-linear-to-br h-10 md:h-20 to-sumiInk1 from-49% from-lighterYellow to-50%" />
-      )}
-    </>
+    <section
+      className={`relative flex flex-col items-center justify-center py-8 ${getColor(props.color)} ${props.className ?? ""}`}
+    >
+      {props.background}
+      <div className="relative z-10 max-w-6xl w-screen flex flex-col gap-8 p-4">
+        {props.children}
+      </div>
+    </section>
   );
 }

@@ -16,7 +16,7 @@ export default function Page(props: {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{`Digital Society | ${props.title}`}</title>
-        <link rel="icon" href="/images/logo-transparent-256x256.png" />
+        <link rel="icon" href="/images/DigitalSociety_Icon_Colour_Dark.png" />
         <meta name="description" content={props.description} />
 
         <link rel="stylesheet" href="/tailwind.css" />
@@ -28,14 +28,14 @@ export default function Page(props: {
         <ClientScript fn={initMenu} />
       </head>
 
-      <body className="h-full margin-0 flex flex-col bg-sumiInk1 text-lighterYellow has-[#mobile-menu:checked]:overflow-hidden">
-        <header>
-          <nav className="flex flex-row justify-between p-4 shadow gap-1 w-full lg:z-1">
+      <body className="margin-0 flex flex-col bg-sumiInk1 text-lighterYellow has-[#mobile-menu:checked]:overflow-hidden">
+        <header className="sticky top-0 z-50">
+          <nav className="flex flex-row justify-between p-4 shadow gap-1 w-full lg:z-1 bg-lighterYellow text-sumiInk1">
             <a href="/" aria-label="Back to the home page" className="z-50">
               <img
-                className="h-[3rem] aspect-square block"
+                className="h-[3rem] block"
                 alt="Digital Society Ltd logo"
-                src="/images/logo-transparent-256x256.png"
+                src="/images/DigitalSociety_Logo_Colour_Dark.png"
               />
             </a>
             <label
@@ -65,11 +65,11 @@ export default function Page(props: {
                   />
                 </svg>
               </div>
-              <div className="fixed inset-0 z-40 h-full w-full bg-sumiInk3/50 backdrop-blur-sm hidden peer-checked:block">
+              <div className="fixed inset-0 z-40 h-full w-full backdrop-blur-sm hidden peer-checked:block">
                 &nbsp;
               </div>
               <div className="fixed top-[56px] right-0 z-40 w-full h-full -translate-y-full transition duration-300 hidden peer-checked:block peer-checked:translate-y-0">
-                <div className="float-top bg-sumiInk2 p-4 shadow-lg">
+                <div className="float-top p-4 shadow-lg bg-lighterYellow">
                   <menu className="flex flex-col gap-6 items-center">
                     <li>
                       <Link href="/#services" className="text-xl">
@@ -95,7 +95,7 @@ export default function Page(props: {
                       <a
                         data-umami-event="out-mail"
                         href="mailto:hello@digitalsociety.coop"
-                        className="text-xl self-center px-3 py-1 sm:mt-0 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+                        className="text-xl self-center px-3 py-1 sm:mt-0 rounded-xl border border-waveAqua2 hover:outline outline-waveAqua2 bg-waveAqua2! hover:bg-waveAqua1!"
                       >
                         Get in touch {"\u2197"}
                       </a>
@@ -104,7 +104,7 @@ export default function Page(props: {
                 </div>
               </div>
             </label>
-            <div className="hidden sm:flex flex-row items-center gap-3 gap-2 md:gap-10 z-100">
+            <div className="hidden sm:flex flex-row items-center gap-2 md:gap-10 z-100">
               <Link href="/#services">Services</Link>
               <Link href="/projects/">Projects</Link>
               <Link href="/about/">About</Link>
@@ -112,17 +112,17 @@ export default function Page(props: {
               <a
                 data-umami-event="out-mail"
                 href="mailto:hello@digitalsociety.coop"
-                className="self-center px-3 py-1 rounded-xl border border-linkBlue hover:outline outline-linkBlue bg-linkBlue! hover:bg-waveBlue2! text-lighterYellow!"
+                className="self-center px-3 py-1 sm:mt-0 rounded-xl border border-waveAqua2 hover:outline outline-waveAqua2 bg-waveAqua2! hover:bg-waveAqua1!"
               >
                 Get in touch {"\u2197"}
               </a>
             </div>
           </nav>
         </header>
-        <main className="py-8">{props.children}</main>
+        <main>{props.children}</main>
       </body>
-      <footer className="self-center max-w-6xl p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-1 sm:grid-cols-3 gap-4 border-t border-fujiWhite [&_a]:text-lighterBlue pb-8">
-        <div className="flex flex-row gap-2 order-3 sm:order-first">
+      <footer className="self-center max-w-6xl mt-4 p-4 w-screen grid grid-rows-[repeat(4,min-content)] sm:grid-rows-[repeat(2,min-content)] grid-cols-[repeat(2,minmax(min-content,1fr))] sm:grid-cols-3 gap-4 [&_a]:text-oniViolet2 pb-8">
+        <div className="flex flex-row gap-2 order-3 justify-center sm:justify-start  sm:order-first col-span-full sm:col-span-1">
           <a
             href="https://www.uk.coop/directory/digital-society"
             aria-label="To uk.coop"
@@ -138,21 +138,9 @@ export default function Page(props: {
             src="https://registry.blockmarktech.com/certificates/5755ab18-de66-4e41-a99e-709338cd7c3f/widget/?tooltip_position=bottom_right&theme=transparent&hover=t"
           />
         </div>
-        <div className="order-first sm:order-2">
-          <h3 className="mb-2 text-lg">Explore</h3>
+        <div className="order-2 text-nowrap">
+          <h3 className="mb-2 text-lg">More</h3>
           <ul className="flex flex-col gap-1">
-            <li>
-              <Link href="/about/">About</Link>
-            </li>
-            <li>
-              <Link href="/#services">Services</Link>
-            </li>
-            <li>
-              <Link href="/projects/">Projects</Link>
-            </li>
-            <li>
-              <Link href="/posts/">Insights</Link>
-            </li>
             <li>
               <Link href="/how/">How we work</Link>
             </li>
@@ -161,7 +149,7 @@ export default function Page(props: {
             </li>
           </ul>
         </div>
-        <div className="order-2 sm:order-3">
+        <div className="order-1 sm:order-2 text-nowrap">
           <h3 className="mb-2 text-lg">Contact us</h3>
           <ul className="flex flex-col gap-1">
             <li>
@@ -187,7 +175,7 @@ export default function Page(props: {
             </li>
           </ul>
         </div>
-        <p className="col-span-full order-last">
+        <p className="col-span-full order-last mt-8 text-center text-katanaGray">
           Digital Society Ltd is a private company limited by guarantee without
           share capital registered in Scotland (SC768012).
         </p>

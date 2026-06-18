@@ -145,7 +145,7 @@ function Service(props: {
   description: string;
 }): React.ReactNode {
   return (
-    <div className="flex-[1_0_45%] flex flex-col gap-4 p-4 rounded-xl bg-oniViolet2 shadow justify-start">
+    <div className="flex-[1_0_45%] flex flex-col gap-4 py-4 px-6 rounded-xl bg-oniViolet2 shadow justify-start">
       <h2 className="text-xl sm:text-2xl min-w-0 font-bold">{props.title}</h2>
       <p className="min-w-0">{props.description}</p>
     </div>

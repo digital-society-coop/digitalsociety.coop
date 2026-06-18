@@ -15,7 +15,8 @@ export default function Insights(): ReactNode {
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. About us."
     >
       <Section background={<DotRotation side="right" />}>
-        <div className="sm:w-[70%] py-12 flex flex-col gap-8">
+        <div className="py-12 flex flex-col gap-8">
+        <div className="sm:w-[70%] flex flex-col gap-8">
           <PageTitle>
             We are an agile not-for-profit co-operative of technical experts
           </PageTitle>
@@ -33,21 +34,28 @@ export default function Insights(): ReactNode {
             lasting solutions.{" "}
             <Link href="/how/">Read more about how we work {"\u2192"}</Link>
           </p>
-          <Heading anchor="team">Meet the team</Heading>
-          <div className="flex flex-row flex-wrap justify-between gap-6">
-            <Member
-              name="Chris Connelly"
-              src="/images/chris.jpg"
-              title="Founder & all-rounder"
-              description="Chat to him about Rust, running or coffee."
-            />
-            <Member
-              name="Endre Kadas"
-              src="/images/endre.jpg"
-              title="Founder & all-rounder"
-              description="Chat to him about DIY, ferments or gardening."
-            />
-          </div>
+        </div>
+        <Heading anchor="team">Meet the team</Heading>
+        <div className="flex flex-row flex-wrap justify-between gap-6">
+          <Member
+            name="Chris Connelly"
+            src="/images/chris.jpg"
+            title="Founder & all-rounder"
+            description="Chat to him about Rust, running or coffee."
+          />
+          <Member
+            name="Grant Forrester"
+            src="/images/grant.jpg"
+            title="Member & all-rounder"
+            description="Chat to him about Java, hill-walking or VW transporters."
+          />
+          <Member
+            name="Endre Kadas"
+            src="/images/endre.jpg"
+            title="Founder & all-rounder"
+            description="Chat to him about DIY, ferments or gardening."
+          />
+        </div>
         </div>
       </Section>
     </Page>

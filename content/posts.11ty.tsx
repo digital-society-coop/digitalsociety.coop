@@ -11,9 +11,18 @@ export default function Insights(): ReactNode {
       title="Insights"
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our insights."
     >
-      <Section background={<DotRotation side="left" />}>
+      <Section background={<DotRotation side="right" />}>
         <PageTitle>Insights</PageTitle>
         <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-8 sm:gap-16 sm:px-12">
+          <Post
+            href="/posts/glow-up/"
+            title="We've had a glow up!"
+            date="22/06/2026"
+            description="A new logo and a fresh lick of paint for our website."
+            alt="Digital Society light logo"
+            src="/images/DigitalSociety_Logo_Colour_Light.svg"
+            imgContainerClass="bg-sumiInk2 px-8 py-9"
+          />
           <Post
             href="/posts/pension-sovereignty/"
             title="UK pensions"
@@ -34,7 +43,7 @@ export default function Insights(): ReactNode {
             href="/posts/migrating-to-hetzner-cloud/"
             title="Migrating to Hetzner"
             date="02/10/2025"
-            description="Saving 76% on our cloud bills and tripling our capacity"
+            description="Saving 76% on our cloud bills and tripling our capacity."
             alt=""
             src="/images/hetzner-logo.png"
             imgContainerClass="bg-[#d50c2d]!"
@@ -43,7 +52,7 @@ export default function Insights(): ReactNode {
             href="/posts/job-satisfaction/"
             title="Job satisfaction"
             date="27/05/2025"
-            description="A self-reflection exercise"
+            description="A self-reflection exercise."
             alt="Zen rock in front of water"
             src="/images/zen.jpg"
           />
@@ -51,7 +60,7 @@ export default function Insights(): ReactNode {
             href="/posts/tap-generally-available/"
             title="tap is generally available!"
             date="15/05/2025"
-            description="Our first data SaaS product"
+            description="Our first data SaaS product."
             alt="Logo for tap"
             src="/images/tap.svg"
             imgContainerClass="bg-sumiInk2 p-8"

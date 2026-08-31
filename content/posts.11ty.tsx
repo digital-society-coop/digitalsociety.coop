@@ -11,9 +11,9 @@ export default function Insights(): ReactNode {
       title="Insights"
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our insights."
     >
-      <Section background={<DotRotation side="right" />}>
+      <Section>
         <PageTitle>Insights</PageTitle>
-        <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-8 sm:gap-16 sm:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16 sm:px-12">
           <Post
             href="/posts/glow-up/"
             title="We've had a glow up!"

@@ -15,6 +15,20 @@ export default function Projects(): ReactNode {
         <PageTitle>Some of our projects</PageTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16 sm:px-12 mb-16">
           <Project
+            href="/projects/singular-photonics/"
+            title="Singular Photonics"
+            description="From light to insight"
+            screenshots={
+              <div className="max-h-[15rem] w-full h-full self-center rounded-t-xl overflow-hidden flex flex-col justify-center bg-sumiInk1">
+                <img
+                  alt="Image of a Singular Photonics SPAD"
+                  src="/images/singular-photonics.png"
+                  className="object-contain h-full"
+                />
+              </div>
+            }
+          />
+          <Project
             href="/projects/vouchsafe/"
             title="Vouchsafe"
             description="Inclusive identity verification"

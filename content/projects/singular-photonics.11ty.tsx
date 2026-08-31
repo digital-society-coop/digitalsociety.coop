@@ -37,10 +37,9 @@ export default function SkillsTrack(): ReactNode {
             for data transfer and power consumption. By performing processing
             on-chip, Singular Photonics' products offer compact,
             energy-efficient, and highly versatile solutions for a wide range of
-            technological challenges. Applications span medical imaging (e.g.
-            non-invasive blood flow monitoring), industrial automation,
-            scientific instrumentation, environmental sensing, and quantum
-            technologies.
+            technological challenges. Applications span medical imaging,
+            industrial automation, scientific instrumentation, environmental
+            sensing, and quantum technologies.
           </p>
           <p>
             We worked with Singular Photonics as an embedded delivery partner,

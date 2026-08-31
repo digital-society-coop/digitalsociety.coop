@@ -67,9 +67,9 @@ export default function Vouchsafe(): ReactNode {
             Digital Society exceeded our expectations and put us ahead of our
             anticipated schedule. They helped us out on thorny technical
             challenges, delivering from day 1 and seamlessly slotting into our
-            team. We wouldn't hesitate to work with them again! — Jaye Hackett
-            (CTO, Vouchsafe)
-          </q>
+            team. We wouldn't hesitate to work with them again!
+          </q>{" "}
+          — Jaye Hackett (CTO, Vouchsafe)
         </p>
       </Section>
     </Page>

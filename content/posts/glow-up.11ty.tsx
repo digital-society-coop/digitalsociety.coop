@@ -11,7 +11,7 @@ import BeforeAfter from "../../components/BeforeAfter";
 export default function PensionSovereigntyPost(): JSX.Element {
   return (
     <Page
-      title="Insights | We've had a glow up!"
+      title="Blog | We've had a glow up!"
       description="Our pension fund should be made to invest more than 2.5% in the UK."
     >
       <Section>

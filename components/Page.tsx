@@ -88,7 +88,7 @@ export default function Page(props: {
                     </li>
                     <li>
                       <Link href="/posts/" className="text-xl">
-                        Insights
+                        Blog
                       </Link>
                     </li>
                     <li>
@@ -108,7 +108,7 @@ export default function Page(props: {
               <Link href="/#services">Services</Link>
               <Link href="/projects/">Projects</Link>
               <Link href="/about/">About</Link>
-              <Link href="/posts/">Insights</Link>
+              <Link href="/posts/">Blog</Link>
               <a
                 data-umami-event="out-mail"
                 href="mailto:hello@digitalsociety.coop"

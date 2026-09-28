@@ -17,10 +17,12 @@ export default function Section(props: {
   className?: string;
   children: ReactNode;
   background?: ReactNode;
+  anchor?: string;
 }): ReactNode {
   return (
     <section
-      className={`relative flex flex-col items-center justify-center py-8 ${getColor(props.color)} ${props.className ?? ""}`}
+      className={`relative flex flex-col items-center justify-center py-10 ${getColor(props.color)} ${props.className ?? ""}`}
+      id={props.anchor}
     >
       {props.background}
       <div className="relative z-10 max-w-6xl w-screen flex flex-col gap-8 p-4">

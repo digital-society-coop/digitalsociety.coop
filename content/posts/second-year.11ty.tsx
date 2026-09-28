@@ -13,7 +13,7 @@ import Subheading from "../../components/Subheading";
 export default function SecondYear(): ReactNode {
   return (
     <Page
-      title="Insights | Second year"
+      title="Blog | Second year"
       description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our second year anniversary."
     >
       <Section>

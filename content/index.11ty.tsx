@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Page from "../components/Page";
 import Section from "../components/Section";
 import Heading from "../components/Heading";
+import Subheading from "../components/Subheading.tsx";
 import DotRotation from "../components/DotRotation";
 import Project from "../components/Project";
 
@@ -14,14 +15,13 @@ export default function Home(): ReactNode {
     >
       <Section background={<DotRotation side="right" />}>
         <div className="sm:w-[70%] pb-12">
-          <h1 className="text-4xl sm:text-5xl my-20 text-oniViolet font-semibold">
-            Digital Society is founded on the belief that technology can improve
-            society.
+          <h1 className="text-4xl sm:text-5xl my-14 text-oniViolet font-semibold">
+            We connect the dots on your complex software problems.
           </h1>
 
           <h2 className="text-2xl sm:text-3xl">
-            We connect the dots on your most complex and ambitious projects,
-            building bespoke digital solutions with best practice and at pace.
+            We are a not-for-profit co-operative of technical experts, building
+            bespoke digital solutions with best practice and at pace.
           </h2>
           <p className="text-end mt-12">
             <a
@@ -33,9 +33,48 @@ export default function Home(): ReactNode {
           </p>
         </div>
       </Section>
-      <Section color="green">
-        <Heading anchor="projects">Featured Projects</Heading>
-        <div className="flex flex-col sm:flex-row sm:justify-start gap-8 sm:gap-16 sm:px-12">
+      <Section color="light" anchor="services">
+        <div>
+          <Heading>Our services</Heading>
+          <Subheading>We can help you with:</Subheading>
+        </div>
+        <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-8 sm:gap-12">
+          <Service
+            title="Web applications"
+            description="We build high performance web services, whether they are APIs, platforms or full-stack applications."
+          />
+          <Service
+            title="Native applications"
+            description="Mobile applications, native desktop applications with a GUI or just a CLI, we built them all."
+          />
+          <Service
+            title="DevOps bootstrapping"
+            description="We'll help with your infrastructure, optimize your cloud spending, and transform how your team ships code."
+          />
+        </div>
+        <Subheading>We offer two delivery models:</Subheading>
+        <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-8 sm:gap-12">
+          <DeliveryWay
+            title="End-to-end delivery partner"
+            description="We'll take responsibility for the full software life-cycle, from design through to the building and finally operating. Our sprint-based approach adapts to your timeline and evolves with your priorities."
+          />
+          <DeliveryWay
+            title="Staff augmentation"
+            description="Best suited for for organisations that already have an engineering team that need to accelerate development with people who slot in to your ways of working and deliver from day one."
+          />
+        </div>
+        <Subheading>
+          We are the technical leads you know you need. We take the effort to
+          understand the domain you operate in through a process of co-design
+          and research to ensure you ship exactly what you need, at the time you
+          need it and in a way that's suitable immediately and in the future.
+          You can rely on us to build confidence in your project with your
+          internal and external stakeholders and drive delivery forward.
+        </Subheading>
+      </Section>
+      <Section color="green" anchor="projects">
+        <Heading>Featured Projects</Heading>
+        <div className="flex flex-col sm:flex-row sm:justify-start gap-8 sm:gap-16">
           <Project
             href="/projects/vouchsafe/"
             title="Vouchsafe"
@@ -86,29 +125,6 @@ export default function Home(): ReactNode {
           More projects {"→"}
         </a>
       </Section>
-      <Section color="light">
-        <Heading anchor="services">
-          Flexible services that adapt to your organisation
-        </Heading>
-        <div className="flex flex-col sm:flex-row flex-wrap sm:justify-start gap-8 sm:gap-12 sm:px-12 mb-12">
-          <Service
-            title="Agile product development"
-            description="Whether web, mobile, or custom software, our sprint-based approach adapts to your timeline and evolves with your priorities."
-          />
-          <Service
-            title="Staff augmentation"
-            description="Need to accelerate development with people who deliver from day one? That's our specialty."
-          />
-          <Service
-            title="Data engineering"
-            description="Get more from your data by building it on solid foundations. We handle the engineering, modeling, and integration."
-          />
-          <Service
-            title="DevOps bootstrapping"
-            description="We'll help with your infrastructure, optimize your cloud spending, and transform how your team ships code."
-          />
-        </div>
-      </Section>
       <Section background={<DotRotation side="left" />}>
         <Quotes>
           <Quote
@@ -141,6 +157,18 @@ export default function Home(): ReactNode {
 }
 
 function Service(props: {
+  title: string;
+  description: string;
+}): React.ReactNode {
+  return (
+    <div className="flex-[1_0_30%] flex flex-col gap-4 py-4 px-6 rounded-xl bg-waveAqua2/80 shadow justify-start">
+      <h2 className="text-xl sm:text-2xl min-w-0 font-bold">{props.title}</h2>
+      <p className="min-w-0">{props.description}</p>
+    </div>
+  );
+}
+
+function DeliveryWay(props: {
   title: string;
   description: string;
 }): React.ReactNode {

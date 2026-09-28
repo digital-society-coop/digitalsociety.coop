@@ -16,46 +16,44 @@ export default function Insights(): ReactNode {
     >
       <Section background={<DotRotation side="right" />}>
         <div className="py-12 flex flex-col gap-8">
-        <div className="sm:w-[70%] flex flex-col gap-8">
-          <PageTitle>
-            We are an agile not-for-profit co-operative of technical experts
-          </PageTitle>
-          <Subheading>
-            Digital Society was founded on the belief that technology can
-            improve society.
-          </Subheading>
-          <p>
-            Motivated by this belief we operate as a worker-owned not-for-profit
-            co-operative and seek out projects inline with this mission.
-          </p>
-          <p>
-            We bring our deep technical expertise and agile approach to all
-            challenges and seek to build sustainable, cost-effective, and
-            lasting solutions.{" "}
-            <Link href="/how/">Read more about how we work {"\u2192"}</Link>
-          </p>
-        </div>
-        <Heading anchor="team">Meet the team</Heading>
-        <div className="flex flex-row flex-wrap justify-between gap-6">
-          <Member
-            name="Chris Connelly"
-            src="/images/chris.jpg"
-            title="Founder & all-rounder"
-            description="Chat to him about Rust, running or coffee."
-          />
-          <Member
-            name="Grant Forrester"
-            src="/images/grant.jpg"
-            title="Member & all-rounder"
-            description="Chat to him about Java, hill-walking or VW transporters."
-          />
-          <Member
-            name="Endre Kadas"
-            src="/images/endre.jpg"
-            title="Founder & all-rounder"
-            description="Chat to him about DIY, ferments or gardening."
-          />
-        </div>
+          <div className="sm:w-[70%] flex flex-col gap-8">
+            <PageTitle>
+              Digital Society was founded on the belief that technology can make
+              society more equitable.
+            </PageTitle>
+            <Subheading>
+              Motivated by this belief we operate as a worker-owned
+              not-for-profit co-operative and seek out projects inline with this
+              mission.
+            </Subheading>
+            <Subheading>
+              We bring our deep technical expertise and agile approach to all
+              challenges and seek to build sustainable, cost-effective, and
+              lasting solutions.{" "}
+              <Link href="/how/">Read more about how we work {"\u2192"}</Link>
+            </Subheading>
+          </div>
+          <Heading anchor="team">Meet the team</Heading>
+          <div className="flex flex-row flex-wrap justify-between gap-6">
+            <Member
+              name="Chris Connelly"
+              src="/images/chris.jpg"
+              title="Founder & all-rounder"
+              description="Chat to him about Rust, running or coffee."
+            />
+            <Member
+              name="Grant Forrester"
+              src="/images/grant.jpg"
+              title="Member & all-rounder"
+              description="Chat to him about Java, hill-walking or VW transporters."
+            />
+            <Member
+              name="Endre Kadas"
+              src="/images/endre.jpg"
+              title="Founder & all-rounder"
+              description="Chat to him about DIY, ferments or gardening."
+            />
+          </div>
         </div>
       </Section>
     </Page>

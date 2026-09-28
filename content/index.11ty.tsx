@@ -5,7 +5,7 @@ import Section from "../components/Section";
 import Heading from "../components/Heading";
 import Subheading from "../components/Subheading.tsx";
 import DotRotation from "../components/DotRotation";
-import Project from "../components/Project";
+import Card, { Img } from "../components/Card";
 
 export default function Home(): ReactNode {
   return (
@@ -75,47 +75,44 @@ export default function Home(): ReactNode {
       <Section color="green" anchor="projects">
         <Heading>Featured Projects</Heading>
         <div className="flex flex-col sm:flex-row sm:justify-start gap-8 sm:gap-16">
-          <Project
+          <Card
             href="/projects/vouchsafe/"
             title="Vouchsafe"
             description="Inclusive identity verification"
-            screenshots={
-              <div className="max-h-[15rem] w-full h-full self-center rounded-t-xl overflow-hidden flex flex-col justify-center bg-sumiInk1">
-                <img
-                  alt="Logo for Youth Work SkillsTrack"
-                  src="/images/vouchsafe.png"
-                  className="object-contain h-full"
-                />
-              </div>
-            }
+            className="bg-sumiInk1"
+            screenshots={(
+              <Img
+                alt="Logo for Youth Work SkillsTrack"
+                src="/images/vouchsafe.png"
+                object="contain"
+              />
+            )}
           />
-          <Project
+          <Card
             href="/projects/skillstrack/"
             title="Youth Work SkillsTrack"
             description="Recording and demonstrating the impact of youth work"
-            screenshots={
-              <div className="max-h-[15rem] w-full h-full self-center rounded-t-xl overflow-hidden flex flex-col justify-center bg-white">
-                <img
+            className="bg-white"
+            screenshots={(
+              <Img
                   alt="Logo for Youth Work SkillsTrack"
                   src="/images/youthlink-logo.png"
-                  className="object-contain h-full"
-                />
-              </div>
-            }
+                object="contain"
+              />
+            )}
           />
-          <Project
+          <Card
             href="/projects/tap/"
             title="tap"
             description="Unlocking the value of data"
-            screenshots={
-              <div className="p-4 max-h-[15rem] w-full self-center rounded-t-xl overflow-hidden bg-sumiInk1 aspect-320/213 flex flex-col justify-center">
-                <img
-                  alt="Logo for tap"
-                  src="/images/tap.svg"
-                  className="w-full"
-                />
-              </div>
-            }
+            className="bg-sumiInk1"
+            screenshots={(
+              <Img
+                alt="Logo for tap"
+                src="/images/tap.svg"
+                object="contain"
+              />
+            )}
           />
         </div>
         <a

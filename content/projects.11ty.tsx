@@ -13,7 +13,7 @@ export default function Projects(): ReactNode {
     >
       <Section color="green">
         <PageTitle>Some of our projects</PageTitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16 sm:px-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16 mb-16">
           <Card
             href="/projects/singular-photonics/"
             title="Singular Photonics"

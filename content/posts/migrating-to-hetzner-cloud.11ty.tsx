@@ -10,7 +10,7 @@ import Heading from "../../components/Heading";
 export default function HetznerMigrationPost(): JSX.Element {
   return (
     <Page
-      title="Posts | Migrating to Hetzner"
+      title="Blog | Migrating to Hetzner"
       description="We saved 76% on our cloud bills while tripling our capacity by migrating to Hetzner from AWS and DigitalOcean. Digital Society is a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data."
     >
       <Section>

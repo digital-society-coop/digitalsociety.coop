@@ -11,7 +11,7 @@ import ClientScript from "../../components/ClientScript";
 export default function PensionSovereigntyPost(): JSX.Element {
   return (
     <Page
-      title="Insights | UK pensions"
+      title="Blog | UK pensions"
       description="Our pension fund should be made to invest more than 2.5% in the UK."
     >
       <Section>

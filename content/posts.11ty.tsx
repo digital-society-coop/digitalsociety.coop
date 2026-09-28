@@ -6,15 +6,15 @@ import PageTitle from "../components/PageTitle";
 import DotRotation from "../components/DotRotation";
 import Card, { Img } from "../components/Card";
 
-export default function Insights(): ReactNode {
+export default function Blog(): ReactNode {
   return (
     <Page
-      title="Insights"
-      description="Digital Society, a not-for-profit cooperative helping you get your projects off the ground and realise the value of your data. Our insights."
+      title="Blog"
+      description="Digital Society's blog sharing organisational updates and insights about technology, society and their relationship."
     >
       <Section>
-        <PageTitle>Insights</PageTitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16 sm:px-12">
+        <PageTitle>Blog</PageTitle>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-16">
           <Card
             href="/posts/glow-up/"
             title="We've had a glow up!"

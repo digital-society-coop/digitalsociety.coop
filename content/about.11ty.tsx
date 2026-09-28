@@ -8,7 +8,7 @@ import Subheading from "../components/Subheading";
 import Link from "../components/Link";
 import DotRotation from "../components/DotRotation";
 
-export default function Insights(): ReactNode {
+export default function About(): ReactNode {
   return (
     <Page
       title="About"
